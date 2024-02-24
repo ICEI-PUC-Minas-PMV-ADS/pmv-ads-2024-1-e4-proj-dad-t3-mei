@@ -1,10 +1,10 @@
 # TÍTULO DO PROJETO
 
-Análise e Desenvolvimento de Sistemas
+`Análise e Desenvolvimento de Sistemas`
 
-Eixo 4 - Projeto: Desenvolvimento de uma Aplicação Distribuída
+`Eixo 4 - Projeto: Desenvolvimento de uma Aplicação Distribuída`
 
-Primeiro Semestre de 2024
+`Primeiro Semestre de 2024`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
