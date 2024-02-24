@@ -1,23 +1,25 @@
 # TÍTULO DO PROJETO
 
-`CURSO`
+Análise e Desenvolvimento de Sistemas
 
-`DISCIPLINA`
+Eixo 4 - Projeto: Desenvolvimento de uma Aplicação Distribuída
 
-`SEMESTRE`
+Primeiro Semestre de 2024
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Ana Carolina Mozelli
+* Anna Clara Rocha Mota
+* Geraldo Homero do Couto Neto
+* Gustavo Silva Diniz
+* Hugo César Candian Ferreira
+* Junia Marina Campos
 
 ## Orientador
 
-* Nome completo do professor 1
+* Leonardo Vilela Cardoso
 
 ## Instruções de utilização
 
