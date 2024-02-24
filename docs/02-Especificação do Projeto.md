@@ -154,11 +154,31 @@ De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar 
 
 Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
 
-![Diagrama de rede simplificado notação francesa (método francês)](img/02-diagrama-rede-simplificado.png)
-
 O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
 
-![Gráfico de Gantt](img/02-grafico-gantt.png)
+Com base no cronograma estipulado pela Intituição PUC Minas, a divisão das tarefas em relação as datas ficaram da seguinte forma (Demonstrado a partir do Diagrama de Gannt):
+
+**Etapa 1 do Projeto**
+
+![Diagrama de Gantt - Etapa 1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/46386b9a-338b-4480-b9f3-ce32d74e7347)
+
+**Etapa 2 do Projeto**
+
+![Diagrama de Gantt - Etapa 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/c633d2ae-117e-4f7f-993d-f390b221f87f)
+
+**Etapa 3 do Projeto**
+
+![Diagrama de Gantt - Etapa 3](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/4387ee4c-21f4-48a6-b7a6-3bbb1763bbe6)
+
+**Etapa 4 do Projeto**
+
+![Diagrama de Gantt - Etapa 4](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/5976de25-1666-4fae-9b09-2755a121adf4)
+
+**Etapa 5 do Projeto**
+
+![Diagrama de Gantt - Etapa 5](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/34f6487d-18ec-4ba6-8639-f59ef471e2a0)
+
+A partir do desenvolvimento de cada etapa, as atividades seguintes ficarão mais detalhadas, seguindo os Requisitos estabelecidos pela equipe e sua ordem de prioridade para execução.
 
 ## Gerenciamento de Equipe
 
