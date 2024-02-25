@@ -29,4 +29,5 @@ Nossa aplicação surge a partir desse desafio, colaborando com o empreendedor p
 [2]https://exame.com/economia/brasil-tem-132-milhoes-de-meis-que-representam-70-das-empresas-do-pais/
 
 [3] https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/38044-em-2021-brasil-tinha-13-2-milhoes-de-microempreendedores-individuais-meis
+
 [4]https://celero.com.br/blog/desafios-das-micro-e-pequenas-empresas/
