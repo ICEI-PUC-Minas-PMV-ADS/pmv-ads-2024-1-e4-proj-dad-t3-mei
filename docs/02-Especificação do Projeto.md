@@ -79,15 +79,22 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| O sistema deve exibir o total de vendas ou serviços do dia, semana, mês ou ano | ALTA |
+|RF-002| Emitir um alerta do limite mensal e anual da respectiva subcategoria do MEI | ALTA |
+|RF-003| Separar vendas a prazo, à vista, cartão, pix ou dinheiro | ALTA |
+|RF-004| Autenticar o usuário | MÉDIA |
+|RF-005| Permitir fazer uma agenda de clientes | BAIXA |
+|RF-006| Permitir cadastrar serviços prestados e produtos vendidos | MÉDIA |
+
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| O sistema deve ser responsivo e otimizado para rodar em dispositivos móvel e navegadores| MÉDIA | 
+|RNF-002| Deve processar requisições do usuário em no máximo 3s | MÉDIA | 
+|RNF-003| Estar disponível aproximadamente 24/7, com reduzidas interrupções para manutenção | ALTA | 
+|RNF-004| Proteger dados sensíveis de usuários por meio de criptografia e autenticação segura.| ALTA | 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
