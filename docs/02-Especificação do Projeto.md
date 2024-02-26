@@ -113,6 +113,11 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 
 ## Diagrama de Casos de Uso
 
+ATOR |	DESCRIÇÃO |
+--|--|
+Empresário|	Usuário responsável pelo cadastro de suas vendas, serviços prestados e clientes.|
+
+
 CASOS DE USO     | DESCRIÇÃO  |RF |
 ---|---|---|
 Validar usuário|O sistema deve autenticar o ator corretamente para que ele consiga realizar suas necessidades dentro do sistema.|RF-004|
