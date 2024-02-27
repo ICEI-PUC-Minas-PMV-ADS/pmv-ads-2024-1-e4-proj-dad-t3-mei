@@ -103,19 +103,11 @@ Empresário|	Usuário responsável pelo cadastro de suas vendas, serviços prest
 
 CASOS DE USO     | DESCRIÇÃO  |RF |
 ---|---|---|
-Validar usuário|O sistema deve autenticar o ator corretamente para que ele consiga realizar suas necessidades dentro do sistema.|RF-004|
-Visualizar valor total de vendas/ serviços diários|	O sistema deve permitir que o usuário visualize o total de suas vendas/serviços diários.|	RF-001|
-Visualizar valor total de vendas/ serviços mensais|	O sistema deve permitir que o usuário visualize o total de suas vendas/serviços mensais.|	RF-001|
-Visualizar valor total de vendas/ serviços anuais| 	O sistema deve permitir que o usuário visualize o total de suas vendas/serviços mensais.|	RF-001|
-Visualizar alerta mensal de valor da subcategoria|	O sistema deve permitir que o usuário visualize um alerta mensalmente sobre o valor da subcategoria do MEI.| 	RF-002|
-Visualizar alerta anual de valor da subcategoria|	O sistema deve permitir que o usuário visualize um alerta mensalmente sobre o valor da subcategoria do MEI.| 	RF-002|
-Visualizar vendas a prazo|	O sistema deve permitir que o usuário visualize o valor total das vendas a prazo.|	RF-003|
-Visualizar vendas à vista|	O sistema deve permitir que o usuário visualize o valor total das vendas à vista.|	RF-003|
-Visualizar vendas no cartão|	O sistema deve permitir que o usuário visualize o valor total das vendas no cartão.|	RF-003|
-Visualizar vendas no PIX|	O sistema deve permitir que o usuário visualize o valor total das vendas no PIX.|	RF-003|
-Visualizar vendas no dinheiro|	O sistema deve permitir que o usuário visualize o valor total das vendas no dinheiro.|	RF-003|
-Cadastrar serviços prestados|	O sistema deve permitir que o usuário cadastre os serviços prestados.|	RF-006|
-Cadastrar produtos vendidos|	O sistema deve permitir que o usuário cadastre os produtos vendidos.|	RF-006|
+Validar usuário| O sistema deve autenticar o ator corretamente para que ele consiga realizar suas necessidades.|RF-004|
+Visualizar o total de vendas/serviços|	O sistema deve permitir que o usuário visualize o total de suas vendas/serviços diários, mensais e anuais.|	RF-001|
+Visualizar alerta mensal/anual da subcategoria|	O sistema deve permitir que o usuário visualize um alerta mensal/anual sobre o valor da subcategoria do MEI.| 	RF-002|
+Visualizar valor total de vendas|	O sistema deve permitir que o usuário visualize o valor total das vendas sejam elas a prazo, à vista, no cartão, no PIX ou no dinheiro.|	RF-003|
+Cadastrar serviços/produtos|	O sistema deve permitir que o usuário cadastre os serviços/produtos prestados.|	RF-006|
 Criar agenda de clientes|	O sistema deve permitir que o usuário crie uma agenda de clientes.|	RF-005|
 
 # Matriz de Rastreabilidade
