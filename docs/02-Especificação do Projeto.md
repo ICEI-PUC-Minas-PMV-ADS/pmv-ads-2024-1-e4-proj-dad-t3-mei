@@ -9,6 +9,8 @@ Júlia tem 28 anos, tem uma mercadinho na cidade de Contagem MG, pelo alto movim
 
 Daniel tem 35 anos, é dono de uma padaria na cidade de Petrópoles RJ, como o movimento em seu comércio é muito alto ele gostaria de ter uma ferramenta que o ajudasse a ver suas vendas diárias sem peder muito tempo com os cálculos. 
 
+Renato tem 46 anos, ele era MEI em 2020, nessa época por falta de controle do faturamento acabou estrapolando o limite permitido e foi excluido do regime, tendo que pagar os impostos retroativos. Como esse ano, 2024, resolveu voltar a ser MEI, está com receio da mesma coisa acontecer, e por isso busca no mercado um sistema que o ajude neste controle e o avise quando ele estiver prestes a atingir o limite novamente.
+
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
@@ -18,6 +20,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Dilma, empreendedor | Controlar as vendas, para saber exatamente quanto vendeu.|Ter um maior controle das vendas|
 |Júlia, empreendedora  | Verificar quanto está o faturamento, para que esteja enquadrada no  sistema certo.| Para que não tenha surpresas. | 
 |Daniel, empreendedor |Como tem um movimento muito alto por dia, gostaria de controlar exatamente quanto vendeu no dia|Ter um maior controle das vendas|
+|Renato, empreendedor| Como já teve MEI a um tempo atras e acabou estrapolando o limite sendo excluido do regime e tendo que pagar muitos impostos, gostaria de ter uma ferramenta para controlar|Ter um controle maior de seus ganhos.|
 
 
 ## Modelagem do Processo de Negócio 
