@@ -9,7 +9,7 @@ Com uma ferramenta capaz de possibilitar ao MEI uma melhor compreensão de sua s
 
 ## Objetivos
 
-Nosso objetivo é a criação de uma ferramenta intuitiva e simples para a verificação e atualização de faturamento do MEI, trazendo controle, facilidade e informação para que seu trabalho fique cada vez mais despreocupado com tributos, multas e com a possibilidade de desemquadramento da categoria por extrapolação de seus limites de faturamento.
+Nosso objetivo é a criação de uma ferramenta intuitiva e simples para a verificação e atualização de faturamento do MEI, trazendo controle, facilidade e informação para que em seu trabalho ele fique cada vez mais despreocupado com tributos, multas e com a possibilidade de se desenquadrar da categoria por extrapolação de seus limites de faturamento.
 
 Existem propostas em tramitação no congresso para que os limites sejam ajustados em 2024, ou seja, com essa ferramenta pode-se ficar atualizado assim que alguma mudança ocorrer.
 
