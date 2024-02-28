@@ -1,4 +1,4 @@
-# TÍTULO DO PROJETO
+# MEI A MEI
 
 `Análise e Desenvolvimento de Sistemas`
 
@@ -6,7 +6,7 @@
 
 `Primeiro Semestre de 2024`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Será desenvolvido um APP e um Sistema Web para auxiliar os empresários que estão no regime de tributação MEI a controlar seu faturamento e não extrapolar os limites estabelecidos em Lei. Para isso, o objetivos é criar alertas que mostre ao empresário que ele está próximo em ultrapassar o limite de faturamento da categoria.
 
 ## Integrantes
 
