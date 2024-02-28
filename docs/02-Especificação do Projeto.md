@@ -85,14 +85,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+|01| O projeto deverá ser entregue até o final do semestre e deve ser desenvolvido apenas pelos alunos |
+|02| O sistema/app permite apenas empresário que estejam na categoria de tributação MEI, onde os limites de faturamento sejam os vigentes em lei (em 2024 é R$81.000,00 para atividades diversas e R$251.600,00 para caminhoneiros) |
+|03| A API da solução deve ser programada em C# |
 
 ## Diagrama de Casos de Uso
 
