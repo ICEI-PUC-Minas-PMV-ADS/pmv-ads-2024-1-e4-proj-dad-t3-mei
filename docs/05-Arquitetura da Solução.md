@@ -40,11 +40,11 @@ Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do ba
 
 ## Tecnologias Utilizadas
 
-> - Ambiente de Desenvolvimento: Visual Studio 2022
-> - FrontEnd: React
-> - FronEnd Mobile: React Native
+> - Ambiente de Desenvolvimento: Visual Studio 2022 e Visual Studio Code
+> - Front-end: React
+> - Fron-end Mobile: React Native
 > - Banco de dados: MongoDB
-> - BackEnd: C#
+> - Back-end: C#
 > - Diagramas: Figma, Lucidchart, Draw.io
 > - Plataforma: Azure
 
