@@ -105,6 +105,9 @@ Visualizar valor total de vendas|	O sistema deve permitir que o usuário visuali
 Cadastrar serviços/produtos|	O sistema deve permitir que o usuário cadastre os serviços/produtos prestados.|	RF-006|
 Criar agenda de clientes|	O sistema deve permitir que o usuário crie uma agenda de clientes.|	RF-005|
 
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/114624183/3ca64133-2834-49b9-bf5f-48023bd15a99)
+
+
 # Matriz de Rastreabilidade
 
 A matriz de rastreabilidade é uma ferramenta usada para facilitar a visualização dos relacionamento entre requisitos e outros artefatos ou objetos, permitindo a rastreabilidade entre os requisitos e os objetivos de negócio. 
