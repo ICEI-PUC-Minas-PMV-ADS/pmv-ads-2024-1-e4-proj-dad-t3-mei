@@ -95,18 +95,7 @@ ATOR |	DESCRIÇÃO |
 --|--|
 Empresário|	Usuário responsável pelo cadastro de suas vendas, serviços prestados e clientes.|
 
-
-CASOS DE USO     | DESCRIÇÃO  |RF |
----|---|---|
-Validar usuário| O sistema deve autenticar o ator corretamente para que ele consiga realizar suas necessidades.|RF-004|
-Visualizar o total de vendas/serviços|	O sistema deve permitir que o usuário visualize o total de suas vendas/serviços diários, mensais e anuais.|	RF-001|
-Visualizar alerta mensal/anual da subcategoria|	O sistema deve permitir que o usuário visualize um alerta mensal/anual sobre o valor da subcategoria do MEI.| 	RF-002|
-Visualizar valor total de vendas|	O sistema deve permitir que o usuário visualize o valor total das vendas sejam elas a prazo, à vista, no cartão, no PIX ou no dinheiro.|	RF-003|
-Cadastrar serviços/produtos|	O sistema deve permitir que o usuário cadastre os serviços/produtos prestados.|	RF-006|
-Criar agenda de clientes|	O sistema deve permitir que o usuário crie uma agenda de clientes.|	RF-005|
-
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/114624183/3ca64133-2834-49b9-bf5f-48023bd15a99)
-
 
 # Matriz de Rastreabilidade
 
