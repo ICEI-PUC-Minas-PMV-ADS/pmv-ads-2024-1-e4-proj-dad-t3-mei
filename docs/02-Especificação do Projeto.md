@@ -62,12 +62,17 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| O sistema deve exibir o total de vendas ou serviços do dia, semana, mês ou ano | ALTA |
-|RF-002| Emitir um alerta do limite mensal e anual da respectiva subcategoria do MEI | ALTA |
-|RF-003| Separar vendas a prazo, à vista, cartão, pix ou dinheiro | ALTA |
-|RF-004| Autenticar o usuário | MÉDIA |
-|RF-005| Permitir fazer uma agenda de clientes | BAIXA |
-|RF-006| Permitir cadastrar serviços prestados e produtos vendidos | MÉDIA |
+|RF-001| O sistema deve exibir o total monetário de vendas ou serviços do dia, semana, mês ou ano. | ALTA |
+|RF-002| Emitir alertas textuais do limite mensal/anual de faturamento da respectiva subcategoria do MEI. | ALTA |
+|RF-003| Mostrar um alerta visual do faturamento,de acordo com sua subcategoria (caminhoneiro ou demais atividades), do MEI em tempo real. Usar verde como limite adequado, laranja para alerta e vermelho como extrapolado. | ALTA |
+|RF-004| Separar vendas a prazo, à vista, cartão, pix ou dinheiro. | ALTA |
+|RF-005| O usuário deverá fazer login e ser autenticado. | ALTA |
+|RF-006| Permitir fazer uma agenda de clientes. | BAIXA |
+|RF-007| Permitir cadastrar serviços prestados e produtos vendidos. | MÉDIA|
+|RF-008| Ter a opção "Encontrar um contador próximo a você" e mostrar um mapa com os contadores próximos, para caso o MEI precise de um. | BAIXA|
+|RF-009| Categorizar o tipo de despesa (materia prima, material revenda, uso consumo, material de limpeza, energia eletrica, água, etc). | MÉDIA |
+|RF-010| Permitir que o empresário veja a razão entre faturamento e despesas. | MÉDIA|
+|RF-011| Criar um alerta textual para caso as despesas ultrapassem o faturamento. | MÉDIA|
 
 
 ### Requisitos não Funcionais
