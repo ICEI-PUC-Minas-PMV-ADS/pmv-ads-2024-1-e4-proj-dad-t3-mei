@@ -70,7 +70,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-006| Permitir fazer uma agenda de clientes. | BAIXA |
 |RF-007| Permitir cadastrar serviços prestados e produtos vendidos. | MÉDIA|
 |RF-008| Ter a opção "Encontrar um contador próximo a você" e mostrar um mapa com os contadores próximos, para caso o MEI precise de um. | BAIXA|
-|RF-009| Categorizar o tipo de despesa (materia prima, material revenda, uso consumo, material de limpeza, energia eletrica, água, etc). | MÉDIA |
+|RF-009| Cadastrar e categorizar o tipo de despesa (materia prima, material revenda, uso consumo, material de limpeza, energia eletrica, água, etc). | MÉDIA |
 |RF-010| Permitir que o empresário veja a razão entre faturamento e despesas. | MÉDIA|
 |RF-011| Criar um alerta textual para caso as despesas ultrapassem o faturamento. | MÉDIA|
 
