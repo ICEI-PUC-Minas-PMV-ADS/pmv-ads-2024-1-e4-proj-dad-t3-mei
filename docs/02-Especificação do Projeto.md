@@ -95,7 +95,7 @@ ATOR |	DESCRIÇÃO |
 --|--|
 Empresário|	Usuário responsável pelo cadastro de suas vendas, serviços prestados e clientes.|
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/114624183/3ca64133-2834-49b9-bf5f-48023bd15a99)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/114624183/eb4efca3-b581-495f-bfd3-71b0320081a1)
 
 # Matriz de Rastreabilidade
 
