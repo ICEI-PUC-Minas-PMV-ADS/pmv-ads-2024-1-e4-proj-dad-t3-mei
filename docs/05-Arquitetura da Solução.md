@@ -11,7 +11,7 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/79220860/abccded8-30af-42c5-96b6-e0f49fef99dd)
 
-
+![resourceProvider ashx-1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/116749525/2aac44dd-e82e-4a3e-9e6a-1e00ccb7ae61)
 
 As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Classes”.
 
