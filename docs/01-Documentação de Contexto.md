@@ -31,3 +31,7 @@ Nossa aplicação surge a partir desse desafio, colaborando com o empreendedor p
 [3] https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/38044-em-2021-brasil-tinha-13-2-milhoes-de-microempreendedores-individuais-meis
 
 [4]https://celero.com.br/blog/desafios-das-micro-e-pequenas-empresas/
+
+## Público-Alvo
+
+Empresários que tenham como o regime de tributação o MEI (Micro Empreendedor Individual).
