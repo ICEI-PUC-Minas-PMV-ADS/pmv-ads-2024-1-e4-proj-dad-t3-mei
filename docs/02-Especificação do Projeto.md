@@ -27,7 +27,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+No processo em questão, o gerenciamento das despesas, faturamentos e metas evidencia os benefícios positivos que uma aplicação voltada para o auxílio de microempreendedores poderia proporcionar ao facilitar essas tarefas.
 
 ### Descrição Geral da Proposta
 
@@ -37,13 +37,9 @@ Apresente aqui uma descrição da sua proposta abordando seus limites e suas lig
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
 
+
 ![Processo 1](img/02-bpmn-proc1.png)
 
-### Processo 2 – NOME DO PROCESSO
-
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
-
-![Processo 2](img/02-bpmn-proc2.png)
 
 ## Indicadores de Desempenho
 
@@ -70,6 +66,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-009| Cadastrar e categorizar o tipo de despesa (materia prima, material revenda, uso consumo, material de limpeza, energia eletrica, água, etc). | MÉDIA |
 |RF-010| Permitir que o empresário veja a razão entre faturamento e despesas. | MÉDIA|
 |RF-011| Criar um alerta textual para caso as despesas ultrapassem o faturamento. | MÉDIA|
+|RF-012| Criar projeções de faturamento baseadas nos dados a médio/longo prazo. | MÉDIA|
 
 
 ### Requisitos não Funcionais
