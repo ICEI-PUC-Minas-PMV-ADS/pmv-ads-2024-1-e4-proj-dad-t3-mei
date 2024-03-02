@@ -41,7 +41,7 @@ Apresente aqui uma descrição da sua proposta abordando seus limites e suas lig
 
 Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
 
-![indicadores de desempenho](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/64c5ee59-21fd-489f-af69-f6f146636843)
+![indicadores](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/116749525/9c038b2b-6dcd-4166-8dfd-5415ff64ad69)
 
 ## Requisitos
 
