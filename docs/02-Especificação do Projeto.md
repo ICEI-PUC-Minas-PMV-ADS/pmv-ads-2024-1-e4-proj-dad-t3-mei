@@ -62,8 +62,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-009| Cadastrar e categorizar o tipo de despesa (materia prima, material revenda, uso consumo, material de limpeza, energia eletrica, água, etc). | MÉDIA |
 |RF-010| Permitir que o empresário veja a razão entre faturamento e despesas. | MÉDIA|
 |RF-011| Criar um alerta textual para caso as despesas ultrapassem o faturamento. | MÉDIA|
-|RF-012| Criar projeções de faturamento baseadas nos dados a médio/longo prazo. | MÉDIA|
-
 
 ### Requisitos não Funcionais
 
