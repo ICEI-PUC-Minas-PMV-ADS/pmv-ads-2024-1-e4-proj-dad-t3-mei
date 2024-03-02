@@ -23,6 +23,10 @@ Muitos desses Microempreendedores acabam tendo dificuldades diversas com relaç�
 
 Nossa aplicação surge a partir desse desafio, colaborando com o empreendedor para que sua gestão financeira fique descomplicada, uma vez que uma das dificuldades sofridas por eles é a implementação de novas ferramentas e tecnologia em seu dia a dia. 
 
+## Público-Alvo
+
+Empresários que tenham como o regime de tributação o MEI (Micro Empreendedor Individual).
+
 ---
 [1]https://www.ibge.gov.br/estatisticas/multidominio/empreendedorismo/38014-estatisticas-dos-cadastros-de-microempreendedores-individuais.html
 
@@ -32,6 +36,3 @@ Nossa aplicação surge a partir desse desafio, colaborando com o empreendedor p
 
 [4]https://celero.com.br/blog/desafios-das-micro-e-pequenas-empresas/
 
-## Público-Alvo
-
-Empresários que tenham como o regime de tributação o MEI (Micro Empreendedor Individual).
