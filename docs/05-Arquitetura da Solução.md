@@ -3,7 +3,7 @@
 
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
 
-![arquitetura distribuida](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/15f3e251-2ef2-4bfe-8c7f-f63b1c23c8d0)
+![arquitetura distribuida refeita](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/bc67fec4-a497-4b00-b54e-23d2f234b0c2)
 
 ![resourceProvider ashx-1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/116749525/2aac44dd-e82e-4a3e-9e6a-1e00ccb7ae61)
 
