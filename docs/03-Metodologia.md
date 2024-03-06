@@ -31,15 +31,11 @@ O projeto segue a seguinte convenção para o nome de branches:
 - `testing`: versão em testes do software
 - `dev`: versão de desenvolvimento do software
 
-Quanto à gerência de issues, o projeto adota a seguinte convenção para
-etiquetas:
+Quanto aos commits:
 
-- `documentation`: melhorias ou acréscimos à documentação
-- `bug`: uma funcionalidade encontra-se com problemas
-- `enhancement`: uma funcionalidade precisa ser melhorada
-- `feature`: uma nova funcionalidade precisa ser introduzida
-
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gerência de tags, merges, commits e branchs é realizada. Discuta como a gerência de issues foi realizada.
+- As mensagens de commits devem ser bem detalhadas
+  - `Update <nome do arquivo> - <descrição da mudança>`
+  - Exemplo: `Update 05-Arquitetura da Solução.md - Adiciona o Diagrama de Classes`
 
 > **Links Úteis**:
 > - [Microfundamento: Gerência de Configuração](https://pucminas.instructure.com/courses/87878/)
