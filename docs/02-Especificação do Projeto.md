@@ -140,6 +140,13 @@ O gerenciamento adequado de tarefas contribuirá para que o projeto alcance alto
 
 O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo.
 
-![Orçamento Projeto](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/1e4b6e16-c39c-46d0-954a-a636bc604449)
+![Orçamento Projeto refeito](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/d4d8cf6f-d773-4d5a-86fd-9a98e1d3d921)
 
+Explicação do orçamento:
 
+- Foram considerados 143 dias corridos de projeto e 4 horas de desenvolvimento por dia, totalizando 572 horas de projeto;
+- Foram considerados salários de estágio para cada integrante do projeto (R$2500,00 para Fullstack, R$1800 para UX, R$1900 para Tester e R$2100 para o Scrum);
+- Horas de trabalho semanal: 28 horas (4 horas x 7 dias);
+- Valor Hora: Salario / ( hora semanal x 4 );
+- Para os valores dos Hardware, foram considerados equipamentos simples (Computador: R$3000,00, Tela extra: R$450,00, Mouse: R$50,00 e Teclado: R$150,00) R$ R$ e os valores foram divididos pelo total de eixos da faculdade (5 eixos);
+- Porcentagem de lucro: sugerido pelo orientador do Projeto.
