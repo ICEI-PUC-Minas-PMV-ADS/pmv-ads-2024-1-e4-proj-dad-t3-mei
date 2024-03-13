@@ -69,14 +69,24 @@ Em teste: esta lista/coluna receberá todas as funcionalidades que estão em tes
 
 As ferramentas empregadas no projeto são:
 
-- Editor de código: Visual Studio Code.
-- Ferramentas de comunicação: WhatsApp e Teams.
-- Ferramentas de desenho de tela (wireframing): Figma.
+**Editor de código**:
+> - [Visual Studio Code](https://visualstudiocode.com): Ferramenta utilizada para a confecção de códigos.
 
-O editor de código foi escolhido porque ele possui uma integração com o sistema de versão. As ferramentas de comunicação utilizadas possuem integração semelhante e por isso foram selecionadas. Por fim, para criar diagramas utilizamos essa ferramenta por melhor captar as necessidades da nossa solução.
+**Ferramentas de Comunicação e Organização:**
 
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
- 
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [Slack](https://slack.com/)
-> - [Github](https://github.com/)
+> - [Microsoft Teams](https://microsoftteams.com): Ferramenta utilizada para realizar as reuniões de equipe, assim como as reuniões semanais em conjunto com o coordenador do projeto.
+> - [WhatsApp](https://whatsapp.com): Ferramenta utilizada para comunicação interna entre os membros da equipe.
+> - [Trello](https://trello.com): Ferramenta utilizada para a organização e separação de tarefas no projeto.
+
+**Ferramenta de desenho de tela (wireframing):**
+> - [Figma](https://figma.com).
+
+**Ferramenta de desenho dos diagramas:**
+> - [Lucidchart](https://lucidchart.com/).
+
+
+O editor de código foi escolhido porque ele possui uma integração com o sistema de versão. 
+As ferramentas de comunicação foram escolhidas pois são completas, viabilizando as chamadas de vídeo, áudio e/ou chat, seja pelo computador ou pelo smartphone.
+A ferramenta de organização foi escolhida pois possui acesso gratuito e de fácil interação.
+A ferramenta de desenho foi escolhida pois possui acesso gratuito e de fácil interação, sendo possível criar wireframes conforme a necessidade do projeto, assim como a edição colaborativa pela equipe.
+Por fim, para criar diagramas utilizamos essa ferramenta por melhor captar as necessidades da nossa solução e por possuir acesso gratuito e fácil interação.
