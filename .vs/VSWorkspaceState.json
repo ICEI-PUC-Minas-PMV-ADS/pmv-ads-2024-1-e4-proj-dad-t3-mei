@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\docs"
+    "\\src",
+    "\\src\\Api",
+    "\\src\\Api\\mei"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\src\\Api\\mei\\mei.csproj",
   "PreviewInSolutionExplorer": false
 }
