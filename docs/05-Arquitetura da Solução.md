@@ -13,40 +13,15 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/79220860/abccded8-30af-42c5-96b6-e0f49fef99dd)
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Classes”.
-
-> - [Diagramas de Classes - Documentação da IBM](https://www.ibm.com/docs/pt-br/rational-soft-arch/9.6.1?topic=diagrams-class)
-> - [O que é um diagrama de classe UML? | Lucidchart](https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-classe-uml)
-
-## Modelo ER
-
-O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.]
-
-As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER”.
-
-> - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
-
-## Esquema Relacional
-
-O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
- 
-As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Relacional”.
-
-> - [Criando um modelo relacional - Documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/10.2.2?topic=designer-creating-relational-model)
-
-## Modelo Físico
-
-Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
-
 ## Tecnologias Utilizadas
 
-> - Ambiente de Desenvolvimento: Visual Studio 2022 e Visual Studio Code
-> - Front-end: React
-> - Front-end Mobile: React Native
-> - Banco de dados: MongoDB
-> - Back-end: C#
-> - Diagramas: Figma, Lucidchart, Draw.io
-> - Plataforma: Azure
+ - Ambiente de Desenvolvimento: Visual Studio 2022 e Visual Studio Code
+ - Front-end: React
+ - Front-end Mobile: React Native
+ - Banco de dados: MongoDB
+ - Back-end: C#
+ - Diagramas: Figma, Lucidchart, Draw.io
+ - Plataforma: Azure
 
 ## Hospedagem
 
