@@ -3,12 +3,16 @@
 Com essa ferramenta temos a intenção de facilitar o dia a dia dos empresários, para que eles consigam ter um maior controle de suas finanças. Temos como prioridade ajudar o microempreendedor a controlar suas vendas por dia, semana ou mês, emitindo também um alerta de limite total do mês, para que ele não extrapole e tenha surpresas ao final.
 ## Personas
 
+![persona 1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/7986cca4-90c2-4c9d-accf-97b3e983003d)
 Dilma tem 50 anos, é uma microempreendedora na cidade de Belo Horizonte MG. Ela tem uma loja de roupas, e mesmo que nem todas as semanas sejam muito movimentadas, ela sente dificuldade de controlar suas finanças, saber quanto foi vendido no débito, crédito e dinheiro. Está em busca de um sistema que a ajude a melhorar seu controle financeiro, e assim, saiba exatamente quanto vendeu por semana.
 
+![persona 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/3f79d479-cd71-4d48-b6e9-b1869d8976ed)
 Júlia tem 28 anos, tem uma mercadinho na cidade de Contagem MG, pelo alto movimento todos os dias, ela sente muita dificuldade de monitorar quanto está vendendo para que não tenha surpresas na hora da declaração do imposto.
 
+![persona 3](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/fc7fb534-f2b8-40d1-b3fd-15d0c1ad00b7)
 Daniel tem 35 anos, é dono de uma padaria na cidade de Petrópoles RJ, como o movimento em seu comércio é muito alto ele gostaria de ter uma ferramenta que o ajudasse a ver suas vendas diárias sem peder muito tempo com os cálculos. 
 
+![persona 4](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/ccf0f51a-20e5-4017-ae9e-4ca7201d3c32)
 Renato tem 46 anos, ele era MEI em 2020, nessa época por falta de controle do faturamento acabou estrapolando o limite permitido e foi excluido do regime, tendo que pagar os impostos retroativos. Como esse ano, 2024, resolveu voltar a ser MEI, está com receio da mesma coisa acontecer, e por isso busca no mercado um sistema que o ajude neste controle e o avise quando ele estiver prestes a atingir o limite novamente.
 
 ## Histórias de Usuários
