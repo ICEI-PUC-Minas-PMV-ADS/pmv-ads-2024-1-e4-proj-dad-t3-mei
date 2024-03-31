@@ -1,5 +1,7 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
+using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace mei.Models
 {
