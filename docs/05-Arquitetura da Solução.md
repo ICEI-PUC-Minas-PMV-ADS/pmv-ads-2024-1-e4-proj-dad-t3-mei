@@ -18,24 +18,101 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
 
 ## CRUD das Collections Projetadas
 
-- Collection Endereço:
+- Collection MEI:
 
 **GET**
-![GET](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/eaf2943b-9c4e-4cc2-a9f3-dc7b9d4b5887)
 
 **GET BY ID**
-![GetByID](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/5b455264-d2b2-46fd-a687-3088c601f21c)
 
 **POST**
-![POST](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/a6283e9f-1ff8-428a-b43f-4b4d3d78f7cd)
 
 **PUT**
-![PUT](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/dcba5c8e-2bcb-4fa0-80fc-81861d422b57)
 
 **DELETE**
-![DELETE](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/b3aec84b-f1af-4580-a0b7-b5ec9af6bde9)
 
+- Collection Usuario:
 
+**GET**
+
+**GET BY ID**
+
+**POST**
+
+**PUT**
+
+**DELETE**
+
+- Collection Cliente:
+
+**GET**
+
+**GET BY ID**
+
+**POST**
+
+**PUT**
+
+**DELETE**
+
+- Collection Faturamento:
+
+**GET**
+
+**GET BY ID**
+
+**POST**
+
+**PUT**
+
+**DELETE**
+
+- Collection Despesa:
+
+**GET**
+
+**GET BY ID**
+
+**POST**
+
+**PUT**
+
+**DELETE**
+
+- Collection Categoria:
+
+**GET**
+
+**GET BY ID**
+
+**POST**
+
+**PUT**
+
+**DELETE**
+
+- Collection Serviço:
+
+**GET**
+
+**GET BY ID**
+
+**POST**
+
+**PUT**
+
+**DELETE**
+
+- Collection Produto:
+
+**GET**
+
+**GET BY ID**
+
+**POST**
+
+**PUT**
+
+**DELETE**
 
 ## Tecnologias Utilizadas
 
