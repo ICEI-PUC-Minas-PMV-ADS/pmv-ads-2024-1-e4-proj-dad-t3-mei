@@ -19,6 +19,7 @@ namespace mei
             builder.Services.AddSingleton<CategoriasService>();
             builder.Services.AddSingleton<ClientesService>();
             builder.Services.AddSingleton<DespesasService>();
+            builder.Services.AddSingleton<UsuariosService>();
             builder.Services.AddSingleton<FaturamentosService>();
             builder.Services.AddSingleton<MeisService>();
             builder.Services.AddCors(options =>
