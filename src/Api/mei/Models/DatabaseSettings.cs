@@ -9,8 +9,6 @@
         //public string FaturamentosCollectionName { get; set; } = null!;
         //public string CategoriasCollectionName { get; set; } = null!;
         public string ClientesCollectionName { get; set; } = null!;
-        //public string DespesasCollectionName { get; set; } = null!;
-
 
     }
 }
