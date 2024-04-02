@@ -74,7 +74,7 @@ As ferramentas empregadas no projeto são:
 
 **Ferramentas de Comunicação e Organização:**
 
-> - [Microsoft Teams](https://microsoftteams.com): Ferramenta utilizada para realizar as reuniões de equipe, assim como as reuniões semanais em conjunto com o coordenador do projeto.
+> - [Microsoft Teams](https://teams.microsoft.com/): Ferramenta utilizada para realizar as reuniões de equipe, assim como as reuniões semanais em conjunto com o coordenador do projeto.
 > - [WhatsApp](https://whatsapp.com): Ferramenta utilizada para comunicação interna entre os membros da equipe.
 > - [Trello](https://trello.com): Ferramenta utilizada para a organização e separação de tarefas no projeto.
 
