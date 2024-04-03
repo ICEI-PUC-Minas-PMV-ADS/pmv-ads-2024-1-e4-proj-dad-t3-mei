@@ -16,103 +16,55 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
 
 
 
-## CRUD das Collections Projetadas
+## Schemas das Collections Projetadas
 
 - Collection MEI:
 
-**GET**
+![Schema MEI](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/c7c8b535-a99b-466d-9bd8-c6e395ebbcbe)
 
-**GET BY ID**
-
-**POST**
-
-**PUT**
-
-**DELETE**
+![Example Value MEI](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/a1fa0bf0-588b-46a6-80af-14cee7dfc504)
 
 - Collection Usuario:
 
-**GET**
+![Schema Usuario](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/632fc39d-6311-47d3-a383-16687a316d04)
 
-**GET BY ID**
-
-**POST**
-
-**PUT**
-
-**DELETE**
+![Example Value Usuario](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/1165df44-d360-4e0f-9737-4c7a3d0462d3)
 
 - Collection Cliente:
 
-**GET**
+![Schema Cliente](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/f8c3ab65-3dca-466b-8561-03ac67e9297b)
 
-**GET BY ID**
-
-**POST**
-
-**PUT**
-
-**DELETE**
+![Example Value Cliente](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/b3611568-1f4e-451a-bf1f-32fcc6f432be)
 
 - Collection Faturamento:
 
-**GET**
+![Schema Faturamento](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/62be8db1-9590-4596-b1bf-68f53bafac9f)
 
-**GET BY ID**
-
-**POST**
-
-**PUT**
-
-**DELETE**
+![Example Value Faturamento](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/55124558-e719-4879-a2f4-6e6cf0cad578)
 
 - Collection Despesa:
 
-**GET**
+![Schema Despesa](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/38a2492d-6318-44b7-9864-bc2c32c5f9cd)
 
-**GET BY ID**
-
-**POST**
-
-**PUT**
-
-**DELETE**
+![Example Value Despesa](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/c529576a-d7c4-49ed-aee8-47c79735d791)
 
 - Collection Categoria:
 
-**GET**
+![Schema Categoria](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/39993dca-6fae-419c-bef6-55ff5651fec4)
 
-**GET BY ID**
-
-**POST**
-
-**PUT**
-
-**DELETE**
+![Example Value Categoria](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/94a6c390-ece2-42e8-bbda-6f902aa0e1ac)
 
 - Collection Serviço:
 
-**GET**
+![Schema Serviço](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/b5784055-f6c7-4635-a8a5-43346499eb4b)
 
-**GET BY ID**
-
-**POST**
-
-**PUT**
-
-**DELETE**
+![Example Value Servico](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/cb48323b-a841-48bd-9935-208ebab4fb30)
 
 - Collection Produto:
 
-**GET**
+![Schema Produto](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/fbcc1bc6-a89e-4a20-ac3d-a48dd80d7fb7)
 
-**GET BY ID**
-
-**POST**
-
-**PUT**
-
-**DELETE**
+![Example Value Produto](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/b01c3d6a-b248-4431-a396-fa8e365652b2)
 
 ## Tecnologias Utilizadas
 
