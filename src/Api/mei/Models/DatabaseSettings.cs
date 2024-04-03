@@ -7,7 +7,7 @@
         public string MeisCollectionName { get; set; } = null!;
         public string UsuariosCollectionName { get; set; } = null!;
         //public string FaturamentosCollectionName { get; set; } = null!;
-        //public string CategoriasCollectionName { get; set; } = null!;
+        public string CategoriasCollectionName { get; set; } = null!;
         public string ClientesCollectionName { get; set; } = null!;
 
     }
