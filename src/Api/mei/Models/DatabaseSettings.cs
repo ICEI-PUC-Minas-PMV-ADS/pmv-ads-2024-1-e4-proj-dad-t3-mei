@@ -11,6 +11,7 @@
         public string ClientesCollectionName { get; set; } = null!;
         public string DespesasCollectionName { get; set; } = null!;
         public string ProdutosCollectionName { get; set; } = null!;
+        public string ServicosCollectionName { get; set; } = null!;
 
     }
 }
