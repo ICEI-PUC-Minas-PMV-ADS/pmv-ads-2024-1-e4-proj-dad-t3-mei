@@ -23,6 +23,7 @@ namespace mei
             builder.Services.AddSingleton<FaturamentosService>();
             builder.Services.AddSingleton<MeisService>();
             builder.Services.AddSingleton<ProdutosService>();
+            builder.Services.AddSingleton<ServicosService>();
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy(name: MyAllowSpecificOrigins,
