@@ -1,14 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Bson;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace mei.Controllers
 {
-    public class DespesasController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class DespesasController : ControllerBase
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
     }
 }
