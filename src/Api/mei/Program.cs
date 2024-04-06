@@ -1,7 +1,9 @@
-
 using mei.Models;
 using mei.Services;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 
 namespace mei
@@ -15,7 +17,7 @@ namespace mei
 
             // Add services to the container.
             builder.Services.Configure<DatabaseSettings>(
-                builder.Configuration.GetSection("MeiDatabase"));
+            builder.Configuration.GetSection("MeiDatabase"));
             builder.Services.AddSingleton<CategoriasService>();
             builder.Services.AddSingleton<ClientesService>();
             builder.Services.AddSingleton<DespesasService>();
@@ -32,6 +34,25 @@ namespace mei
                                       policy.WithOrigins("http://localhost:5173").AllowAnyHeader()
                                                   .AllowAnyMethod(); ;
                                   });
+            });
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            // ADD jwt authentication
+            .AddJwtBearer(options =>
+            {
+                options.SaveToken = true;
+                options.RequireHttpsMetadata = false;
+                options.TokenValidationParameters = new TokenValidationParameters()
+                {
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("S3nh4Mu1t0P0d3r0s4S3cr3t4Cu1d4d0"))
+                };
             });
 
             builder.Services.AddControllers()
@@ -59,6 +80,7 @@ namespace mei
 
             app.UseCors(MyAllowSpecificOrigins);
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllers();
