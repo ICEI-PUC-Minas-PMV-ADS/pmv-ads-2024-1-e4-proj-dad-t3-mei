@@ -1,10 +1,12 @@
 ﻿using mei.Models;
 using mei.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace mei.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class MeisController : ControllerBase
