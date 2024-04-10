@@ -1,5 +1,8 @@
 # MEI A MEI
 
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/70844369/5d4e114b-ca18-4343-9704-4ff45c05b97c)
+
+
 `Análise e Desenvolvimento de Sistemas`
 
 `Eixo 4 - Projeto: Desenvolvimento de uma Aplicação Distribuída`
