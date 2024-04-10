@@ -1,7 +1,6 @@
 # MEI A MEI
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/70844369/5d4e114b-ca18-4343-9704-4ff45c05b97c)
-
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/70844369/5d4e114b-ca18-4343-9704-4ff45c05b97c" width="200" height="200"/>
 
 `Análise e Desenvolvimento de Sistemas`
 
