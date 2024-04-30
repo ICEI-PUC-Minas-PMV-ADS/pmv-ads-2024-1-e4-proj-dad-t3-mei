@@ -4,6 +4,28 @@
 
 Layout padrão da aplicação que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
 
+- Cores 
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/20f2e451-f4f9-4c80-ae00-188ce2f93f65)
+
+- Cabeçalho:
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/8b2d2c95-0422-477a-aa44-de891499ae25)
+
+Letra Nome Sistema: tamanho 32
+
+Letra Itens menu tamanho: 18
+
+Botão - Letra tamanho: 18
+
+- Telas
+
+Cor de Fundo: #F2F2F2
+
+Cor Cabeçalho: #F2CB57
+
+Cores Botões 
+
 > **Links Úteis**:
 >
 > - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
