@@ -4,11 +4,11 @@
 
 Layout padrão da aplicação que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
 
-- Cores
+> - Cores
    
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/20f2e451-f4f9-4c80-ae00-188ce2f93f65)
 
-- Cabeçalho:
+> - Cabeçalho:
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/8b2d2c95-0422-477a-aa44-de891499ae25)
 
@@ -18,7 +18,7 @@ Letra Itens menu tamanho: 18
 
 Botão - Letra tamanho: 18
 
-- Telas
+> - Telas
 
 Cor de Fundo: #F2F2F2
 
@@ -38,7 +38,15 @@ Cores Botões:
 
    - Letras Excluir, Cadastrar Despesa, Cancelar Edição: #1A0324
 
-Tamanho letra Botões: 18
+Tamanho letra Botões: 14 a 18
+
+Tamanho Letra Titulos:
+
+   - Principais: entre 35 e 38;
+   - Subtítulos: entre 25 e 30;
+   - Submenus das telas: 22;
+   - Textos diversos: 14;
+   - Letras tabelas: 14;
 
 > **Links Úteis**:
 >
