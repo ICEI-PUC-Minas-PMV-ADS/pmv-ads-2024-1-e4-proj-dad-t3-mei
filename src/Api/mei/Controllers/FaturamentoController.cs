@@ -8,7 +8,7 @@ using MongoDB.Driver;
 
 namespace mei.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class FaturamentosController : ControllerBase

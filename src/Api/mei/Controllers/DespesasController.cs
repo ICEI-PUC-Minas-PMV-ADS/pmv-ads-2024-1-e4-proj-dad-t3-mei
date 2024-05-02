@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace mei.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class DespesasController : ControllerBase

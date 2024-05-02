@@ -36,7 +36,7 @@ namespace mei.Controllers
 
             return user;
         }
-
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Post(Usuario newUser)
         {
@@ -80,7 +80,7 @@ namespace mei.Controllers
         [HttpPost("authenticate")]
         public async Task<ActionResult> Authenticate(AuthenticateDto model)
         {
-            var user = await _usuariosService.GetAsync(model.Id);
+            var user = await _usuariosService.GetByEmailAsync(model.Email);
 
             if (user == null || (model.Password != model.Password))
                 return Unauthorized();

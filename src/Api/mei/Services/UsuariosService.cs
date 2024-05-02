@@ -37,5 +37,10 @@ namespace mei.Services
 
         public async Task RemoveAsync(string id) =>
             await _usuariosCollection.DeleteOneAsync(x => x.Id == id);
+
+        public async Task<Usuario> GetByEmailAsync(string email)
+        {
+            return await _usuariosCollection.Find<Usuario>(usuario => usuario.Email == email).FirstOrDefaultAsync();
+        }
     }
 }
