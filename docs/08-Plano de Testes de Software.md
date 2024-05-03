@@ -34,7 +34,7 @@ Enumere quais cenários de testes foram selecionados para teste. Neste tópico o
 | **Passos** | - 1.	Acessar o sistema. <br> - 2. Inserir e-mail <br> - 3. Inserir senha <br> - 4. Acionar o comando Entrar. <br> - 5. Acionar o menu Gerenciamento. <br> - 6. Acionar o sub menu Clientes. <br> - 7. Preencher os campos. <br> - 8. Acionar o comando Salvar.|
 | **Critérios de Êxito** | O sistema deve permitir o cadastro de clientes com um alerta textual "Cliente Cadastrado com sucesso". |
 
-| **Caso de Teste** | CT 05 - Cadastrar Clientes |
+| **Caso de Teste** | CT 05 - Cadastrar Produtos e Serviços |
 |------------------ | ------------------------ |
 | **Requisitos Associados** | RF007 - Permitir cadastrar serviços prestados e produtos vendidos. |
 | **Objetivo do Teste** | Permitir o cadastro de serviços e produtos. |
