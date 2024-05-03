@@ -12,5 +12,7 @@ namespace mei.Models
         public decimal Valor { get; set; }
         public DateTime DataDespesa { get; set; }
         public List<string>? CategoriasId { get; set; }
+        public string UsuarioId { get; set; }
+
     }
 }

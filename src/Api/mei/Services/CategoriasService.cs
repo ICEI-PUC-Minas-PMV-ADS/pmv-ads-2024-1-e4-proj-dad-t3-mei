@@ -31,5 +31,10 @@ namespace mei.Services
 
         public async Task RemoveAsync(string id) =>
             await _categoriasCollection.DeleteOneAsync(x => x.Id == id);
+        
+        public async Task<List<Categoria>> GetByUsuarioIdAsync(string usuarioId)
+        {
+            return await _categoriasCollection.Find(f => f.UsuarioId == usuarioId).ToListAsync();
+        }
     }
 }

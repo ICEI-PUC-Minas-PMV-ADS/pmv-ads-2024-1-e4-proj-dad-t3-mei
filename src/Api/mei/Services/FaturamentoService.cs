@@ -32,5 +32,11 @@ namespace mei.Services
 
         public async Task RemoveAsync(string id) =>
             await _faturamentosCollection.DeleteOneAsync(x => x.Id == id);
+        
+        public async Task<List<Faturamento>> GetByUsuarioIdAsync(string usuarioId)
+        {
+            return await _faturamentosCollection.Find(f => f.UsuarioId == usuarioId).ToListAsync();
+        }
+        
     }
 }

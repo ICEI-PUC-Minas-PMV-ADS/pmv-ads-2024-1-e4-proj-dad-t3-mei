@@ -15,8 +15,9 @@ namespace mei.Models
         public decimal Valor { get; set; }
         public DateTime DataFaturamento { get; set; }
         public MeioDePagamento MeioDePagamento { get; set; }
+        public string UsuarioId { get; set; }
     }
-
+    
     public enum MeioDePagamento
     {
         [BsonElement("Dinheiro")]

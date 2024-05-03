@@ -14,5 +14,7 @@ namespace mei.Models
         public string Email { get; set; }
         public string Telefone { get; set; }
         public DateOnly DataDeNascimento { get; set; }
+        public string UsuarioId { get; set; }
+
     }
 }
