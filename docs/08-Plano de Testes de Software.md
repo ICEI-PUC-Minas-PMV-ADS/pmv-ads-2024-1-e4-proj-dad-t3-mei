@@ -41,7 +41,7 @@ Enumere quais cenários de testes foram selecionados para teste. Neste tópico o
 | **Passos** | - 1.	Acessar o sistema. <br> - 2. Inserir e-mail <br> - 3. Inserir senha <br> - 4. Acionar o comando Entrar. <br> - 5. Acionar o menu Gerenciamento. <br> - 6. Acionar o sub menu Produto. <br> - 7. Preencher os campos. <br> - 8. Acionar o comando Salvar. <br> - 9. Acionar o sub menu Serviços. <br> - 10. Preencher os campos. <br> - 11. Acionar o comando Salvar.|
 | **Critérios de Êxito** | O sistema deve permitir o cadastro de produtos e serviços com um alerta textual "Produto/Serviço Cadastrado com sucesso". |
 
-| **Caso de Teste** | CT 06 - Procurar um contador próximo a minha locaçização. |
+| **Caso de Teste** | CT 06 - Procurar um contador próximo a minha localização. |
 |------------------ | ------------------------ |
 | **Requisitos Associados** | RF008 - Ter a opção "Encontrar um contador próximo a você" e mostrar um mapa com os contadores próximos, para caso o MEI precise de um. |
 | **Objetivo do Teste** | Permitir que o usuário encontre um contador próximo a ele. |
