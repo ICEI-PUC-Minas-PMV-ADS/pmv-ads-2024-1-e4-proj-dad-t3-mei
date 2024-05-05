@@ -15,7 +15,7 @@ Ambiente de Trabalho|Plataforma|Link de Acesso
 |:------------------|:--------:|:------------:| 
 |Repositório|GitHub|[GitHub](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei) |
 |Documentos do Projeto|GitHubDocs| [GitHubDocs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/tree/main/docs) |
-|Projeto de Interface e WireFrames| Figma| [Figma](https://www.figma.com/file/E7DISYso9rXR5G6Rvvb64q/Untitled?type=design&node-id=0-1&mode=design&t=6bEEdDHSAs1G2oVY-0 ) |
+|Projeto de Interface e WireFrames| Figma/Canva | [Figma](https://www.figma.com/file/E7DISYso9rXR5G6Rvvb64q/Untitled?type=design&node-id=0-1&mode=design&t=6bEEdDHSAs1G2oVY-0 ) [Canva](https://www.canva.com/design/DAGD4_qQmnA/YYTivnd8Zsfxt9JumaZi1Q/edit) |
 |Gerenciamento do Projeto|Trello| [Trello](https://trello.com/b/aP9pRNed/projeto-puc-eixo-4) |
 
 ## Controle de Versão
