@@ -4,7 +4,7 @@ Após realizar os testes de usabilidade, obtém-se um relatório a partir das an
 
 As referências abaixo irão auxiliá-lo na geração do artefato “Registro de Testes de Usabilidade”.
 
-## Respostas do 1º teste de usabilidade em relação as telas projetadas para o projeto MEI a MEI:
+## Respostas do 1º teste de usabilidade em relação as telas projetadas para o projeto MEI a MEI sistema Web:
 
 1. Você é um Micro Empreendedor Indidvidual?
 
