@@ -1,10 +1,10 @@
 
 # Projeto de Interface
-## Diagrama de Fluxo
+## Diagrama de Fluxo web
 
 ![telas](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/8a0cc9e7-ccd4-40d0-a379-eb7930b6c26a)
 
-## Wireframes
+## Wireframes Web
 
 ![wireframes 1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/1532f73a-d794-4751-98e9-557b7802f2ed)
 
