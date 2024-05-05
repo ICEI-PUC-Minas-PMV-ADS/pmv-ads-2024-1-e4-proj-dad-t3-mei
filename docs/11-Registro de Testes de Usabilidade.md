@@ -88,3 +88,19 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Registro de
 
 - Não
 - No momento, não!
+
+### Conclusão pesquisa usabilidade sistema web MEI a MEI:
+
+Ao analisarmos as respostas da pesquisa, observou-se que algumas mudanças serão necessárias para atender o público alvo do sistema MEI a MEI.
+
+80% consideram que informações de pagamento e do limite MEI devem constar na tela de apresentação para que considerem adquirir o sistema.
+
+Apesar de alguns não terem encontrado o limite de faturamento na tela Meu MEI (ao logar no sistema), após mostrarmos onde ele está, consideraram uma opção viável para alertar o usuário do faturamento permitido.
+
+Mudanças na tela de registro também serão necessárias, uma vez que 80% dos entrevistados esperavam criar/editar/excluir os registros feitos no sistema.
+
+A utilização de frases de alerta ao realizar alguma ação dentro do sistema, também é esperada pelos entrevistados e deverá ser implementada para atingir as expectativas de uso.
+
+Para além disso, os entrevistados consideraram o sistema com um bom padrão de apresentação e poucos tiveram dificuldades para encontrar telas ou entender onde realiza alguma ação nele.
+
+A equipe de desenvolvimento se compromete em realizar as mudanças necessárias até a última etapa da entrega do projeto.
