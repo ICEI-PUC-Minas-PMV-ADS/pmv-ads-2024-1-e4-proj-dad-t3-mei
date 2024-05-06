@@ -1,0 +1,51 @@
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#root {
+  height: 100vh;
+}
+.purple-text {
+  color: #8538a6;
+}
+.dark-purple-text {
+  color: #470459;
+}
+.drv {
+  width: 80%;
+}
+.drv input,
+.drv select {
+  border-radius: 1px;
+}
+.dchart {
+  max-height: 300px;
+}
+
+#uncontrolled-tab-example-tab-venda,
+#uncontrolled-tab-example-tab-despesas,
+#uncontrolled-tab-example-tab-produtos,
+#uncontrolled-tab-example-tab-servicos,
+#uncontrolled-tab-example-tab-categoria,
+#uncontrolled-tab-example-tab-clientes,
+#uncontrolled-tab-example-tab-contador {
+  background-color: #f8f9fa;
+  color: #8538a6;
+  font-weight: 600;
+}
+
+#uncontrolled-tab-example-tab-venda.nav-link.active,
+#uncontrolled-tab-example-tab-despesas.nav-link.active,
+#uncontrolled-tab-example-tab-produtos.nav-link.active,
+#uncontrolled-tab-example-tab-servicos.nav-link.active,
+#uncontrolled-tab-example-tab-categoria.nav-link.active,
+#uncontrolled-tab-example-tab-clientes.nav-link.active,
+#uncontrolled-tab-example-tab-contador.nav-link.active {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 3px;
+}
+.nav-link {
+  font-weight: bold;
+}
