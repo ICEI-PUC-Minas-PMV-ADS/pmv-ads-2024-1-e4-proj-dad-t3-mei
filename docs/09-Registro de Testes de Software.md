@@ -16,3 +16,11 @@ Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identi
 **Teste Software Sistema Web versão 1**
 
 [Link para Youtube](https://youtu.be/gRRu6zKhhXQ)
+
+Observações do teste:
+1. CT 01 Funcionando
+2. CT 02 funcionando com um leve delay de atualização entre registro da venda e aparecer no faturamento geral e a frase confirmando o cadastro não aparece;;
+3. CT 03 funciona, mas a frase confirmando o cadastro não aparece;
+4. CT 04 funciona, mas a frase confirmando o cadastro não aparece;
+5. CT 05 funciona, mas a frase confirmando o cadastro não aparece;
+6. CT 06 precisa de ser melhorada para atingir o objetivo de teste;
