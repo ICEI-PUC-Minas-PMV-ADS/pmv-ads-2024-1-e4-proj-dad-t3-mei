@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { Link } from 'react-router-dom';
 import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
@@ -99,7 +100,7 @@ const RegistrarServicos = () => {
         throw new Error("Erro ao excluir o serviço");
       }
 
-      setServicos(servicos.filter((produto) => produto.id !== servicoId));
+      setServicos(servicos.filter((servico) => servico.id !== servicoId));
     } catch (error) {
       setError(error.message);
     } finally {
@@ -146,7 +147,9 @@ const RegistrarServicos = () => {
                 <ListGroup.Item className="" as="li" key={servico.id}>
                   {servico.nome}
                   <div className="d-flex justify-content-end">
-                    <button className="btn btn-success me-2">Editar</button>
+                    <Link to={`/editar/${servico.id}`}
+                    className="btn btn-success me-2">
+                    Editar</Link>
                     <button
                       onClick={() => handleExcluir(servico.id)}
                       className="btn btn-danger"
