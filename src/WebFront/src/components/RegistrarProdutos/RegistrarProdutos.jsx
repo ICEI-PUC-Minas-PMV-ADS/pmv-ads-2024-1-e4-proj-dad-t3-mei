@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+import { Link } from 'react-router-dom';
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import ListGroup from "react-bootstrap/ListGroup";
@@ -15,6 +16,7 @@ const RegistrarProdutos = () => {
   const [usuarioId, setUserId] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -146,7 +148,10 @@ const RegistrarProdutos = () => {
                 <ListGroup.Item className="" as="li" key={produto.id}>
                   {produto.nome}
                   <div className="d-flex justify-content-end">
-                    <button className="btn btn-success me-2">Editar</button>
+                    <Link to={`/editar/${produto.id}`}
+                      className="btn btn-success me-2">
+                      Editar
+                      </Link>
                     <button
                       onClick={() => handleExcluir(produto.id)}
                       className="btn btn-danger"
