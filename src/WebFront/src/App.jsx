@@ -30,7 +30,7 @@ function App() {
           <Route path="/registros" element={<Registros />} />
           <Route path="/perfil" element={<Perfil />} />
           <Route path="/editar/:id" element={<EditarProduto />}/>
-          <Route path="/editar/:id" element={<EditarServico />}/>
+          <Route path="/editarServico/:id" element={<EditarServico />}/>
         </Routes>
       </BrowserRouter>
     </>
