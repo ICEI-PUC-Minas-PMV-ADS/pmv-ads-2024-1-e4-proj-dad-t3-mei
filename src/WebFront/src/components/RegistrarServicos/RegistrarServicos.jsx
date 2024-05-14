@@ -147,7 +147,7 @@ const RegistrarServicos = () => {
                 <ListGroup.Item className="" as="li" key={servico.id}>
                   {servico.nome}
                   <div className="d-flex justify-content-end">
-                    <Link to={`/editar/${servico.id}`}
+                    <Link to={`/editarServico/${servico.id}`}
                     className="btn btn-success me-2">
                     Editar</Link>
                     <button
