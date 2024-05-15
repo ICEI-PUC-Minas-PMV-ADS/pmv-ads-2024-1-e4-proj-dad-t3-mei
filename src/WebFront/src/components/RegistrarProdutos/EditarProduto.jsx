@@ -53,6 +53,7 @@ const EditarProduto = () => {
       if (!response.ok) {
         throw new Error("Erro ao salvar os dados do produto");
       }
+    window.location.href = "/gerenciamento";
     } catch (error) {
       console.error(error);
     } finally {
@@ -88,7 +89,9 @@ const EditarProduto = () => {
           </Row>
           <Row>
             <Col>
+              <Link to="/gerenciamento">
               <Button className="btn btn-success me-2" onClick={handleSalvar}>Salvar</Button>
+              </Link>
             </Col>
           </Row>
         </Col>
