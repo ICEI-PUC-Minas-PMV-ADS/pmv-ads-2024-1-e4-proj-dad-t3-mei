@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+import { Link } from 'react-router-dom';
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import Table from "react-bootstrap/Table";
@@ -210,12 +211,10 @@ const RegistrarClientes = () => {
                       <td>{cliente.telefone}</td>
                       <td>{cliente.dataDeNascimento}</td>
                       <td>
-                        <Button
-                          className="btn btn-success me-2"
-                          onClick={() => handleEditar(cliente.id)}
-                        >
-                          Editar
-                        </Button>
+                      <Link to={`/editarCliente/${cliente.id}`}
+                      className="btn btn-success me-2">
+                      Editar
+                      </Link>
                         <Button
                           className="btn btn-danger"
                           onClick={() => handleExcluir(cliente.id)}

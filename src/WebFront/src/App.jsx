@@ -14,6 +14,8 @@ import Perfil from "./components/Perfil/Perfil";
 import Header from "./components/header/Header";
 import EditarProduto from "./components/RegistrarProdutos/EditarProduto";
 import EditarServico from "./components/RegistrarServicos/EditarServico";
+import EditarCategoria from "./components/RegistrarCategorias/EditarCategoria";
+import EditarCliente from "./components/RegistrarClientes/EditarCliente";
 
 function App() {
   return (
@@ -32,6 +34,7 @@ function App() {
           <Route path="/editar/:id" element={<EditarProduto />}/>
           <Route path="/editarServico/:id" element={<EditarServico />}/>
           <Route path="/editarCategoria/:id" element={<EditarCategoria />}/>
+          <Route path="/editarCliente/:id" element={<EditarCliente />}/>
         </Routes>
       </BrowserRouter>
     </>
