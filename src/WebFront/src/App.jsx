@@ -31,6 +31,7 @@ function App() {
           <Route path="/perfil" element={<Perfil />} />
           <Route path="/editar/:id" element={<EditarProduto />}/>
           <Route path="/editarServico/:id" element={<EditarServico />}/>
+          <Route path="/editarCategoria/:id" element={<EditarCategoria />}/>
         </Routes>
       </BrowserRouter>
     </>

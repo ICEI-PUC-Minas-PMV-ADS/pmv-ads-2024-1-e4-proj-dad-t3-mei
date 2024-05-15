@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { Link } from 'react-router-dom';
 import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
@@ -148,7 +149,9 @@ const RegistrarCategorias = () => {
                 <ListGroup.Item className="" as="li" key={categoria.id}>
                   {categoria.nome}
                   <div className="d-flex justify-content-end">
-                    <button className="btn btn-success me-2">Editar</button>
+                    <Link to={`/editarCategoria/${categoria.id}`}
+                    className="btn btn-success me-2">
+                    Editar</Link>
                     <button
                       onClick={() => handleExcluir(categoria.id)}
                       className="btn btn-danger"
