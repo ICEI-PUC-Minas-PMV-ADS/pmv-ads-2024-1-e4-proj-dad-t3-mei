@@ -55,7 +55,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| O sistema deve exibir o total monetário de vendas ou serviços do dia, semana, mês ou ano. | ALTA |
+|RF-001| O sistema deve exibir o total monetário de vendas ou serviços do mês ou ano. | ALTA |
 |RF-002| Emitir alertas textuais do limite mensal/anual de faturamento da respectiva subcategoria do MEI. | ALTA |
 |RF-003| Mostrar um alerta visual do faturamento,de acordo com sua subcategoria (caminhoneiro ou demais atividades), do MEI em tempo real. Usar verde como limite adequado, laranja para alerta e vermelho como extrapolado. | ALTA |
 |RF-004| Separar vendas a prazo, à vista, cartão, pix ou dinheiro. | ALTA |
