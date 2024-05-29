@@ -40,9 +40,18 @@ namespace mei.Controllers
         [HttpPost]
         public async Task<IActionResult> Post(Usuario newUser)
         {
-            await _usuariosService.CreateAsync(newUser);
 
-            return CreatedAtAction("GetById", new { id = newUser.Id }, newUser);
+            // Verifique se já existe um usuário com o mesmo e-mail
+            var existingUser = await _usuariosService.GetByEmailAsync(newUser.Email);
+            if (existingUser != null)
+            {
+                // Se um usuário com o mesmo e-mail já existir, retorne um erro
+                return BadRequest("Um usuário com o mesmo e-mail já existe");
+            }
+
+            await _usuariosService.CreateAsync(newUser);
+            var jwtToken = GenerateJwtToken(newUser);
+            return CreatedAtAction("GetById", new { id = newUser.Id }, new { user = newUser, token = jwtToken });
         }
         [HttpPut("{id:length(24)}")]
         public async Task<IActionResult> Update(string id, Usuario updatedUser)
