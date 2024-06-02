@@ -31,12 +31,12 @@ Observações do teste:
 https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/114624183/3e4e078d-5f01-4733-a5e3-ae2c383be4ca
 
 
-CT 01 - Logar no Sistema : OK
-CT 02 - Cadastrar Venda para exibir o Faturamento: OK
-CT 03 - Cadastrar Despesas: OK
-CT 04 - Cadastrar Clientes: em desenvolvimento.
-CT 05 - Cadastrar Produtos e Serviços: OK
-CT 06 - Procurar um contador próximo a minha localização: em desenvolvimento.
+1. CT 01 - Logar no Sistema : OK;
+2. CT 02 - Cadastrar Venda para exibir o Faturamento: OK;
+3. CT 03 - Cadastrar Despesas: OK;
+4. CT 04 - Cadastrar Clientes: em desenvolvimento;
+5. CT 05 - Cadastrar Produtos e Serviços: OK;
+6. CT 06 - Procurar um contador próximo a minha localização: em desenvolvimento;
 
 Observação (correções futuras):
 
