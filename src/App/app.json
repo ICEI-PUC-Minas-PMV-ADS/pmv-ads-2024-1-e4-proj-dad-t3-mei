@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "mei-a-mei-app",
+    "slug": "mei-a-mei-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/Logo.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/Logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "io.app.meiamei"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/Logo.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "io.app.meiamei"
+    },
+    "web": {
+      "favicon": "./assets/Logo.png"
+    }
+  }
+}
