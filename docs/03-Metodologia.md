@@ -68,6 +68,8 @@ Em teste: esta lista/coluna receberá todas as funcionalidades que estão em tes
 **Atualização Trello 05/05/2024**
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/3877b36f-1653-4926-9624-c68ac4b7c254)
 
+**Atualização Trello 02/06/2024**
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/113808083/5994350f-9e9f-490b-8df4-2c9d01a2402c)
 
 ### Ferramentas
 
