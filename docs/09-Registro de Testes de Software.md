@@ -24,3 +24,23 @@ Observações do teste:
 4. CT 04 funciona, mas a frase confirmando o cadastro não aparece;
 5. CT 05 funciona, mas a frase confirmando o cadastro não aparece;
 6. CT 06 precisa de ser melhorada para atingir o objetivo de teste;
+
+**Teste Software App Web versão 1**
+
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/114624183/3e4e078d-5f01-4733-a5e3-ae2c383be4ca
+
+
+CT 01 - Logar no Sistema : OK
+CT 02 - Cadastrar Venda para exibir o Faturamento: OK
+CT 03 - Cadastrar Despesas: OK
+CT 04 - Cadastrar Clientes: em desenvolvimento.
+CT 05 - Cadastrar Produtos e Serviços: OK
+CT 06 - Procurar um contador próximo a minha localização: em desenvolvimento.
+
+Observação (correções futuras):
+
+1 - Cadastro de vendas: sistema não exibe nada ao selecionar a opção 'serviço'.
+2- Ao adicionar, editar e excluir 'produto/ serviço/ categoria', a tela inicial não é atualizada.
+3- Melhoria: exibir mensagem de sucesso ao editar/excluir poduto/serviço/categoria; No momento só exibe mensagem de sucesso ao incluir.
+4- Corrigir mensagem de sucesso ao adicionar categoria: trocar adicionado por adicionada.
