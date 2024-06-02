@@ -40,7 +40,7 @@ https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/asse
 
 Observação (correções futuras):
 
-1 - Cadastro de vendas: sistema não exibe nada ao selecionar a opção 'serviço'.
-2- Ao adicionar, editar e excluir 'produto/ serviço/ categoria', a tela inicial não é atualizada.
-3- Melhoria: exibir mensagem de sucesso ao editar/excluir poduto/serviço/categoria; No momento só exibe mensagem de sucesso ao incluir.
-4- Corrigir mensagem de sucesso ao adicionar categoria: trocar adicionado por adicionada.
+1. Cadastro de vendas: sistema não exibe nada ao selecionar a opção 'serviço';
+2. Ao adicionar, editar e excluir 'produto/ serviço/ categoria', a tela inicial não é atualizada;
+3. Melhoria: exibir mensagem de sucesso ao editar/excluir poduto/serviço/categoria; No momento só exibe mensagem de sucesso ao incluir;
+4. Corrigir mensagem de sucesso ao adicionar categoria: trocar adicionado por adicionada;
