@@ -82,6 +82,102 @@
 
 ![web 37](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/c0a22409-d545-40f2-a8e8-5807da61b5f7)
 
+## Diagrama de Fluxo app
+![diagrama de fluxo app](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/af56d54b-44b7-4171-a7a1-298c9eab8647)
+
+## Wireframes App
+![app 1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/040595e7-ab56-4254-b603-58b64641c61a)
+
+![app 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/dbc6df83-6c7d-4773-9385-180d62b5bf2b)
+
+![app 3](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/228a62c8-41b5-4a49-8a8f-3f1c31135b81)
+
+![app 4](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/2d3ec09d-c1a9-4d9b-b5d6-16a326d6ffaf)
+
+![app 5](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/7330c223-19a6-4ed5-9dce-4d961664ed5a)
+
+![app 6](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/6da7db9d-56d3-42cf-9837-1e6bd46885c9)
+
+![app 7](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/aaa1feaa-385d-48b4-9df8-f8a62e4255b2)
+
+![app 8](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/a7ea6bc8-c795-4bfd-ad41-8fb2d8e5e9e4)
+
+![app 9](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/95f5e94e-50ae-4277-84b6-3859906c70ba)
+
+![app 10](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/8f24b9d6-2c00-4aad-a057-f16a0f73b39b)
+
+![app 11](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/31ade842-39f3-485d-82a2-d2214cf1664c)
+
+![app 12](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/c9cfc1a4-514c-4951-aafd-4d6493827dde)
+
+![app 13](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/e915e966-25ca-40df-b302-e89a8ebcaa5a)
+
+![app 14](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/145e67b9-ebe6-494e-9526-d15312a72694)
+
+![app 15](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/83dda37a-7c8f-4abf-9935-9033f6431696)
+
+![app 16](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/6e28042d-e8a7-4f64-8be9-9013476d4905)
+
+![app 17](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/da1219ab-9757-4641-a94b-bda1ae34bac6)
+
+![app 18](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/0ca86c97-c737-4d26-aad8-71743d649145)
+
+![app 19](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/6385810c-7822-4c7d-bb5d-d565e38467ec)
+
+![app 20](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/569edc23-f39e-400c-b853-af6bfa18114e)
+
+![app 21](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/6155dc59-40e3-4c3f-946e-4a08e00b782d)
+
+![app 22](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/b12e45c1-d93d-45a2-997e-663d1b1a5691)
+
+![qpp 23](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/2bf86d8e-780a-4848-927a-680bdd2bb860)
+
+![app 24](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/defd3d4c-37d1-4e3d-a521-68aab1f0dcff)
+
+![app 25](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/04bd7a21-4543-4d4b-8fa4-e3bb3593b310)
+
+![app 26](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/4b75e4d1-592e-44bf-bc16-1b55d5fa0869)
+
+![app 27](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/07025848-9186-4865-95a3-81b3d470d9d7)
+
+![app 28](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/1c9926cb-4cd5-4e06-b9f5-3bfb19ad78c4)
+
+![app 29](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/87b021e2-aae2-4857-b098-ddb471f9c731)
+
+![app 30](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/a88ab840-21da-4b3f-b358-d6dec9e4ad92)
+
+![app 31](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/8af69714-d98e-47c5-8a48-2afe1a39e8f3)
+
+![app 32](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/551b0962-7708-41ec-9d92-4dd1064d376d)
+
+![app 33](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/6608aca2-7825-4898-acfc-c60e040d7d4d)
+
+![app 34](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/77b02015-2ff6-4252-ac6b-46dd77935492)
+
+![app 35](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/6a953874-52f0-4150-8fcc-ee74f476f660)
+
+![app 36](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/3825dd72-760a-40ff-9a00-0b1471989ef5)
+
+![app 37](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/8f9e7fbf-fedf-4a79-b7a9-abf9228cea32)
+
+![app 38](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/35ce0f1a-8bdb-4e6c-acba-c2478890cc3d)
+
+![app 39](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/d4e778ac-e585-4411-a4f9-44c0f3108001)
+
+![app 40](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/5ad26494-8498-4e85-9940-018b054b6833)
+
+![app 41](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/ebf2557c-f84e-425c-8d63-5c689304910f)
+
+![app 42](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/592ac927-4329-4cfe-a07b-3e2afa023d09)
+
+![app 43](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/d77b3487-1dcc-44cf-9f76-4bb3ad6d688e)
+
+
+
+
+
+
+
 
 
 
