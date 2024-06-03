@@ -104,3 +104,43 @@ A utilização de frases de alerta ao realizar alguma ação dentro do sistema, 
 Para além disso, os entrevistados consideraram o sistema com um bom padrão de apresentação e poucos tiveram dificuldades para encontrar telas ou entender onde realiza alguma ação nele.
 
 A equipe de desenvolvimento se compromete em realizar as mudanças necessárias até a última etapa da entrega do projeto.
+
+## Respostas do 1º teste de usabilidade em relação as telas projetadas para o projeto MEI a MEI sistema App:
+![usabilidade 1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/c8daa12f-7256-4363-9cf1-82b0499374e0)
+
+![usabilidade 2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/fb72db66-5444-4b9e-9e46-01aec6794425)
+
+![usabilidade 3](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/70ec21ad-87a0-4b75-8b0c-10d078ab6ff1)
+
+![usabilidade 4](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/aa9e7460-2289-476d-91ff-1a4a073e1de0)
+
+![usabilidade 5](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/a214fa62-26db-49fd-a84a-9e5ea37c05a8)
+
+![usabilidade 6](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/a3d9c50e-9d39-4b90-ba12-d25fe345ec76)
+
+![usabilidade 7](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/a4bfaa86-8c4b-4780-a008-f77d2a66e9c7)
+
+![usabilidade 8](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/e9560ba0-d3f4-4ff4-8e53-1c164c7c354f)
+
+![usabilidade 9](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/3e66b69a-92cb-4256-9e89-f7bb5f8d79c5)
+
+![usabilidade 10](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/1cfbb7a7-e824-4a7d-950c-e5bfa6519ffa)
+
+![usabilidade 11](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/127b75e7-11d0-46e6-ba59-54aed094b8b0)
+
+![Usabilidade 12](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/e4af1bb4-c8a0-48ed-a941-8497012d7716)
+
+![usabilidade 13](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/269a56df-7365-403c-bc21-d00524209d91)
+
+![usabilidade 14](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/d7880fcc-bfe8-4dbf-90ac-0173dd7d4f9d)
+
+![usabilidade 15](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/57c146d3-cb8e-41c8-af4a-62f0428aa55a)
+
+![usabilidade 16](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/52fcf358-f5f6-4426-81a7-fda40b9771f0)
+
+
+![usabilidade 17](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/cccbbb23-3d75-49d1-bd93-aa25e3a7f1de)
+
+![usabilidade 18](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/b0502fb5-b34b-4a79-aefc-a561455ae1f9)
+
+![usabilidade 19](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei/assets/115122757/25879512-faa3-4d4a-b846-66230400ca54)
