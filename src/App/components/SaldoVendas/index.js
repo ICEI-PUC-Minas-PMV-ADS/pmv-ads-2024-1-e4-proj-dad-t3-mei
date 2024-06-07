@@ -14,8 +14,12 @@ const SaldoVendas = () => {
   useEffect(() => {
     const getToken = async () => {
       const token = await AsyncStorage.getItem("token");
-      const decodedToken = jwtDecode(token);
-      setUserId(decodedToken.nameid);
+      if (token) {
+        const decodedToken = jwtDecode(token);
+        setUserId(decodedToken.nameid);
+      } else {
+        console.log('Token não encontrado');
+      }
     };
 
     getToken();

@@ -31,7 +31,11 @@ export default function Login({ navigation }) {
 
     // Armazena o token JWT no AsyncStorage
     try {
-      await AsyncStorage.setItem("token", token);
+      if (token !== null) {
+        await AsyncStorage.setItem("token", token);
+      } else {
+        console.log('Token é nulo');
+      }
     } catch (error) {
       // handle error
     }

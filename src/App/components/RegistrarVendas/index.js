@@ -7,9 +7,9 @@ import CurrencyInput from "react-native-currency-input";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { jwtDecode } from "jwt-decode";
 
-const urlProdutos = "http://10.0.2.2:5062/api/Produtos";
-const urlServicos = "http://10.0.2.2:5062/api/Servicos";
-const url = "http://10.0.2.2:5062/api/Faturamentos";
+const urlProdutos = "https://swaggerapimeiamei.azurewebsites.net/api/Produtos";
+const urlServicos = "https://swaggerapimeiamei.azurewebsites.net/api/Servicos";
+const url = "https://swaggerapimeiamei.azurewebsites.net/api/Faturamentos";
 
 const Vendas = () => {
   const [usuarioId, setUserId] = useState("");
@@ -201,7 +201,7 @@ const Vendas = () => {
               separator=","
               precision={2}
               minValue={0}
-              onChangeText={() => {}}
+              onChangeText={() => { }}
             />
           </View>
         </View>
