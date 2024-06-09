@@ -6,10 +6,7 @@ import DateTimePicker from "@react-native-community/datetimepicker";
 import CurrencyInput from "react-native-currency-input";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { jwtDecode } from "jwt-decode";
-
-const urlProdutos = "https://swaggerapimeiamei.azurewebsites.net/api/Produtos";
-const urlServicos = "https://swaggerapimeiamei.azurewebsites.net/api/Servicos";
-const url = "https://swaggerapimeiamei.azurewebsites.net/api/Faturamentos";
+import API_URLS from "../../config/apiUrls";
 
 const Vendas = () => {
   const [usuarioId, setUserId] = useState("");
@@ -45,8 +42,8 @@ const Vendas = () => {
     if (usuarioId) {
       setIsLoading(true);
       Promise.all([
-        fetch(urlProdutos).then((response) => response.json()),
-        fetch(urlServicos).then((response) => response.json()),
+        fetch(API_URLS.PRODUTOS).then((response) => response.json()),
+        fetch(API_URLS.SERVICOS).then((response) => response.json()),
       ])
         .then(([produtosData, servicosData]) => {
           setProdutos(
@@ -96,7 +93,7 @@ const Vendas = () => {
     };
 
     try {
-      const response = await fetch(url, {
+      const response = await fetch(API_URLS.FATURAMENTOS, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
