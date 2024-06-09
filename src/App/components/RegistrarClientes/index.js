@@ -1,35 +1,56 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button } from 'react-native';
+import { View, Text } from 'react-native';
+import { TextInput, Button } from "react-native-paper";
 
 const RegistrarClientes = () => {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [telefone, setTelefone] = useState('');
   const [dataDeNascimento, setDataDeNascimento] = useState('');
-  const [usuarioId, setUsuarioId] = useState('');
 
   const handleRegister = () => {
     const cliente = {
-      id,
       nome,
       email,
       telefone,
       dataDeNascimento,
-      usuarioId,
     };
 
     console.log(cliente);
   };
 
   return (
-    <View>
-      <Text>Registrar Clientes</Text>
-      <TextInput placeholder="Nome" onChangeText={setNome} value={nome} />
-      <TextInput placeholder="Email" onChangeText={setEmail} value={email} />
-      <TextInput placeholder="Telefone" onChangeText={setTelefone} value={telefone} />
-      <TextInput placeholder="Data de Nascimento" onChangeText={setDataDeNascimento} value={dataDeNascimento} />
-      <TextInput placeholder="ID do Usuário" onChangeText={setUsuarioId} value={usuarioId} />
-      <Button title="Registrar" onPress={handleRegister} />
+    <View style={{ padding: 16, }}>
+      <TextInput
+        mode="outlined"
+        label="Nome"
+        value={nome}
+        onChangeText={setNome}
+        style={{ marginBottom: 10 }}
+      />
+      <TextInput
+        mode="outlined"
+        label="Email"
+        value={email}
+        onChangeText={setEmail}
+        style={{ marginBottom: 10 }}
+      />
+      <TextInput
+        mode="outlined"
+        label="Telefone"
+        value={telefone}
+        onChangeText={setTelefone}
+        style={{ marginBottom: 10 }}
+      />
+      <TextInput
+        mode="outlined"
+        label="Data de Nascimento"
+        value={dataDeNascimento}
+        onChangeText={setDataDeNascimento}
+        style={{ marginBottom: 10 }}
+      />
+      <Button mode="contained" onPress={handleRegister}> Registrar </Button>
+
     </View>
   );
 };

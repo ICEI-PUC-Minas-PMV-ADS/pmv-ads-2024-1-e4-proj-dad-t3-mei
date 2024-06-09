@@ -1,4 +1,4 @@
-const URL_BASE = 'https://swaggerapimeiamei.azurewebsites.net/api/';
+const URL_BASE = 'http://10.0.2.2:5062/api/';
 
 const API_URLS = {
   USUARIOS_AUTHENTICATE: `${URL_BASE}Usuarios/authenticate`,

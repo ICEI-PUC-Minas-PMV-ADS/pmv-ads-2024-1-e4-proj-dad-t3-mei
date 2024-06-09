@@ -130,16 +130,18 @@ const Registros = () => {
     const widthArr = new Array(head.length).fill(80); // Altere 80 para a largura desejada
 
     return (
-      <ScrollView horizontal={true}>
-        <View>
-          <Text>{title}</Text>
-          <Table borderStyle={{ borderWidth: 2, borderColor: '#c8e1ff' }}>
-            <Row data={head} style={styles.head} widthArr={widthArr} />
-            {data.map((rowData, index) => (
-              <Row key={index} data={Object.values(renderRow(rowData))} widthArr={widthArr} />
-            ))}
-          </Table>
-        </View>
+      <ScrollView vertical={true}>
+        <ScrollView horizontal={true}>
+          <View>
+            <Text>{title}</Text>
+            <Table borderStyle={{ borderWidth: 2, borderColor: '#c8e1ff' }}>
+              <Row data={head} style={styles.head} widthArr={widthArr} />
+              {data.map((rowData, index) => (
+                <Row key={index} data={Object.values(renderRow(rowData))} widthArr={widthArr} />
+              ))}
+            </Table>
+          </View>
+        </ScrollView>
       </ScrollView>
     );
   };
