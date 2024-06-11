@@ -22,7 +22,7 @@ const EditarServico = () => {
   useEffect(() => {
     const buscarServico = async () => {
       try {
-        const response = await fetch(`https://localhost:7097/api/Servicos/${id}`);
+        const response = await fetch(`https://swaggerapimeiamei.azurewebsites.net/api/Servicos/${id}`);
         if (!response.ok) {
           throw new Error("Erro ao buscar os dados do serviço");
         }
@@ -43,7 +43,7 @@ const EditarServico = () => {
     try {
       setIsLoading(true);
       const dataToSend = {nome, usuarioId};
-      const response = await fetch(`https://localhost:7097/api/Servicos/${id}`, {
+      const response = await fetch(`https://swaggerapimeiamei.azurewebsites.net/api/Servicos/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

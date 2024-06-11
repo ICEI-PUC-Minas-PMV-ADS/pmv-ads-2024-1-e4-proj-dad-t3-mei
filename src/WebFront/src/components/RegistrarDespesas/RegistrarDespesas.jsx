@@ -6,8 +6,8 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import { jwtDecode } from "jwt-decode";
 
-const urlDespesas = "https://localhost:7097/api/Despesas";
-const urlCategorias = "https://localhost:7097/api/Categorias";
+const urlDespesas = "https://swaggerapimeiamei.azurewebsites.net/api/Despesas";
+const urlCategorias = "https://swaggerapimeiamei.azurewebsites.net/api/Categorias";
 
 const RegistrarDespesas = () => {
   const [despesas, setDespesas] = useState([]);

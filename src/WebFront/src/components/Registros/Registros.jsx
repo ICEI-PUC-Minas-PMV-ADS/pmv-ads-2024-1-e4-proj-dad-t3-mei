@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 import Table from "react-bootstrap/Table";
 import { jwtDecode } from "jwt-decode";
 
-const API_URL = "https://localhost:7097/api";
+const API_URL = "https://swaggerapimeiamei.azurewebsites.net/api";
 
 const Registros = () => {
   const [faturamentos, setFaturamentos] = useState([]);

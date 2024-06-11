@@ -8,7 +8,7 @@ import Form from "react-bootstrap/Form";
 import ListGroup from "react-bootstrap/ListGroup";
 import { jwtDecode } from "jwt-decode";
 
-const url = "https://localhost:7097/api/Categorias";
+const url = "https://swaggerapimeiamei.azurewebsites.net/api/Categorias";
 
 const RegistrarCategorias = () => {
   const [categorias, setCategorias] = useState([]);

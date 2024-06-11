@@ -25,7 +25,7 @@ const EditarCliente = () => {
   useEffect(() => {
     const buscarCliente = async () => {
       try {
-        const response = await fetch(`https://localhost:7097/api/Clientes/${id}`);
+        const response = await fetch(`https://swaggerapimeiamei.azurewebsites.net/api/Clientes/${id}`);
         if (!response.ok) {
           throw new Error("Erro ao buscar os dados do cliente");
         }
@@ -49,7 +49,7 @@ const EditarCliente = () => {
     try {
       setIsLoading(true);
       const dataToSend = {nome,email, telefone, dataDeNascimento, usuarioId};
-      const response = await fetch(`https://localhost:7097/api/Clientes/${id}`, {
+      const response = await fetch(`https://swaggerapimeiamei.azurewebsites.net/api/Clientes/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

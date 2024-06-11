@@ -6,9 +6,9 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import { jwtDecode } from "jwt-decode";
 
-const urlProdutos = "https://localhost:7097/api/Produtos";
-const urlServicos = "https://localhost:7097/api/Servicos";
-const url = "https://localhost:7097/api/Faturamentos";
+const urlProdutos = "https://swaggerapimeiamei.azurewebsites.net/api/Produtos";
+const urlServicos = "https://swaggerapimeiamei.azurewebsites.net/api/Servicos";
+const url = "https://swaggerapimeiamei.azurewebsites.net/api/Faturamentos";
 
 const RegistrarVendas = () => {
   const [faturamentos, setFaturamentos] = useState([]);

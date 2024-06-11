@@ -22,7 +22,7 @@ const EditarProduto = () => {
   useEffect(() => {
     const buscarProduto = async () => {
       try {
-        const response = await fetch(`https://localhost:7097/api/Produtos/${id}`);
+        const response = await fetch(`https://swaggerapimeiamei.azurewebsites.net/api/Produtos/${id}`);
         if (!response.ok) {
           throw new Error("Erro ao buscar os dados do produto");
         }
@@ -43,7 +43,7 @@ const EditarProduto = () => {
     try {
       setIsLoading(true);
       const dataToSend = {nome, usuarioId};
-      const response = await fetch(`https://localhost:7097/api/Produtos/${id}`, {
+      const response = await fetch(`https://swaggerapimeiamei.azurewebsites.net/api/Produtos/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

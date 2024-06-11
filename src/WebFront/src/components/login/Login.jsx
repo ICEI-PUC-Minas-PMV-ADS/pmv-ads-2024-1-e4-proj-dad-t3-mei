@@ -14,7 +14,7 @@ const Login = () => {
     try {
       // Faz a autenticação usando o e-mail e a senha do usuário
       const authResponse = await fetch(
-        "https://localhost:7097/api/Usuarios/authenticate",
+        "https://swaggerapimeiamei.azurewebsites.net/api/Usuarios/authenticate",
         {
           method: "POST",
           headers: {

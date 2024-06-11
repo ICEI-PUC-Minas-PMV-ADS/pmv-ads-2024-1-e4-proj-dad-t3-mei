@@ -22,7 +22,7 @@ const EditarCategoria = () => {
   useEffect(() => {
     const buscarCategoria = async () => {
       try {
-        const response = await fetch(`https://localhost:7097/api/Categorias/${id}`);
+        const response = await fetch(`https://swaggerapimeiamei.azurewebsites.net/api/Categorias/${id}`);
         if (!response.ok) {
           throw new Error("Erro ao buscar os dados da Categoria");
         }
@@ -43,7 +43,7 @@ const EditarCategoria = () => {
     try {
       setIsLoading(true);
       const dataToSend = {nome, usuarioId};
-      const response = await fetch(`https://localhost:7097/api/Categorias/${id}`, {
+      const response = await fetch(`https://swaggerapimeiamei.azurewebsites.net/api/Categorias/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

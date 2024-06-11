@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { jwtDecode } from "jwt-decode";
 
-const urlDespesas = "https://localhost:7097/api/Despesas";
+const urlDespesas = "https://swaggerapimeiamei.azurewebsites.net/api/Despesas";
 
 const SaldoDespesa = () => {
   const [despesas, setDespesas] = useState([]);

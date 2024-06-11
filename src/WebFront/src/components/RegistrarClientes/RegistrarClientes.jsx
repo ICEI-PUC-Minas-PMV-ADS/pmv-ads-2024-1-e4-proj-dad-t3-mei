@@ -8,7 +8,7 @@ import Form from "react-bootstrap/Form";
 import Table from "react-bootstrap/Table";
 import { jwtDecode } from "jwt-decode";
 
-const url = "https://localhost:7097/api/Clientes";
+const url = "https://swaggerapimeiamei.azurewebsites.net/api/Clientes";
 
 const RegistrarClientes = () => {
   const [clientes, setClientes] = useState([]);
