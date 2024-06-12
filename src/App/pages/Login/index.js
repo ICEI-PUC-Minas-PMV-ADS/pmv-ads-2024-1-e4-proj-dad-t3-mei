@@ -9,37 +9,80 @@ export default function Login({ navigation }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  // Função de validação
+  const validarLogin = (email, senha) => {
+    if (email.trim() === "" || senha.trim() === "") {
+      alert("E-mail e senha são obrigatórios.");
+      return false;
+    }
+    if (senha.length < 5) {
+      alert("A senha deve ter pelo menos 6 caracteres.");
+      return false;
+    }
+    if (!email.includes("@") || !email.includes(".")) {
+      alert("E-mail inválido.");
+      return false;
+    }
+    return true;
+  };
+
   const handleLogin = async () => {
-    const response = await axios.post(`${API_URLS.USUARIOS_AUTHENTICATE}`, {
-      email: email,
-      senha: password,
-    });
-
-    const data = response.data;
-    const token = data.jwtToken;
-
-    if (token && typeof token === "string") {
-      console.log("Token JWT via E-mail: " + token);
-      // Redefine o histórico de navegação após o login
-      navigation.reset({
-        index: 0,
-        routes: [{ name: "MyTabs" }],
-      });
-    } else {
-      throw new Error("Token não encontrado ou não é uma string");
+    // Chama a função de validação
+    if (!validarLogin(email, password)) {
+      return; // Interrompe a execução se a validação falhar
     }
 
-    // Armazena o token JWT no AsyncStorage
     try {
-      if (token !== null) {
-        await AsyncStorage.setItem("token", token);
+      const response = await axios.post(`${API_URLS.USUARIOS_AUTHENTICATE}`, {
+        email: email,
+        senha: password,
+      });
+
+      const data = response.data;
+      const token = data.jwtToken;
+
+      // Verifica se o token existe e é uma string antes de tentar armazená-lo
+      if (token) {
+        // Converte o token para string usando JSON.stringify
+        const tokenString = JSON.stringify(token);
+
+        console.log("Token JWT via E-mail: " + tokenString);
+        // Redefine o histórico de navegação após o login
+        navigation.reset({
+          index: 0,
+          routes: [{ name: "MyTabs" }],
+        });
+        // Armazena o token JWT no AsyncStorage como uma string
+        await AsyncStorage.setItem("token", tokenString);
       } else {
-        console.log('Token é nulo');
+        // Lança um erro se o token não for encontrado
+        throw new Error("Token inválido: não encontrado");
       }
     } catch (error) {
-      // handle error
+      if (error.response) {
+        // O servidor respondeu com um status fora do intervalo 2xx
+        console.log(error.response.data);
+        console.log(error.response.status);
+        console.log(error.response.headers);
+        // Aqui você pode adicionar lógica baseada no status ou na mensagem de erro
+        if (error.response.status === 401) {
+          alert("E-mail ou senha incorretos.");
+        } else {
+          alert("Erro ao fazer login. Tente novamente mais tarde.");
+        }
+        // Por exemplo, se status for 401 ou 404, você pode assumir que o usuário não existe ou a senha está incorreta
+      } else if (error.request) {
+        // O pedido foi feito, mas não houve resposta
+        console.log(error.request);
+        alert("Erro ao fazer a requisição. Tente novamente mais tarde.");
+      } else {
+        // Algo aconteceu na configuração do pedido que causou um erro
+        console.log('Error', error.message);
+      }
     }
-  };
+  }
+
+
 
   return (
     <View

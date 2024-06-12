@@ -29,10 +29,18 @@ const Vendas = () => {
     const fetchToken = async () => {
       try {
         const token = await AsyncStorage.getItem("token");
-        const decodedToken = jwtDecode(token.toString());
-        setUserId(decodedToken.nameid);
+        if (typeof token === 'string') {
+          const decodedToken = jwtDecode(token);
+          setUserId(decodedToken.nameid);
+        } else {
+          console.log(token)
+          console.error("Token inválido ou não encontrado");
+          // Trate o caso de token inválido ou não encontrado aqui
+          // Por exemplo, redirecionar para a tela de login
+        }
       } catch (error) {
         console.error("Erro ao buscar o token:", error);
+        // Tratar o erro, possivelmente informando o usuário
       }
     };
     fetchToken();

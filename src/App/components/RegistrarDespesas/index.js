@@ -27,7 +27,7 @@ const Despesas = () => {
     const fetchToken = async () => {
       try {
         const token = await AsyncStorage.getItem("token");
-        const decodedToken = jwtDecode(token.toString());
+        const decodedToken = jwtDecode(token);
         setUserId(decodedToken.nameid);
       } catch (error) {
         console.error("Erro ao buscar o token:", error);
@@ -192,7 +192,7 @@ const Despesas = () => {
               separator=","
               precision={2}
               minValue={0}
-              onChangeText={() => {}}
+              onChangeText={() => { }}
             />
           </View>
         </View>
