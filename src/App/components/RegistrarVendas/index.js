@@ -35,12 +35,10 @@ const Vendas = () => {
         } else {
           console.log(token)
           console.error("Token inválido ou não encontrado");
-          // Trate o caso de token inválido ou não encontrado aqui
-          // Por exemplo, redirecionar para a tela de login
         }
       } catch (error) {
         console.error("Erro ao buscar o token:", error);
-        // Tratar o erro, possivelmente informando o usuário
+        alert("Erro ao buscar suas informações. Tente novamente mais tarde.")
       }
     };
     fetchToken();
