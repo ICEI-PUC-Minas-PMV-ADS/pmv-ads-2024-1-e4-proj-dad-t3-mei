@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, FlatList, Button, TextInput, StyleSheet, Alert } from 'react-native';
+import { View, Text, FlatList, StyleSheet, Alert } from 'react-native';
+import { TextInput, Button } from "react-native-paper";
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import API_URLS from '../../config/apiUrls';
 import Dialog from "react-native-dialog";
 import { jwtDecode } from 'jwt-decode';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const RegistrarCategorias = ({ navigation, route }) => {
   const [categorias, setCategorias] = useState([]);
@@ -80,6 +82,8 @@ const RegistrarCategorias = ({ navigation, route }) => {
       console.error('Erro ao adicionar categoria:', error);
       Alert.alert('Erro', 'Falha ao adicionar categoria: ' + error.message);
     }
+
+    setNome('');
   };
 
 
@@ -120,19 +124,32 @@ const RegistrarCategorias = ({ navigation, route }) => {
   return (
     <View style={styles.container}>
       <TextInput
-        style={styles.input}
-        placeholder="Nome do categoria"
-        value={nome}
+        mode="outlined"
+        label="Nome da categoria"
         onChangeText={setNome}
+        value={nome}
+        style={{ marginBottom: 10 }}
       />
-      <Button title="Salvar" onPress={handleAddCategoria} />
+      <Button
+        mode="contained"
+        onPress={handleAddCategoria}
+        style={{ marginBottom: 10 }}
+      > Salvar </Button>
 
-      <TextInput
-        style={styles.searchBar}
-        placeholder="Buscar..."
-        value={search}
-        onChangeText={handleSearch}
-      />
+      <View style={styles.searchContainer}>
+        <Icon
+          name="search"
+          size={20}
+          color="#313131"
+          style={styles.searchIcon}
+        />
+        <TextInput
+          placeholder="Buscar..."
+          value={search}
+          onChangeText={handleSearch}
+          style={styles.searchInput}
+        />
+      </View>
 
       <FlatList
         data={categorias.filter(categoria => categoria.nome && categoria.nome.toLowerCase().includes(search.toLowerCase()))}
@@ -141,8 +158,16 @@ const RegistrarCategorias = ({ navigation, route }) => {
           <View style={styles.itemContainer}>
             <Text>{item.nome}</Text>
             <View style={styles.buttonContainer}>
-              <Button title="Editar" onPress={() => handleEdit(item.id)} />
-              <Button title="Excluir" color="red" onPress={() => handleDelete(item.id)} />
+              <Button
+                style={styles.buttonEditar}
+                mode="contained"
+                onPress={() => handleEdit(item.id)}
+              > Editar</Button>
+              <Button
+                style={styles.buttonExcluir}
+                mode="contained"
+                onPress={() => handleDelete(item.id)}
+              > Excluir</Button>
             </View>
           </View>
         )}
@@ -162,24 +187,10 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 16,
   },
-  input: {
-    marginBottom: 16,
-    padding: 8,
-    borderWidth: 1,
-    borderColor: '#ddd',
-    borderRadius: 4,
-  },
-  searchBar: {
-    marginBottom: 16,
-    padding: 8,
-    borderWidth: 1,
-    borderColor: '#ddd',
-    borderRadius: 4,
-  },
   itemContainer: {
     padding: 16,
     borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
+    borderBottomColor: '#a3a3a3',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -191,6 +202,27 @@ const styles = StyleSheet.create({
     margin: 0,
     padding: 0,
   },
+  buttonEditar: {
+    marginRight: 8,
+  },
+  buttonExcluir: {
+    backgroundColor: '#c40000',
+  },
+  searchContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 10,
+    backgroundColor: '#f0f0f0',
+    paddingHorizontal: 10,
+  },
+  searchIcon: {
+    marginRight: 10,
+  },
+  searchInput: {
+    flex: 1,
+    backgroundColor: '#f0f0f0',
+  },
+
 });
 
 export default RegistrarCategorias;

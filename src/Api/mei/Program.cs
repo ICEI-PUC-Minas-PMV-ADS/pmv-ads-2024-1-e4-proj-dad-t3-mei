@@ -79,7 +79,9 @@ namespace mei
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+            // Configure the HTTP request pipeline. 
+            // Mostra ou não o swagger na págia inicial da aplicação depois do deploy
+            // Retirar if caso queira {apiUrl}/ mostre o swagger
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();

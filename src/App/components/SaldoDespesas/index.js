@@ -44,7 +44,7 @@ const SaldoVendas = () => {
 
   return (
     <View>
-      <Text style={styles.text}>Seu faturamento</Text>
+      <Text style={styles.text}>Sua despesa</Text>
       <View style={styles.faturamentoContainer}>
         <View style={styles.containerBotoes}>
           <Text style={{ fontSize: 24 }}>R$</Text>
