@@ -15,7 +15,6 @@ Será desenvolvido um APP e um Sistema Web para auxiliar os empresários que est
 * Ana Carolina Mozelli
 * Anna Clara Rocha Mota
 * Geraldo Homero do Couto Neto
-* Gustavo Silva Diniz
 * Hugo César Candian Ferreira
 * Junia Marina Campos
 
