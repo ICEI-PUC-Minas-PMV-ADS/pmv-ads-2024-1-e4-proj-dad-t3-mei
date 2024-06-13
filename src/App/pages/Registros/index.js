@@ -166,8 +166,7 @@ const Registros = () => {
     </View>
   );
 
-
-
+  //https://github.com/dohooo/react-native-table-component/issues/145
   return (
     <View style={styles.container}>
       <View style={styles.box}>
