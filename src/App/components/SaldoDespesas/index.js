@@ -40,7 +40,7 @@ const SaldoVendas = () => {
           console.error("Erro ao buscar dados:", error);
         });
     }
-  }, [userId, userDespesas]);
+  }, [userId]);
 
   return (
     <View>

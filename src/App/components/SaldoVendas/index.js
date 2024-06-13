@@ -17,6 +17,7 @@ const SaldoVendas = () => {
       if (token) {
         const decodedToken = jwtDecode(token);
         setUserId(decodedToken.nameid);
+        console.log("Token encontrado e decodificado = ", decodedToken.nameid);
       } else {
         console.log('Token não encontrado');
       }
@@ -24,6 +25,7 @@ const SaldoVendas = () => {
 
     getToken();
   }, []);
+
 
   useEffect(() => {
     if (userId) {
@@ -35,8 +37,7 @@ const SaldoVendas = () => {
           );
           setUserFaturamentos(filteredFaturamentos);
           const totalFaturamentos = filteredFaturamentos.reduce(
-            (acc, cur) => acc + cur.valor,
-            0
+            (acc, cur) => acc + cur.valor, 0
           );
           setTotalFaturamentos(totalFaturamentos);
         })
@@ -44,7 +45,7 @@ const SaldoVendas = () => {
           console.error("Erro ao buscar dados:", error);
         });
     }
-  }, [userId, userFaturamentos]);
+  }, [userId]);
 
   return (
     <View>

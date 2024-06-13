@@ -94,6 +94,7 @@ const Registros = () => {
     return item ? item.nome : '';
   };
 
+
   const renderFaturamentosRow = (fat) => {
     return {
       data: fat.dataFaturamento,

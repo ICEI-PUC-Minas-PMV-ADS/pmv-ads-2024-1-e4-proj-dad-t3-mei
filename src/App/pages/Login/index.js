@@ -31,7 +31,6 @@ export default function Login({ navigation }) {
     if (!validarLogin(email, password)) {
       return; // Interrompe a execução se a validação falhar
     }
-
     try {
       const response = await axios.post(`${API_URLS.USUARIOS_AUTHENTICATE}`, {
         email: email,
@@ -43,17 +42,14 @@ export default function Login({ navigation }) {
 
       // Verifica se o token existe e é uma string antes de tentar armazená-lo
       if (token) {
-        // Converte o token para string usando JSON.stringify
-        const tokenString = JSON.stringify(token);
-
-        console.log("Token JWT via E-mail: " + tokenString);
+        console.log("Token JWT via E-mail: " + token);
         // Redefine o histórico de navegação após o login
         navigation.reset({
           index: 0,
           routes: [{ name: "MyTabs" }],
         });
-        // Armazena o token JWT no AsyncStorage como uma string
-        await AsyncStorage.setItem("token", tokenString);
+        // Armazena o token JWT no AsyncStorage diretamente
+        await AsyncStorage.setItem("token", token);
       } else {
         // Lança um erro se o token não for encontrado
         throw new Error("Token inválido: não encontrado");
