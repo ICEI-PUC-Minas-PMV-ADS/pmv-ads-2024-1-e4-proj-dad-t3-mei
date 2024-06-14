@@ -1,6 +1,7 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using BCrypt.Net;
 using mei.Models;
 using mei.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -40,19 +41,22 @@ namespace mei.Controllers
         [HttpPost]
         public async Task<IActionResult> Post(Usuario newUser)
         {
-
             // Verifique se já existe um usuário com o mesmo e-mail
             var existingUser = await _usuariosService.GetByEmailAsync(newUser.Email);
             if (existingUser != null)
             {
-                // Se um usuário com o mesmo e-mail já existir, retorne um erro
                 return BadRequest("Um usuário com o mesmo e-mail já existe");
             }
 
+            // Criptografe a senha antes de salvar
+            newUser.Senha = BCrypt.Net.BCrypt.HashPassword(newUser.Senha);
+
             await _usuariosService.CreateAsync(newUser);
             var jwtToken = GenerateJwtToken(newUser);
+
             return CreatedAtAction("GetById", new { id = newUser.Id }, new { user = newUser, token = jwtToken });
         }
+
         [HttpPut("{id:length(24)}")]
         public async Task<IActionResult> Update(string id, Usuario updatedUser)
         {
@@ -63,12 +67,15 @@ namespace mei.Controllers
                 return NotFound();
             }
 
+            // Criptografe a senha ao atualizar
+            updatedUser.Senha = BCrypt.Net.BCrypt.HashPassword(updatedUser.Senha);
             updatedUser.Id = user.Id;
 
             await _usuariosService.UpdateAsync(id, updatedUser);
 
             return NoContent();
         }
+
 
         [HttpDelete("{id:length(24)}")]
         public async Task<IActionResult> Delete(string id)
@@ -91,8 +98,24 @@ namespace mei.Controllers
         {
             var user = await _usuariosService.GetByEmailAsync(model.Email);
 
-            if (user == null || (model.Password != model.Password))
+            if (user == null)
+            {
+                Console.WriteLine("Usuário não encontrado.");
                 return Unauthorized();
+            }
+
+            if (string.IsNullOrEmpty(user.Senha) || string.IsNullOrEmpty(model.Senha))
+            {
+                Console.WriteLine("Senha do usuário ou senha fornecida é nula ou vazia.");
+                return Unauthorized();
+            }
+
+            // Verifique se a senha fornecida corresponde à senha armazenada no banco de dados
+            if (!BCrypt.Net.BCrypt.Verify(model.Senha, user.Senha))
+            {
+                Console.WriteLine("Senha incorreta.");
+                return Unauthorized();
+            }
 
             var jwt = GenerateJwtToken(user);
 
@@ -106,7 +129,7 @@ namespace mei.Controllers
             var key = Encoding.ASCII.GetBytes("S3nh4Mu1t0P0d3r0s4S3cr3t4Cu1d4d0");
             var claims = new ClaimsIdentity(new Claim[]
             {
-            new Claim(ClaimTypes.NameIdentifier, model.Id.ToString()),
+        new Claim(ClaimTypes.NameIdentifier, model.Id.ToString()),
             });
             var tokenDescriptor = new SecurityTokenDescriptor
             {
@@ -118,6 +141,7 @@ namespace mei.Controllers
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
         }
+
     }
 }
 
