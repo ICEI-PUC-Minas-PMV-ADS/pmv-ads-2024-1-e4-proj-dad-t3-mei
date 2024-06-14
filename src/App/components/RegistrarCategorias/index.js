@@ -156,7 +156,9 @@ const RegistrarCategorias = ({ navigation, route }) => {
         keyExtractor={item => item.id.toString()}
         renderItem={({ item }) => (
           <View style={styles.itemContainer}>
-            <Text>{item.nome}</Text>
+            <View style={styles.textContainer}>
+              <Text style={styles.itemText}>{item.nome}</Text>
+            </View>
             <View style={styles.buttonContainer}>
               <Button
                 style={styles.buttonEditar}
@@ -190,7 +192,7 @@ const styles = StyleSheet.create({
   itemContainer: {
     padding: 16,
     borderBottomWidth: 1,
-    borderBottomColor: '#a3a3a3',
+    borderBottomColor: '#ddd',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -222,7 +224,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#f0f0f0',
   },
-
+  textContainer: {
+    flex: 1,
+    marginRight: 8, // Espaço entre o texto e os botões de editar e excluir
+  },
+  itemText: {
+    flexShrink: 1, // Encolhe o texto (muda de linha) se não houver espaço suficiente
+  },
 });
 
 export default RegistrarCategorias;

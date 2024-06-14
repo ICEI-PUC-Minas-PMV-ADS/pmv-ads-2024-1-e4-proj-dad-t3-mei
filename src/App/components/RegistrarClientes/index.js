@@ -6,7 +6,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import API_URLS from '../../config/apiUrls';
 import { jwtDecode } from 'jwt-decode';
 import DateTimePicker from '@react-native-community/datetimepicker';
-
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const GerenciarClientes = () => {
   const [clientes, setClientes] = useState([]);
@@ -134,18 +134,21 @@ const GerenciarClientes = () => {
         ListHeaderComponent={
           <View style={styles.headerContainer}>
             <TextInput
+              mode="outlined"
               label="Nome"
               value={nome}
               onChangeText={setNome}
               style={styles.input}
             />
             <TextInput
+              mode="outlined"
               label="Email"
               value={email}
               onChangeText={setEmail}
               style={styles.input}
             />
             <TextInput
+              mode="outlined"
               label="Telefone"
               value={telefone}
               onChangeText={setTelefone}
@@ -173,12 +176,20 @@ const GerenciarClientes = () => {
             <Button mode="contained" onPress={handleRegister} style={styles.button}>
               Registrar Cliente
             </Button>
-            <TextInput
-              label="Buscar"
-              value={search}
-              onChangeText={handleSearch}
-              style={styles.input}
-            />
+            <View style={styles.searchContainer}>
+              <Icon
+                name="search"
+                size={20}
+                color="#313131"
+                style={styles.searchIcon}
+              />
+              <TextInput
+                placeholder="Buscar..."
+                value={search}
+                onChangeText={handleSearch}
+                style={styles.searchInput}
+              />
+            </View>
           </View>
         }
         renderItem={({ item }) => (
@@ -186,7 +197,7 @@ const GerenciarClientes = () => {
             <Text>{item.nome}</Text>
             <Text>{item.email}</Text>
             <Text>{item.telefone}</Text>
-            <Text>{item.dataDeNascimento}</Text>
+            <Text>{new Date(item.dataDeNascimento).toLocaleDateString("pt-BR")}</Text>
           </View>
         )}
       />
@@ -209,6 +220,20 @@ const styles = StyleSheet.create({
     padding: 10,
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
+  },
+  searchContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 10,
+    backgroundColor: '#f0f0f0',
+    paddingHorizontal: 10,
+  },
+  searchIcon: {
+    marginRight: 10,
+  },
+  searchInput: {
+    flex: 1,
+    backgroundColor: '#f0f0f0',
   },
 });
 
