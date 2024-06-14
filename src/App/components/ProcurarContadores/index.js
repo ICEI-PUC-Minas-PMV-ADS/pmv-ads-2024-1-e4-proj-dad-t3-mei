@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Alert, Platform, Linking, View, Text, StyleSheet, ActivityIndicator } from 'react-native';
+import { Alert, Platform, Linking, View, Text, StyleSheet, ActivityIndicator } from 'react-native';
+import { Button } from 'react-native-paper';
 import * as Location from 'expo-location';
 
 const ProcurarContadores = () => {
@@ -50,7 +51,11 @@ const ProcurarContadores = () => {
       {loading ? (
         <ActivityIndicator size="large" color="#0000ff" />
       ) : (
-        <Button title="Procurar Contador" onPress={acharContador} />
+        <Button
+          onPress={acharContador}
+          mode="contained"
+          style={{ marginBottom: 10 }}
+        > Procurar Contador </Button>
       )}
       {errorMsg ? <Text style={styles.error}>{errorMsg}</Text> : null}
     </View>

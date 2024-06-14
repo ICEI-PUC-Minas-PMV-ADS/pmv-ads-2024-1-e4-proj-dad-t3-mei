@@ -11,7 +11,6 @@ import API_URLS from '../../config/apiUrls';
 
 function Perfil() {
   const [usuario, setUsuario] = useState(null);
-  const [showId, setShowId] = useState(false);
   const [dialogVisible, setDialogVisible] = useState(false);
   const [fieldToEdit, setFieldToEdit] = useState("");
   const [newValue, setNewValue] = useState("");
@@ -104,10 +103,9 @@ function Perfil() {
   }
 
   return (
-    <View style={{ flex: 1, padding: 10, justifyContent: 'center', alignItems: 'center' }}>
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 15, width: '100%' }}>
-        <Text><Text style={{ fontWeight: 'bold' }}>ID:</Text> {showId && <Text>{usuario.id}</Text>}</Text>
-        <Button mode="contained" onPress={() => setShowId(!showId)}>{showId ? 'Esconder' : 'Mostrar'}</Button>
+    <View style={{ flex: 1, padding: 30, justifyContent: 'center', alignItems: 'center' }}>
+      <View>
+        <Text style={{ fontSize: 20, fontWeight: 'bold', marginBottom: 45 }}>Seus dados</Text>
       </View>
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 15, width: '100%' }}>
         <Text><Text style={{ fontWeight: 'bold' }}>Nome:</Text> {usuario.nome}</Text>
@@ -131,7 +129,6 @@ function Perfil() {
         </Dialog.Container>
       </View>
     </View>
-
   );
 }
 
