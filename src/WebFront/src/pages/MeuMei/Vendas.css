@@ -1,0 +1,51 @@
+.p-inputtext:enabled:focus,
+.p-focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: none;
+  border-color: #2e053f;
+}
+.p:focus {
+  border: #2e053f;
+  box-shadow: none;
+}
+.p-inputtext:enabled:hover,
+.p-dropdown:hover {
+  border-color: #2e053f;
+  box-shadow: none;
+}
+.p-dropdown-items {
+  padding: 5px;
+}
+.p-dropdown-item {
+  padding: 10px;
+}
+.btn-venda {
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  background-color: rgb(41, 150, 65);
+}
+
+.vendas-conteudo {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+#vendas {
+  padding: 20px;
+}
+
+@media (max-width: 860px) {
+  .vendas-conteudo {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .vendas-conteudo {
+    grid-template-columns: 1fr;
+  }
+}

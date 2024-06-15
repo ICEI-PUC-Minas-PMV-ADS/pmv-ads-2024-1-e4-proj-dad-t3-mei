@@ -1,0 +1,61 @@
+.recuperar {
+  justify-items: center;
+  align-items: center;
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: #2e053f;
+}
+.recuperar-conteudo {
+  height: 650px;
+  width: 600px;
+  background-color: #ffdc72;
+  border-radius: 10px;
+}
+.recuperar-conteudo h1 {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.recuperar-conteudo p {
+  color: #2e053f;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.recuperar-logo {
+  background-color: #fff;
+}
+.recuperar-form {
+  display: grid;
+  justify-content: center;
+}
+.recuperar-form label {
+  font-size: 1.125rem;
+}
+.recuperar-form input {
+  outline: none;
+  margin-bottom: 20px;
+  border: none;
+  height: 40px;
+  width: 300px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+.botoes-recuperar {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  .recuperar {
+    grid-template-columns: 1fr;
+  }
+  .recuperar-conteudo {
+    height: 650px;
+    width: 400px;
+  }
+  .recuperar-logo {
+    display: none;
+  }
+}

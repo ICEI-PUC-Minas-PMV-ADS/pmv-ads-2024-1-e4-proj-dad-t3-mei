@@ -1,0 +1,38 @@
+.btn-despesa {
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  background-color: rgb(219, 39, 48);
+}
+
+.despesas-conteudo {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  color: #8538a6;
+  border-color: #8538a6;
+}
+.titulo-h1-meumei {
+  color: #2e053f;
+}
+.btn-despesa {
+  grid-column: 1;
+}
+#despesas {
+  padding: 20px;
+}
+@media (max-width: 860px) {
+  .despesas-conteudo {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .despesas-conteudo {
+    grid-template-columns: 1fr;
+  }
+}

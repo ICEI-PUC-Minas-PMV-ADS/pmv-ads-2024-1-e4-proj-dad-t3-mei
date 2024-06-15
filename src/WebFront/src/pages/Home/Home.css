@@ -1,0 +1,203 @@
+.home-conteudo-principal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 120px;
+}
+.home-conteudo-principal h1 {
+  border-right: 5px dashed #f5e0f8;
+  text-align: start;
+  color: #2e053f;
+  font-size: 6rem;
+}
+.home-conteudo-principal h1 span {
+  color: #ffdc72;
+}
+
+.home-conteudo-principal .logo {
+  justify-self: end;
+  align-self: center;
+}
+.home-conteudo-principal p {
+  text-align: center;
+  color: #2e053f;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+.registre-gerencie {
+  grid-column: 1/-1;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  border-radius: 10px;
+  background: #f2ebf3;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.registre-gerencie p {
+  margin-bottom: 20px;
+}
+.registre-gerencie ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.registre-gerencie li {
+  color: #8538a6;
+  padding-left: 60px;
+  font-size: 1.1rem;
+  position: relative;
+}
+.registre-gerencie li::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 5px;
+  top: 10px;
+  left: 35px;
+  background: #ffdc72;
+}
+#funcionalidades,
+#fale-conosco {
+  font-size: 3rem;
+  border-bottom: 5px dashed #f5e0f8;
+  color: #2e053f;
+}
+.funcionalidades-container {
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+.funcionalidades-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px;
+  justify-content: space-between;
+  align-items: center;
+}
+.funcionalidades-item img {
+  grid-column: 1;
+  max-width: 150px;
+}
+.funcionalidades-item h2 {
+  color: #8538a6;
+  padding-left: 20px;
+  grid-column: 2;
+}
+.funcionalidades-item p {
+  color: #470459;
+  font-size: 1.125rem;
+  align-self: flex-start;
+  grid-column: 1/-1;
+}
+#fale-conosco {
+  margin-top: 240px;
+}
+.fale-conosco-telefone,
+.fale-conosco-email,
+.fale-conosco-endereco {
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.fale-conosco-endereco p {
+  max-width: 28ch;
+}
+.fale-conosco-telefone img,
+.fale-conosco-email img,
+.fale-conosco-endereco img {
+  align-self: flex-start;
+  max-width: 50px;
+}
+.fale-conosco-conteudo {
+  padding: 20px 120px;
+  color: #868686;
+  font-size: 1.1rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 60px;
+  background: #f2ebf3;
+  border-radius: 10px;
+}
+.baixe-nosso-app {
+  padding-left: 10px;
+  align-content: center;
+}
+.baixe-nosso-app img {
+  max-width: 200px;
+}
+.baixe-nosso-app p {
+  font-weight: bold;
+  color: #8538a6;
+  margin-bottom: 20px;
+}
+.copy {
+  margin-top: 220px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .funcionalidades-item {
+    grid-template-columns: 1fr;
+  }
+  .funcionalidades-item h2 {
+    align-self: start;
+    padding-left: 0px;
+    grid-column: 1;
+  }
+}
+@media (max-width: 1100px) {
+  .home-conteudo-principal h1 {
+    font-size: 4rem;
+    padding-right: 40px;
+  }
+  .logo {
+    max-width: 300px;
+  }
+}
+@media (max-width: 860px) {
+  .funcionalidades-container {
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .item3 {
+    grid-column: 1/-1;
+    justify-items: center;
+  }
+  .item3 p {
+    max-width: 40ch;
+  }
+  .fale-conosco-conteudo {
+    padding: 20px 20px;
+}
+@media (max-width: 700px) {
+  .home-conteudo-principal {
+    grid-template-columns: 1fr;
+  }
+  .home-conteudo-principal h1 {
+    padding-right: 0px;
+    border-right: none;
+    text-align: center;
+  }
+  .home-conteudo-principal .logo {
+    padding-top: 40px;
+    justify-self: center;
+  }
+}
+@media (max-width: 500px) {
+  .funcionalidades-container {
+    grid-template-columns: 1fr;
+  }
+  .fale-conosco-conteudo {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 60px;
+  }
+  .baixe-nosso-app {
+    margin-top: 20px;
+    justify-self: center;
+  }
+}

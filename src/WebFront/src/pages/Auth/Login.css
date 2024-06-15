@@ -1,0 +1,75 @@
+.login {
+  justify-items: center;
+  align-items: center;
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: #2e053f;
+}
+.login-conteudo {
+  height: 650px;
+  width: 600px;
+  background-color: #ffdc72;
+  border-radius: 10px;
+}
+.login-conteudo h1 {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.login-form {
+  display: grid;
+  justify-content: center;
+}
+.login-form label {
+  font-size: 1.125rem;
+}
+.login-form input {
+  outline: none;
+  margin-bottom: 20px;
+  border: none;
+  height: 40px;
+  width: 300px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+.botoes-login {
+  display: flex;
+  justify-content: center;
+}
+.login-logo h3 {
+  font-size: 2rem;
+  text-align: center;
+  color: #8538a6;
+}
+.esqueceu-senha {
+  text-align: center;
+}
+.esqueceu-senha:hover {
+  font-weight: bold;
+}
+.fale-conosco-container {
+  display: flex;
+  justify-content: center;
+  opacity: 0.9;
+}
+.fale-conosco-container:hover {
+  opacity: 1;
+}
+.fale-conosco-container a {
+  padding: 10px 20px;
+  background: #470459;
+  color: #f5e0f8;
+  border-radius: 5px;
+  display: block;
+}
+
+@media (max-width: 1100px) {
+  .login {
+    grid-template-columns: 1fr;
+  }
+  .login-conteudo {
+    height: 650px;
+    width: 400px;
+  }
+}

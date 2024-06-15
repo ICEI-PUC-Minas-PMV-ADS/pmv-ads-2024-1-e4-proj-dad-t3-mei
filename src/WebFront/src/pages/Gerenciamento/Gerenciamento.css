@@ -1,0 +1,12 @@
+.tab-conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+.botoes-tabela-edit {
+  color: #0caf2a;
+  background-color: #dbffe2;
+}
+.botoes-tabela-excluir {
+  color: #ff0808;
+  background-color: #ffeeee;
+}

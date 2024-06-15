@@ -1,0 +1,83 @@
+.meumei-conteudo {
+  margin-top: 40px;
+  height: 100vh;
+  color: #2e053f;
+  /* border: 5px dashed #f5e0f8; */
+}
+.meumei-faturamento-despesa {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.meumei-painel {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 40px;
+  background-color: #f6eef7;
+  border-radius: 15px;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.meumei-painel span {
+  font-size: 1.8rem;
+  width: 100%;
+}
+.meumei-painel-img p {
+  text-align: center;
+  opacity: 0.3;
+}
+.space-between {
+  gap: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.btn-mes,
+.btn-ano {
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.ganho-img {
+  max-width: 50px;
+  opacity: 0.2;
+}
+.meumei-saldo-fat {
+  color: #0ba030;
+}
+.meumei-saldo-des {
+  color: #e21;
+}
+.limite-mei {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.meumei-tab {
+  margin-top: 40px;
+  border: 2px dashed #f5e0f8;
+  color: #2e053f;
+}
+.grafico-conteudo {
+  margin-top: 60px;
+}
+.barra-de-progresso {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+#meivalorbase {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: normal;
+  color: #cacaca;
+  padding-left: 20px;
+}
+@media (max-width: 600px) {
+  .meumei-faturamento-despesa {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

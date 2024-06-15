@@ -1,0 +1,30 @@
+.perfil-conteudo {
+  margin: 40px auto;
+  border: 2px dashed #f5e0f8;
+  color: #2e053f;
+  padding: 40px;
+  max-width: 600px;
+}
+.perfil-conteudo h1 {
+  margin-bottom: 20px;
+}
+.perfil-dados {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+}
+.perfil-dados-item {
+  margin-bottom: 20px;
+}
+
+.perfil-dados-item span {
+  color: #8538a6;
+  padding: 5px 20px;
+  border-radius: 5px;
+  display: block;
+  width: 400px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

@@ -1,5 +1,5 @@
 {
-  "name": "mei-a-mei",
+  "name": "mei-a-mei-front",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,22 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fortawesome/free-solid-svg-icons": "^6.5.2",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@googlemaps/react-wrapper": "^1.1.35",
-    "@types/jwt-decode": "^3.1.0",
-    "axios": "^1.6.8",
-    "bootstrap": "^5.3.3",
-    "bootstrap-icons": "^1.11.3",
-    "google-map-react": "^2.2.1",
+    "axios": "^1.7.2",
+    "chart.js": "^4.4.3",
     "jwt-decode": "^4.0.0",
+    "primeicons": "^7.0.0",
+    "primereact": "^10.6.6",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.10.2",
-    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^5.1.0",
-    "react-router-dom": "^6.22.3",
-    "styled-components": "^6.1.8"
+    "react-icons": "^5.2.1",
+    "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

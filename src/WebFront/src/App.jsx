@@ -1,44 +1,18 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AuthProvider from "./provider/authProvider";
+import Routes from "./routes";
 
+// CSS
 import "./App.css";
+import { PrimeReactProvider } from "primereact/api";
 
-import Home from "./components/home/Home";
-import Registrar from "./components/registrar/Registrar";
-import Login from "./components/login/Login";
-import Recuperar from "./components/recuperar/Recuperar";
-import Faturamento from "./components/faturamento/Faturamento";
-import Gerenciamento from "./components/Gerenciamento/Gerenciamento";
-import Registros from "./components/Registros/Registros";
-import Perfil from "./components/Perfil/Perfil";
-import Header from "./components/header/Header";
-import EditarProduto from "./components/RegistrarProdutos/EditarProduto";
-import EditarServico from "./components/RegistrarServicos/EditarServico";
-import EditarCategoria from "./components/RegistrarCategorias/EditarCategoria";
-import EditarCliente from "./components/RegistrarClientes/EditarCliente";
-
-function App() {
+const App = () => {
   return (
-    <>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/registrar" element={<Registrar />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/recuperar" element={<Recuperar />} />
-          <Route path="/meumei" element={<Faturamento />} />
-          <Route path="/gerenciamento" element={<Gerenciamento />} />
-          <Route path="/registros" element={<Registros />} />
-          <Route path="/perfil" element={<Perfil />} />
-          <Route path="/editar/:id" element={<EditarProduto />}/>
-          <Route path="/editarServico/:id" element={<EditarServico />}/>
-          <Route path="/editarCategoria/:id" element={<EditarCategoria />}/>
-          <Route path="/editarCliente/:id" element={<EditarCliente />}/>
-        </Routes>
-      </BrowserRouter>
-    </>
+    <PrimeReactProvider>
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
+    </PrimeReactProvider>
   );
-}
+};
 
 export default App;
