@@ -70,6 +70,17 @@ namespace mei.Controllers
                     return NotFound();
                 }
 
+                // Verifique se o email foi fornecido e se já está em uso por outro usuário
+                if (!string.IsNullOrEmpty(updatedUser.Email) && updatedUser.Email != user.Email)
+                {
+                    var existingUser = await _usuariosService.GetByEmailAsync(updatedUser.Email);
+                    if (existingUser != null)
+                    {
+                        return BadRequest("Um usuário com este email já existe.");
+                    }
+                    user.Email = updatedUser.Email;
+                }
+
                 // Atualize o campo Nome se ele foi fornecido
                 if (!string.IsNullOrEmpty(updatedUser.Nome))
                 {
@@ -82,12 +93,6 @@ namespace mei.Controllers
                     user.Cnpj = updatedUser.Cnpj;
                 }
 
-                // Atualize o campo Email se ele foi fornecido
-                if (!string.IsNullOrEmpty(updatedUser.Email))
-                {
-                    user.Email = updatedUser.Email;
-                }
-
                 // Atualize a senha apenas se uma nova senha foi fornecida
                 if (!string.IsNullOrEmpty(updatedUser.Senha))
                 {
@@ -96,7 +101,6 @@ namespace mei.Controllers
 
                 await _usuariosService.UpdateAsync(id, user);
 
-                Console.WriteLine("User updated successfully.");
 
                 return NoContent();
             }
