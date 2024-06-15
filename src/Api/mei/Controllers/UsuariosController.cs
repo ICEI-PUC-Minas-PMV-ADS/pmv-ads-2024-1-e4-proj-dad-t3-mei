@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using MongoDB.Bson.IO;
 
 namespace mei.Controllers
 {
@@ -60,21 +61,53 @@ namespace mei.Controllers
         [HttpPut("{id:length(24)}")]
         public async Task<IActionResult> Update(string id, Usuario updatedUser)
         {
-            var user = await _usuariosService.GetAsync(id);
-
-            if (user is null)
+            try
             {
-                return NotFound();
+                var user = await _usuariosService.GetAsync(id);
+
+                if (user is null)
+                {
+                    return NotFound();
+                }
+
+                // Atualize o campo Nome se ele foi fornecido
+                if (!string.IsNullOrEmpty(updatedUser.Nome))
+                {
+                    user.Nome = updatedUser.Nome;
+                }
+
+                // Atualize o campo Cnpj se ele foi fornecido
+                if (!string.IsNullOrEmpty(updatedUser.Cnpj))
+                {
+                    user.Cnpj = updatedUser.Cnpj;
+                }
+
+                // Atualize o campo Email se ele foi fornecido
+                if (!string.IsNullOrEmpty(updatedUser.Email))
+                {
+                    user.Email = updatedUser.Email;
+                }
+
+                // Atualize a senha apenas se uma nova senha foi fornecida
+                if (!string.IsNullOrEmpty(updatedUser.Senha))
+                {
+                    user.Senha = BCrypt.Net.BCrypt.HashPassword(updatedUser.Senha);
+                }
+
+                await _usuariosService.UpdateAsync(id, user);
+
+                Console.WriteLine("User updated successfully.");
+
+                return NoContent();
             }
-
-            // Criptografe a senha ao atualizar
-            updatedUser.Senha = BCrypt.Net.BCrypt.HashPassword(updatedUser.Senha);
-            updatedUser.Id = user.Id;
-
-            await _usuariosService.UpdateAsync(id, updatedUser);
-
-            return NoContent();
+            catch (Exception ex)
+            {
+                // Log the exception details
+                Console.WriteLine($"Error updating user: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+            }
         }
+
 
 
         [HttpDelete("{id:length(24)}")]
