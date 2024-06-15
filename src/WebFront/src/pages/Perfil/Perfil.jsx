@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "primereact/button";
-import { jwtDecode } from "jwt-decode";
 import { api } from "../../utils/config";
 import { Dialog } from "primereact/dialog";
 import { Skeleton } from "primereact/skeleton";
+import { InputText } from "primereact/inputtext";
+import { Password } from "primereact/password";
 
 import "./Perfil.css";
 
@@ -13,16 +14,16 @@ const Perfil = () => {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [cnpj, setCnpj] = useState("");
-
-  const [usuario, setUsuario] = useState(null);
+  const [senha, setSenha] = useState("");
 
   const { usuarioId, token } = useAuth();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const [dialogVisible, setDialogVisible] = useState(false);
-  const [fieldToEdit, setFieldToEdit] = useState("");
-  const [newValue, setNewValue] = useState("");
+  const [dialogNome, setDialogNome] = useState(false);
+  const [dialogEmail, setDialogEmail] = useState(false);
+  const [dialogCnpj, setDialogCnpj] = useState(false);
+  const [dialogSenha, setDialogSenha] = useState(false);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -37,22 +38,25 @@ const Perfil = () => {
 
           if (response.ok) {
             const data = await response.json();
-            setUsuario(data);
             setNome(data.nome);
             setEmail(data.email);
             setCnpj(data.cnpj);
             setLoading(false);
+          } else if (response.status === 404) {
+            setError("Usuário não encontrado.");
+          } else if (response.status === 401) {
+            setError("Não autorizado. Faça login novamente.");
           } else {
-            setError(
-              "Erro ao recuperar os dados do usuário:",
-              response.statusText
-            );
+            const errorMessage = await response.text();
+            setError(`Erro ao recuperar os dados do usuário: ${errorMessage}`);
           }
         } else {
           setError("Erro: userId está indefinido");
         }
       } catch (error) {
-        setError("Erro ao decodificar o token ou ao buscar os dados:", error);
+        setError(
+          "Erro ao decodificar o token ou ao buscar os dados do usuário."
+        );
       } finally {
         setLoading(false);
       }
@@ -73,15 +77,34 @@ const Perfil = () => {
     return formattedCnpj;
   };
 
-  const handleEdit = (field) => {
-    setFieldToEdit(field);
-    setNewValue(usuario[field.toLowerCase()]);
-    setDialogVisible(true);
+  const handleEditNome = () => {
+    setError("");
+    setDialogNome(true);
   };
 
-  const handleConfirm = async () => {
-    const updatedUser = { ...usuario, [fieldToEdit.toLowerCase()]: newValue };
+  const handleEditEmail = () => {
+    setError("");
+    setDialogEmail(true);
+  };
+
+  const handleEditCnpj = () => {
+    setError("");
+    setDialogCnpj(true);
+  };
+
+  const handleEditSenha = () => {
+    setError("");
+    setDialogSenha(true);
+  };
+
+  const handleConfirmNome = async () => {
+    setError("");
     setLoading(true);
+
+    const updatedUser = {
+      nome: nome,
+    };
+
     try {
       const response = await fetch(`${api}/Usuarios/${usuarioId}`, {
         method: "PUT",
@@ -93,30 +116,89 @@ const Perfil = () => {
       });
 
       if (response.ok) {
-        const updatedData = await response.json().catch(() => null);
-        if (updatedData) {
-          setUsuario(updatedData);
-          if (fieldToEdit.toLowerCase() === "nome") {
-            setNome(updatedData.nome);
-          } else if (fieldToEdit.toLowerCase() === "email") {
-            setEmail(updatedData.email);
-          } else if (fieldToEdit.toLowerCase() === "cnpj") {
-            setCnpj(updatedData.cnpj);
-          }
-        } else {
-          setUsuario(updatedUser);
-          if (fieldToEdit.toLowerCase() === "nome") {
-            setNome(updatedUser.nome);
-          } else if (fieldToEdit.toLowerCase() === "email") {
-            setEmail(updatedUser.email);
-          } else if (fieldToEdit.toLowerCase() === "cnpj") {
-            setCnpj(updatedUser.cnpj);
-          }
-        }
-        setDialogVisible(false);
+        setDialogNome(false);
       } else {
         setError(
-          `Erro ao atualizar o usuário: ${response.status} ${response.statusText}`
+          `Erro ao atualizar o nome do usuário: ${response.status} ${response.statusText}`
+        );
+      }
+    } catch (error) {
+      setError("Erro ao atualizar o usuário.");
+    } finally {
+      setLoading(false);
+    }
+  };
+  const handleConfirmEmail = async () => {
+    setError("");
+    setLoading(true);
+    const updatedInfo = { email: email };
+    try {
+      const response = await fetch(`${api}/Usuarios/${usuarioId}`, {
+        method: "PUT",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedInfo),
+      });
+
+      if (response.ok) {
+        setDialogEmail(false);
+      } else {
+        setError("Já existe uma conta vinculada a este e-mail, utilize outro");
+      }
+    } catch (error) {
+      setError("Erro ao atualizar o usuário.");
+    } finally {
+      setLoading(false);
+    }
+  };
+  const handleConfirmCnpj = async () => {
+    setError("");
+    setLoading(true);
+    const updatedInfo = { cnpj: cnpj };
+    try {
+      const response = await fetch(`${api}/Usuarios/${usuarioId}`, {
+        method: "PUT",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedInfo),
+      });
+
+      if (response.ok) {
+        setDialogCnpj(false);
+      } else {
+        setError(
+          `Erro ao atualizar o cnpj do usuário: ${response.status} ${response.statusText}`
+        );
+      }
+    } catch (error) {
+      setError("Erro ao atualizar o usuário.");
+    } finally {
+      setLoading(false);
+    }
+  };
+  const handleConfirmSenha = async () => {
+    setError("");
+    setLoading(true);
+    const updatedInfo = { senha: senha };
+    try {
+      const response = await fetch(`${api}/Usuarios/${usuarioId}`, {
+        method: "PUT",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedInfo),
+      });
+
+      if (response.ok) {
+        setDialogSenha(false);
+      } else {
+        setError(
+          `Erro ao atualizar a senha do usuário: ${response.status} ${response.statusText}`
         );
       }
     } catch (error) {
@@ -147,7 +229,7 @@ const Perfil = () => {
                 rounded
                 outlined
                 className="botoes-tabela-edit"
-                onClick={() => handleEdit("Nome")}
+                onClick={() => handleEditNome()}
               />
             </div>
           </div>
@@ -162,7 +244,8 @@ const Perfil = () => {
                 rounded
                 outlined
                 className="botoes-tabela-edit"
-                onClick={() => handleEdit("Email")}
+                onClick={() => handleEditEmail()}
+                disabled={loading}
               />
             </div>
           </div>
@@ -177,30 +260,48 @@ const Perfil = () => {
                 rounded
                 outlined
                 className="botoes-tabela-edit"
-                onClick={() => handleEdit("Cnpj")}
+                onClick={() => handleEditCnpj()}
+                disabled={loading}
+              />
+            </div>
+          </div>
+          <div className="perfil-dados">
+            <div className="perfil-dados-item">
+              <h2>Senha</h2>
+            </div>
+            <div className="perfil-dados-btn">
+              <Button
+                icon="pi pi-pencil"
+                rounded
+                outlined
+                className="botoes-tabela-edit"
+                onClick={() => handleEditSenha()}
+                disabled={loading}
               />
             </div>
           </div>
         </div>
       </div>
+      {/* Alterar nome */}
       <Dialog
-        visible={dialogVisible}
+        visible={dialogNome}
         style={{ width: "450px" }}
-        onHide={() => setDialogVisible(false)}
-        header={`Editar ${fieldToEdit}`}
+        onHide={() => setDialogNome(false)}
+        header="Editar nome"
         modal
         footer={
           <div>
             <Button
               label="Cancelar"
               icon="pi pi-times"
-              onClick={() => setDialogVisible(false)}
+              onClick={() => setDialogNome(false)}
               className="p-button-text"
+              disabled={loading}
             />
             <Button
               label="Salvar"
               icon="pi pi-check"
-              onClick={handleConfirm}
+              onClick={handleConfirmNome}
               disabled={loading}
             />
           </div>
@@ -209,12 +310,122 @@ const Perfil = () => {
         <div className="dialog-content">
           {error && <p className="error">{error}</p>}
           <div className="dialog-field">
-            <label htmlFor="editField">{fieldToEdit}</label>
-            <input
-              id="editField"
+            <InputText
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
               type="text"
-              value={newValue}
-              onChange={(e) => setNewValue(e.target.value)}
+            />
+          </div>
+        </div>
+      </Dialog>
+
+      {/* Alterar email */}
+      <Dialog
+        visible={dialogEmail}
+        style={{ width: "450px" }}
+        onHide={() => setDialogEmail(false)}
+        header="Editar e-mail"
+        modal
+        footer={
+          <div>
+            <Button
+              label="Cancelar"
+              icon="pi pi-times"
+              onClick={() => setDialogEmail(false)}
+              className="p-button-text"
+              disabled={loading}
+            />
+            <Button
+              label="Salvar"
+              icon="pi pi-check"
+              onClick={handleConfirmEmail}
+              disabled={loading}
+            />
+          </div>
+        }
+      >
+        <div className="dialog-content">
+          {error && <p className="error">{error}</p>}
+          <div className="dialog-field">
+            <InputText
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              type="email"
+            />
+          </div>
+        </div>
+      </Dialog>
+
+      {/* Alterar cnpj */}
+      <Dialog
+        visible={dialogCnpj}
+        style={{ width: "450px" }}
+        onHide={() => setDialogCnpj(false)}
+        header="Editar CNPJ"
+        modal
+        footer={
+          <div>
+            <Button
+              label="Cancelar"
+              icon="pi pi-times"
+              onClick={() => setDialogCnpj(false)}
+              className="p-button-text"
+              disabled={loading}
+            />
+            <Button
+              label="Salvar"
+              icon="pi pi-check"
+              onClick={handleConfirmCnpj}
+              disabled={loading}
+            />
+          </div>
+        }
+      >
+        <div className="dialog-content">
+          {error && <p className="error">{error}</p>}
+          <div className="dialog-field">
+            <InputText
+              value={cnpj}
+              onChange={(e) => setCnpj(e.target.value)}
+              type="text"
+            />
+          </div>
+        </div>
+      </Dialog>
+
+      {/* Alterar senha */}
+      <Dialog
+        visible={dialogSenha}
+        style={{ width: "450px" }}
+        onHide={() => setDialogSenha(false)}
+        header="Digite uma nova senha"
+        modal
+        footer={
+          <div>
+            <Button
+              label="Cancelar"
+              icon="pi pi-times"
+              onClick={() => setDialogSenha(false)}
+              className="p-button-text"
+              disabled={loading}
+            />
+            <Button
+              label="Salvar"
+              icon="pi pi-check"
+              onClick={handleConfirmSenha}
+              disabled={loading}
+            />
+          </div>
+        }
+      >
+        <div className="dialog-content">
+          {error && <p className="error">{error}</p>}
+          <div className="dialog-field">
+            <Password
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+              feedback={false}
+              tabIndex={1}
             />
           </div>
         </div>
