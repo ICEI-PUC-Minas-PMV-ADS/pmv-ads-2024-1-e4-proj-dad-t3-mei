@@ -26,7 +26,7 @@ const Despesas = () => {
   useEffect(() => {
     const fetchToken = async () => {
       try {
-        const token = await AsyncStorage.getItem("token");
+        const token = await AsyncStorage.getItem('token');
         const decodedToken = jwtDecode(token);
         setUserId(decodedToken.nameid);
       } catch (error) {

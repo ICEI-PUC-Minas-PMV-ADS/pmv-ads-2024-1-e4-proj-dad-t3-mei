@@ -21,18 +21,24 @@ function Perfil() {
     const fetchUser = async () => {
       try {
         const token = await AsyncStorage.getItem('token');
+        if (!token) {
+          console.error('Token não encontrado');
+          return;
+        }
         setToken(token);
         const decodedToken = jwtDecode(token);
         const userId = decodedToken && decodedToken.nameid;
 
-
         console.log('userId:', userId);
+        console.log(`Fazendo requisição para: ${API_URLS.USUARIOS}/${userId}`);
+        console.log(`Com token: ${token}`);
 
         if (userId) {
-          axios.get(`${API_URLS.USUARIOS}/${userId}`, {
+          fetch(`${API_URLS.USUARIOS}/${userId}`, {
+            method: 'GET',
             headers: {
-              Authorization: `Bearer ${token}`,
-            },
+              'Authorization': `Bearer ${token}`
+            }
           })
             .then((response) => {
               setUsuario(response.data);

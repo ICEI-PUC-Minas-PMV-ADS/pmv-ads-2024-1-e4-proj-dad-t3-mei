@@ -7,7 +7,7 @@ import API_URLS from "../../config/apiUrls";
 
 export default function Login({ navigation }) {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [senha, setSenha] = useState("");
 
   // Função de validação
   const validarLogin = (email, senha) => {
@@ -16,7 +16,7 @@ export default function Login({ navigation }) {
       return false;
     }
     if (senha.length < 5) {
-      alert("A senha deve ter pelo menos 6 caracteres.");
+      alert("A senha deve ter pelo menos 5 caracteres.");
       return false;
     }
     if (!email.includes("@") || !email.includes(".")) {
@@ -28,13 +28,13 @@ export default function Login({ navigation }) {
 
   const handleLogin = async () => {
     // Chama a função de validação
-    if (!validarLogin(email, password)) {
+    if (!validarLogin(email, senha)) {
       return; // Interrompe a execução se a validação falhar
     }
     try {
       const response = await axios.post(`${API_URLS.USUARIOS_AUTHENTICATE}`, {
         email: email,
-        senha: password,
+        senha: senha,
       });
 
       const data = response.data;
@@ -49,7 +49,7 @@ export default function Login({ navigation }) {
           routes: [{ name: "MyTabs" }],
         });
         // Armazena o token JWT no AsyncStorage diretamente
-        await AsyncStorage.setItem("token", token);
+        await AsyncStorage.setItem("token", JSON.stringify(token));
       } else {
         // Lança um erro se o token não for encontrado
         throw new Error("Token inválido: não encontrado");
@@ -108,8 +108,8 @@ export default function Login({ navigation }) {
       <TextInput
         mode="outlined"
         label="Senha"
-        value={password}
-        onChangeText={setPassword}
+        value={senha}
+        onChangeText={setSenha}
         secureTextEntry
         style={{ marginBottom: 10 }}
       />

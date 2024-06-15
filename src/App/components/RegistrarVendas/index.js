@@ -28,8 +28,8 @@ const Vendas = () => {
   useEffect(() => {
     const fetchToken = async () => {
       try {
-        const token = await AsyncStorage.getItem("token");
-        if (typeof token === 'string') {
+        const token = await AsyncStorage.getItem('token');
+        if (token) {
           const decodedToken = jwtDecode(token);
           setUserId(decodedToken.nameid);
         } else {
