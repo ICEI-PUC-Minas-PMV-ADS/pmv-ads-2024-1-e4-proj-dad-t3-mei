@@ -12,7 +12,7 @@ import { Toast } from "primereact/toast";
 import "./Vendas.css";
 
 // BaseUrl e config
-import { api, requestConfig } from "../../utils/config";
+import { api } from "../../utils/config";
 import { useAuth } from "../../provider/authProvider";
 
 const Vendas = ({ fetchFaturamento }) => {
@@ -38,8 +38,8 @@ const Vendas = ({ fetchFaturamento }) => {
   // Monta o array com filter para mostrar as opções
   const [servicos, setServicos] = useState([]);
   const [produtos, setProdutos] = useState([]);
-  const { usuarioId } = useAuth();
 
+  const { usuarioId } = useAuth();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -116,6 +116,13 @@ const Vendas = ({ fetchFaturamento }) => {
     e.preventDefault();
     setLoading(true);
 
+    // Validar os dados antes de enviar
+    if (!meioDePagamento || !nome || !valor || !dataFaturamento) {
+      setError("Preencha os campos com *.");
+      setLoading(false);
+      return;
+    }
+
     const fat = {
       usuarioId,
       nome,
@@ -125,6 +132,7 @@ const Vendas = ({ fetchFaturamento }) => {
       produtosId: [selectedProduct],
       servicosId: [selectedService],
     };
+
     const config = {
       method: "POST",
       headers: {
@@ -132,23 +140,26 @@ const Vendas = ({ fetchFaturamento }) => {
       },
       body: JSON.stringify(fat),
     };
+
     try {
       const res = await fetch(`${api}/Faturamentos`, config);
 
       if (!res.ok) {
-        setError("Erro no envio!");
+        const errorData = await res.json();
+        setError(`Erro no envio: ${errorData.message || res.statusText}`);
+      } else {
+        // Mostrar mensagem de sucesso
+        show();
+        // Limpar campos
+        limparCampos();
+        // Limpa os erros
+        setError("");
+        // Atualizar a lista de faturamentos
+        await fetchFaturamento();
       }
-
-      // Mostrar mensagem de sucesso
-      show();
-      // Limpar campos
-      limparCampos();
-      // Limpa os erros
-      setError("");
-      fetchFaturamento();
-      setLoading(false);
     } catch (error) {
-      setError(error.message);
+      setError(`Erro: ${error.message}`);
+    } finally {
       setLoading(false);
     }
   };
@@ -161,12 +172,12 @@ const Vendas = ({ fetchFaturamento }) => {
       <div className="vendas-conteudo">
         <InputText
           value={nome}
-          placeholder="Venda de..."
+          placeholder="Venda de...*"
           onChange={(e) => setNome(e.target.value)}
         />
         <InputNumber
           value={valor}
-          placeholder="R$"
+          placeholder="R$*"
           onValueChange={(e) => setValor(e.value)}
           locale="pt-BR"
           minFractionDigits={2}
@@ -176,7 +187,7 @@ const Vendas = ({ fetchFaturamento }) => {
           onChange={(e) => setDataFaturamento(e.value)}
           showIcon
           locale="pt-BR"
-          placeholder="Data"
+          placeholder="Data*"
         />
         <Dropdown
           value={selectedProduct}
@@ -204,9 +215,11 @@ const Vendas = ({ fetchFaturamento }) => {
           value={meioDePagamento}
           onChange={(e) => setMeioDePagamento(e.value)}
           options={meioDePagamentoOptions}
-          placeholder="Meio de pagamento"
+          placeholder="Meio de pagamento*"
+          optionValue="name"
           optionLabel="name"
           className="w-full md:w-14rem"
+          required={true}
         />
         <button
           className="btn-venda"
