@@ -1,7 +1,7 @@
-import * as React from "react";
+import React, { useCallback } from 'react';
 import { IconButton, MD3Colors, Button } from "react-native-paper";
 
-import { View, ScrollView, StyleSheet, Text } from "react-native";
+import { RefreshControl, View, ScrollView, StyleSheet, Text } from "react-native";
 
 import GraficoMes from "../../components/Graficos/GraficoMes";
 import GraficoAno from "../../components/Graficos/GraficoAno";
@@ -13,11 +13,28 @@ import VendasDespesas from "../../components/VendasDespesas";
 
 const Faturamento = () => {
   const [grafico, setGrafico] = React.useState("mes");
+  const [refreshing, setRefreshing] = React.useState(false);
+
+  const wait = (time) => new Promise(resolve => setTimeout(resolve, time));
+
+  const onRefresh = useCallback(async () => {
+    setRefreshing(true);
+    await wait(2000); // Agora espera 2 segundos antes de definir refreshing para false
+    setRefreshing(false);
+  }, []);
+
 
   return (
     <View style={styles.mainContainer}>
       <Container>
-        <ScrollView>
+        <ScrollView
+          refreshControl={
+            <RefreshControl
+              refreshing={refreshing}
+              onRefresh={onRefresh}
+            />
+          }
+        >
           <View style={styles.buttonIcon}>
             <Text style={styles.text}>Limite MEI</Text>
             <View style={styles.buttonIcon}>

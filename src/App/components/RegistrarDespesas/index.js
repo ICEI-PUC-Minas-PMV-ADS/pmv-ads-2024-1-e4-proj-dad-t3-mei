@@ -154,7 +154,7 @@ const Despesas = () => {
           <View>
             <TextInput
               style={styles.input}
-              label="Despesa com ..."
+              label="Mais informações"
               value={nome}
               onChange={handleChange}
               onChangeText={(text) => setNome(text)}

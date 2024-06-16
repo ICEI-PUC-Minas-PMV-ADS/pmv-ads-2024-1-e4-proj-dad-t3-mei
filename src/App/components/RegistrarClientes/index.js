@@ -17,7 +17,7 @@ const GerenciarClientes = () => {
   const [usuarioId, setUsuarioId] = useState('');
   const [search, setSearch] = useState('');
   const [error, setError] = useState('');
-  const [showDatePicker, setShowDatePicker] = useState(false); // Renomeado para showDatePicker para clareza
+  const [showDatePicker, setShowDatePicker] = useState(false);
 
   useEffect(() => {
     const obterTokenEUsuario = async () => {
@@ -28,27 +28,36 @@ const GerenciarClientes = () => {
       }
       const decodedToken = jwtDecode(jwtToken);
       setUsuarioId(decodedToken && decodedToken.nameid);
-      buscarClientes();
+      // Chamar buscarClientes aqui não é mais necessário
     };
 
-    obterTokenEUsuario();
-  }, []);
+    const buscarClientes = async () => {
+      try {
+        const jwtToken = await AsyncStorage.getItem('token');
+        if (!jwtToken) {
+          Alert.alert('Erro', 'Token não encontrado');
+          return;
+        }
+        const response = await axios.get(API_URLS.CLIENTES, {
+          headers: {
+            Authorization: `Bearer ${jwtToken}`,
+          },
+        });
 
-  const buscarClientes = async () => {
-    try {
-      const jwtToken = await AsyncStorage.getItem('token');
-      const response = await axios.get(API_URLS.CLIENTES, {
-        headers: {
-          Authorization: `Bearer ${jwtToken}`,
-        },
-        body: JSON.stringify({ usuarioId }),
-      });
-      setClientes(response.data);
-    } catch (error) {
-      console.error('Erro ao buscar clientes:', error);
-      Alert.alert('Erro', 'Falha ao buscar clientes');
-    }
-  };
+        const usuarioIdCorreto = usuarioId;
+        const clientesFiltrados = response.data.filter(cliente => cliente.usuarioId === usuarioIdCorreto);
+
+        setClientes(clientesFiltrados);
+      } catch (error) {
+        console.error('Erro ao buscar clientes:', error);
+        Alert.alert('Erro', 'Falha ao buscar clientes');
+      }
+    };
+
+    // Chamar obterTokenEUsuario e buscarClientes quando o componente é montado
+    obterTokenEUsuario();
+    buscarClientes();
+  }, []);
 
   const limparCampos = () => {
     setNome('');
@@ -95,7 +104,6 @@ const GerenciarClientes = () => {
       const response = await axios.post(API_URLS.CLIENTES, cliente, config);
       if (response.status === 200) {
         Alert.alert('Sucesso', 'Cliente registrado com sucesso');
-        // Atualizar a lista de clientes ou realizar outras ações necessárias
       }
     } catch (error) {
       console.error('Erro ao registrar cliente:', error);
@@ -119,17 +127,47 @@ const GerenciarClientes = () => {
   const handleDateChange = (event, selectedDate) => {
     const currentDate = selectedDate || dataDeNascimento;
     setShowDatePicker(false);
-    setDataDeNascimento(currentDate); // Corrigido para usar o nome correto do estado
+    setDataDeNascimento(currentDate);
   };
 
+  function handleDeleteCliente(clienteId) {
+    Alert.alert(
+      "Confirmação",
+      "Tem certeza que deseja excluir este cliente?",
+      [
+        {
+          text: "Cancelar",
+          style: "cancel"
+        },
+        {
+          text: "Confirmar", onPress: async () => {
+            try {
+              const jwtToken = await AsyncStorage.getItem('token');
+              const config = {
+                headers: { Authorization: `Bearer ${jwtToken}` }
+              };
+              await axios.delete(`${API_URLS.CLIENTES}/${clienteId}`, config);
+              // Atualizar a lista de clientes
+              const novaListaClientes = clientes.filter(cliente => cliente.id !== clienteId);
+              setClientes(novaListaClientes);
+              Alert.alert("Sucesso", "Cliente excluído com sucesso.");
+            } catch (error) {
+              console.error('Erro ao excluir cliente:', error);
+              Alert.alert("Erro", "Não foi possível excluir o cliente.");
+            }
+          }
+        }
+      ]
+    );
+  }
 
   return (
     <View style={styles.container}>
       <FlatList
-        data={clientesFiltrados} // Alterado para usar clientes filtrados
+        data={clientesFiltrados} // clientes filtrados
         keyExtractor={item => item.id.toString()}
         renderItem={({ item }) => (
-          <Text>{item.nome}</Text> // Exemplo simples de como exibir os nomes dos clientes
+          <Text>{item.nome}</Text> // Exibe os nomes
         )}
         ListHeaderComponent={
           <View style={styles.headerContainer}>
@@ -155,7 +193,7 @@ const GerenciarClientes = () => {
               style={styles.input}
             />
 
-            <View style={styles.input}>
+            <View style={styles.inputData}>
               <TouchableOpacity
                 onPress={showDatePickerHandler}
                 style={styles.datePickerTouch}
@@ -198,10 +236,18 @@ const GerenciarClientes = () => {
             <Text>{item.email}</Text>
             <Text>{item.telefone}</Text>
             <Text>{new Date(item.dataDeNascimento).toLocaleDateString("pt-BR")}</Text>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+              <Button>
+                Editar
+              </Button>
+              <Button onPress={() => handleDeleteCliente(item.id)}>
+                Excluir
+              </Button>
+            </View>
           </View>
         )}
       />
-    </View>
+    </View >
   );
 }
 
@@ -234,6 +280,16 @@ const styles = StyleSheet.create({
   searchInput: {
     flex: 1,
     backgroundColor: '#f0f0f0',
+  },
+  datePickerTouch: {
+    padding: 12,
+    borderWidth: 1,
+    borderBottomWidth: 3,
+    borderBottomColor: '#ccc',
+    backgroundColor: '#fff',
+    marginBottom: 10,
+    fontSize: 16,
+    borderRadius: 5,
   },
 });
 

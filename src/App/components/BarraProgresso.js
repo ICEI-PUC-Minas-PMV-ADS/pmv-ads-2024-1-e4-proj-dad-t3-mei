@@ -50,9 +50,9 @@ const BarraProgresso = ({ progress }) => {
   }, [userId, userFaturamentos]);
 
   useEffect(() => {
-    const barra = totalFaturamentos / meiMes;
+    const barra = totalFaturamentos / meiAno;
     setBarra(barra);
-  }, [totalFaturamentos, meiMes]);
+  }, [totalFaturamentos, meiAno]);
 
   return (
     <View style={{ flexDirection: "row", alignItems: "center", width: "100%" }}>

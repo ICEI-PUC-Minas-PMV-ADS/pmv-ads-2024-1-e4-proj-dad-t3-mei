@@ -9,7 +9,6 @@ const SaldoVendas = () => {
   const [userId, setUserId] = useState(null);
   const [userFaturamentos, setUserFaturamentos] = useState([]);
   const [totalFaturamentos, setTotalFaturamentos] = useState(0);
-  const [periodo, setPeriodo] = useState("mes");
 
   useEffect(() => {
     const getToken = async () => {
@@ -24,7 +23,7 @@ const SaldoVendas = () => {
     };
 
     getToken();
-  }, []);
+  }, [totalFaturamentos]);
 
 
   useEffect(() => {
@@ -45,7 +44,7 @@ const SaldoVendas = () => {
           console.error("Erro ao buscar dados:", error);
         });
     }
-  }, [userId]);
+  }, [userId, userFaturamentos]);
 
   return (
     <View>
@@ -56,14 +55,7 @@ const SaldoVendas = () => {
           <Text style={[{ fontSize: 24, color: "#349c14" }]}>
             {totalFaturamentos.toLocaleString("pt-BR")}
           </Text>
-        </View>
-        <View style={styles.containerBotoes}>
-          <Button mode="contained" onPress={() => setPeriodo("mes")}>
-            MÊS
-          </Button>
-          <Button mode="contained" onPress={() => setPeriodo("ano")}>
-            ANO
-          </Button>
+          <Text style={{ fontSize: 12, padding: 8, marginLeft: 130 }}>de 81.000,00</Text>
         </View>
       </View>
     </View>

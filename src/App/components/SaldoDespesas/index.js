@@ -40,7 +40,7 @@ const SaldoVendas = () => {
           console.error("Erro ao buscar dados:", error);
         });
     }
-  }, [userId]);
+  }, [userId, userDespesas]);
 
   return (
     <View>
@@ -51,14 +51,6 @@ const SaldoVendas = () => {
           <Text style={[{ fontSize: 24, color: "#e72424" }]}>
             {totalDespesas.toLocaleString("pt-BR")}
           </Text>
-        </View>
-        <View style={styles.containerBotoes}>
-          <Button mode="contained" onPress={() => setPeriodo("mes")}>
-            MÊS
-          </Button>
-          <Button mode="contained" onPress={() => setPeriodo("ano")}>
-            ANO
-          </Button>
         </View>
       </View>
     </View>
