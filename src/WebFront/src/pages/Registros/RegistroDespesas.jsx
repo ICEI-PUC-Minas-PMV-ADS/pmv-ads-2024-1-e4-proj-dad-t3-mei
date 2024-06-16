@@ -282,12 +282,12 @@ const RegistroDespesas = () => {
           onSelectionChange={(e) => setSelectedDespesa(e.value)}
           dataKey="id"
           paginator
-          rows={8}
-          rowsPerPageOptions={[5, 10, 25]}
+          rows={5}
           paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
           currentPageReportTemplate="Mostrando {first} de {last} de {totalRecords} despesas"
           globalFilter={globalFilter}
           header={header}
+          emptyMessage={loading ? "Carregando..." : "Sem despesas registradas"}
         >
           {columns.map((col, i) => (
             <Column

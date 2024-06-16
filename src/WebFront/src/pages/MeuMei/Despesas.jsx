@@ -35,9 +35,9 @@ const Despesas = ({ fetchDespesa }) => {
 
   // Monta o array com filter para mostrar as opções
   const [categoria, setCategoria] = useState([]);
-  const { usuarioId } = useAuth();
   const [despesas, setDespesas] = useState([]);
 
+  const { usuarioId } = useAuth();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -98,6 +98,13 @@ const Despesas = ({ fetchDespesa }) => {
     setLoading(true);
     e.preventDefault();
 
+    // Validar os dados antes de enviar
+    if (!nome || !valor || !dataDespesa) {
+      setError("Preencha os campos com *.");
+      setLoading(false);
+      return;
+    }
+
     const des = {
       usuarioId,
       nome,
@@ -111,21 +118,22 @@ const Despesas = ({ fetchDespesa }) => {
       const res = await fetch(api + "/Despesas", config);
 
       if (!res.ok) {
-        throw new Error("Erro no envio!");
+        const errorData = await res.json();
+        setError(`Erro no envio: ${errorData.message || res.statusText}`);
+      } else {
+        const newData = await res.json();
+        setDespesas([...despesas, newData]);
+        // Mostrar mensagem de sucesso
+        show();
+        // Limpar campos
+        limparCampos();
+        // Limpa os erros
+        setError("");
+        // Atualizar a lista de faturamentos
+        await fetchDespesa();
       }
-      const newData = await res.json();
-      setDespesas([...despesas, newData]);
-
-      // Mostrar mensagem de sucesso
-      show();
-      // Limpar campos
-      limparCampos();
-      // Limpa os erros
-      setError("");
-
-      fetchDespesa();
     } catch (error) {
-      setError(error.message);
+      setError(`Erro: ${error.message}`);
     } finally {
       setLoading(false);
     }
@@ -139,12 +147,12 @@ const Despesas = ({ fetchDespesa }) => {
       <div className="despesas-conteudo">
         <InputText
           value={nome}
-          placeholder="Despesa com..."
+          placeholder="Despesa com...*"
           onChange={(e) => setNome(e.target.value)}
         />
         <InputNumber
           value={valor}
-          placeholder="R$"
+          placeholder="R$*"
           onValueChange={(e) => setValor(e.value)}
           locale="pt-BR"
           minFractionDigits={2}
@@ -154,7 +162,7 @@ const Despesas = ({ fetchDespesa }) => {
           onChange={(e) => setDataDespesa(e.value)}
           showIcon
           locale="pt-BR"
-          placeholder="Data"
+          placeholder="Data*"
         />
         <Dropdown
           value={selectedCategoria}

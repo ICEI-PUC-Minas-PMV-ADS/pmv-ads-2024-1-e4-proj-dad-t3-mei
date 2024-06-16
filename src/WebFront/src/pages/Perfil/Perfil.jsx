@@ -5,6 +5,7 @@ import { Dialog } from "primereact/dialog";
 import { Skeleton } from "primereact/skeleton";
 import { InputText } from "primereact/inputtext";
 import { Password } from "primereact/password";
+import { Message } from "primereact/message";
 
 import "./Perfil.css";
 
@@ -24,6 +25,7 @@ const Perfil = () => {
   const [dialogEmail, setDialogEmail] = useState(false);
   const [dialogCnpj, setDialogCnpj] = useState(false);
   const [dialogSenha, setDialogSenha] = useState(false);
+  const [msg, setMsg] = useState(false);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -117,6 +119,7 @@ const Perfil = () => {
 
       if (response.ok) {
         setDialogNome(false);
+        setMsg(true);
       } else {
         setError(
           `Erro ao atualizar o nome do usuário: ${response.status} ${response.statusText}`
@@ -430,6 +433,9 @@ const Perfil = () => {
           </div>
         </div>
       </Dialog>
+      <div className="perfil-msg">
+        {msg && <Message severity="success" text="Atualizado com sucesso" />}
+      </div>
     </div>
   );
 };

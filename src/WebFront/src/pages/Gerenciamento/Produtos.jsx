@@ -261,12 +261,12 @@ const Produtos = () => {
           onSelectionChange={(e) => setSelectedProduct(e.value)}
           dataKey="id"
           paginator
-          rows={8}
-          rowsPerPageOptions={[5, 10, 25]}
+          rows={5}
           paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
           currentPageReportTemplate="Mostrando {first} de {last} de {totalRecords} produtos"
           globalFilter={globalFilter}
           header={header}
+          emptyMessage={loading ? "Carregando..." : "Sem produtos cadastrados"}
         >
           {columns.map((col, i) => (
             <Column key={col.field} field={col.field} header={col.header} />

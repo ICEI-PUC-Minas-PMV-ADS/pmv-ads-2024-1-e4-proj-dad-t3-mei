@@ -28,3 +28,8 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.perfil-msg {
+  display: grid;
+  max-width: 600px;
+  margin: 0 auto;
+}

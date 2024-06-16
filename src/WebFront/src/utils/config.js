@@ -1,4 +1,5 @@
 export const api = "https://swaggerapimeiamei.azurewebsites.net/api";
+// export const api = "http://localhost:5062/api";
 
 export const requestConfig = (method, data, token = null) => {
   let config;

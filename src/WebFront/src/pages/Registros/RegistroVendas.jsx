@@ -321,12 +321,12 @@ const RegistroVendas = () => {
           onSelectionChange={(e) => setSelectedFaturamento(e.value)}
           dataKey="id"
           paginator
-          rows={8}
-          rowsPerPageOptions={[5, 10, 25]}
+          rows={5}
           paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
           currentPageReportTemplate="Mostrando {first} de {last} de {totalRecords} faturamentos"
           globalFilter={globalFilter}
           header={header}
+          emptyMessage={loading ? "Carregando..." : "Sem vendas registradas"}
         >
           {columns.map((col, i) => (
             <Column
