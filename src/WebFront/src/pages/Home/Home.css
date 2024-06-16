@@ -173,6 +173,7 @@
   .fale-conosco-conteudo {
     padding: 20px 20px;
 }
+}
 @media (max-width: 700px) {
   .home-conteudo-principal {
     grid-template-columns: 1fr;
