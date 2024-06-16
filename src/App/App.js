@@ -10,7 +10,7 @@ export default function App() {
   useEffect(() => {
     const checkLoginStatus = async () => {
       const userToken = await AsyncStorage.getItem("userToken");
-      console.log("userToken:", userToken);
+      console.log("userTokenAppJs:", userToken);
       if (userToken) {
         const decodedToken = jwtDecode(userToken);
         const currentTime = Date.now() / 1000;

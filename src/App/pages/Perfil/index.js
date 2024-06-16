@@ -27,6 +27,7 @@ function Perfil() {
         }
         setToken(token);
         const decodedToken = jwtDecode(token);
+        console.log('decodedToken:', decodedToken)
         const userId = decodedToken && decodedToken.nameid;
 
         console.log('userId:', userId);
@@ -34,23 +35,24 @@ function Perfil() {
         console.log(`Com token: ${token}`);
 
         if (userId) {
-          fetch(`${API_URLS.USUARIOS}/${userId}`, {
+          const response = await fetch(`${API_URLS.USUARIOS}/${userId}`, {
             method: 'GET',
             headers: {
               'Authorization': `Bearer ${token}`
             }
-          })
-            .then((response) => {
-              setUsuario(response.data);
-            })
-            .catch((error) => {
-              console.error('Erro ao recuperar os dados do usuário:', error);
-            });
+          });
+          if (response.ok) {
+            const data = await response.json();
+            setUsuario(data)
+          } else {
+            console.error('Erro ao recuperar os dados do usuário:', response.status, response.statusText);
+          }
         } else {
           console.error('Erro: userId está indefinido');
         }
-      } catch (error) {
-        console.error('Erro ao decodificar o token:', error);
+      }
+      catch (error) {
+        console.error('Erro ao decodificar o token', error);
       }
     };
     fetchUser();

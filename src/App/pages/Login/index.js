@@ -49,7 +49,7 @@ export default function Login({ navigation }) {
           routes: [{ name: "MyTabs" }],
         });
         // Armazena o token JWT no AsyncStorage diretamente
-        await AsyncStorage.setItem("token", JSON.stringify(token));
+        await AsyncStorage.setItem("token", token);
       } else {
         // Lança um erro se o token não for encontrado
         throw new Error("Token inválido: não encontrado");

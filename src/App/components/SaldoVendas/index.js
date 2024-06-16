@@ -13,7 +13,7 @@ const SaldoVendas = () => {
 
   useEffect(() => {
     const getToken = async () => {
-      const token = await AsyncStorage.getItem("token");
+      const token = await AsyncStorage.getItem('token');
       if (token) {
         const decodedToken = jwtDecode(token);
         setUserId(decodedToken.nameid);

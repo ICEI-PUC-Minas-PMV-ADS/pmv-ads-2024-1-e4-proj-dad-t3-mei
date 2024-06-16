@@ -15,13 +15,19 @@ const BarraProgresso = ({ progress }) => {
 
   useEffect(() => {
     const getToken = async () => {
-      const token = await AsyncStorage.getItem("token");
-      const decodedToken = jwtDecode(token);
-      setUserId(decodedToken.nameid);
-    };
-
+      try {
+        const token = await AsyncStorage.getItem('token');
+        if (token) {
+          const decodedToken = jwtDecode(token);
+          setUserId(decodedToken.nameid);
+        }
+      } catch (error) {
+        console.error("Erro ao buscar o token:", error);
+      }
+    }
     getToken();
   }, []);
+
   useEffect(() => {
     if (userId) {
       fetch(`${API_URLS.FATURAMENTOS}`)

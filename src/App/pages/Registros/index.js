@@ -127,6 +127,7 @@ const Registros = () => {
     };
   };
 
+
   const renderTable = (head, data, renderRow, title) => {
     const widthArr = new Array(head.length).fill(80); // Altere 80 para a largura desejada
 

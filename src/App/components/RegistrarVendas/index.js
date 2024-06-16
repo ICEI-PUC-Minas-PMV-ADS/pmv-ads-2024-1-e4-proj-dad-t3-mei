@@ -32,6 +32,7 @@ const Vendas = () => {
         if (token) {
           const decodedToken = jwtDecode(token);
           setUserId(decodedToken.nameid);
+          console.log(token)
         } else {
           console.log(token)
           console.error("Token inválido ou não encontrado");
