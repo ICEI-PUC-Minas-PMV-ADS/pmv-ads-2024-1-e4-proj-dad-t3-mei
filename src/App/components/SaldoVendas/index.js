@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
 import { Button } from "react-native-paper";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { jwtDecode } from "jwt-decode";
@@ -9,9 +9,11 @@ const SaldoVendas = () => {
   const [userId, setUserId] = useState(null);
   const [userFaturamentos, setUserFaturamentos] = useState([]);
   const [totalFaturamentos, setTotalFaturamentos] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getToken = async () => {
+      setLoading(true);
       const token = await AsyncStorage.getItem('token');
       if (token) {
         const decodedToken = jwtDecode(token);
@@ -20,6 +22,7 @@ const SaldoVendas = () => {
       } else {
         console.log('Token não encontrado');
       }
+      setLoading(false);
     };
 
     getToken();
@@ -28,6 +31,7 @@ const SaldoVendas = () => {
 
   useEffect(() => {
     if (userId) {
+      setLoading(true);
       fetch(`${API_URLS.FATURAMENTOS}`)
         .then((response) => response.json())
         .then((faturamentosData) => {
@@ -42,9 +46,14 @@ const SaldoVendas = () => {
         })
         .catch((error) => {
           console.error("Erro ao buscar dados:", error);
-        });
+        })
+        .finally(() => setLoading(false));
     }
   }, [userId, userFaturamentos]);
+
+  if (loading) {
+    return <ActivityIndicator size="large" color="#0000ff" />;
+  }
 
   return (
     <View>

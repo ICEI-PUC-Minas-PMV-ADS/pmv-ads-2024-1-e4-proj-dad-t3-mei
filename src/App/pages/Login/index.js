@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Image, Text, Alert } from "react-native";
+import { View, Image, Text, Alert, ActivityIndicator } from "react-native";
 import { TextInput, Button } from "react-native-paper";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
@@ -8,6 +8,8 @@ import API_URLS from "../../config/apiUrls";
 export default function Login({ navigation }) {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+  const [loading, setLoading] = useState(false);
+
 
   // Função de validação
   const validarLogin = (email, senha) => {
@@ -32,6 +34,7 @@ export default function Login({ navigation }) {
       return; // Interrompe a execução se a validação falhar
     }
     try {
+      setLoading(true);
       const response = await axios.post(`${API_URLS.USUARIOS_AUTHENTICATE}`, {
         email: email,
         senha: senha,
@@ -113,9 +116,13 @@ export default function Login({ navigation }) {
         secureTextEntry
         style={{ marginBottom: 10 }}
       />
-      <Button mode="contained" onPress={handleLogin}>
-        Login
-      </Button>
+      {loading ? (
+        <ActivityIndicator size="large" color="#0000ff" />
+      ) : (
+        <Button mode="contained" onPress={handleLogin}>
+          Login
+        </Button>
+      )}
       <Button mode="text" onPress={() => navigation.navigate("RecuperarSenha")}>
         Esqueceu a senha?
       </Button>

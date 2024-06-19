@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, View, Text, StyleSheet } from 'react-native';
+import { ScrollView, View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 import { Table, Row } from 'react-native-table-component';
 import { IconButton } from 'react-native-paper';
 import API_URLS from '../../config/apiUrls';
@@ -13,6 +13,8 @@ const Registros = () => {
   const [servicos, setServicos] = useState([]);
   const [categorias, setCategorias] = useState([]);
   const [userId, setUserId] = useState(null);
+  const [atualizar, setAtualizar] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchTokenAndDecode = async () => {
@@ -28,29 +30,39 @@ const Registros = () => {
 
   useEffect(() => {
     if (userId) {
-      Promise.all([
-        fetch(`${API_URLS.FATURAMENTOS}`).then((response) => response.json()),
-        fetch(`${API_URLS.DESPESAS}`).then((response) => response.json()),
-        fetch(`${API_URLS.PRODUTOS}`).then((response) => response.json()),
-        fetch(`${API_URLS.SERVICOS}`).then((response) => response.json()),
-        fetch(`${API_URLS.CATEGORIAS}`).then((response) => response.json())
-      ])
-        .then(
-          ([faturamentosData, despesasData, produtosData, servicosData, categoriasData]) => {
-            setFaturamentos(
-              faturamentosData.filter((fat) => fat.usuarioId === userId)
-            );
-            setDespesas(despesasData.filter((des) => des.usuarioId === userId));
-            setProdutos(produtosData.filter((pro) => pro.usuarioId === userId));
-            setServicos(servicosData.filter((ser) => ser.usuarioId === userId));
-            setCategorias(categoriasData.filter((cat) => cat.usuarioId === userId));
-          }
-        )
-        .catch((error) => {
-          console.error("Erro ao buscar dados:", error);
-        });
+      const fetchData = () => {
+        setLoading(true);
+        Promise.all([
+          fetch(`${API_URLS.FATURAMENTOS}`).then((response) => response.json()),
+          fetch(`${API_URLS.DESPESAS}`).then((response) => response.json()),
+          fetch(`${API_URLS.PRODUTOS}`).then((response) => response.json()),
+          fetch(`${API_URLS.SERVICOS}`).then((response) => response.json()),
+          fetch(`${API_URLS.CATEGORIAS}`).then((response) => response.json())
+        ])
+          .then(
+            ([faturamentosData, despesasData, produtosData, servicosData, categoriasData]) => {
+              setFaturamentos(
+                faturamentosData.filter((fat) => fat.usuarioId === userId)
+              );
+              setDespesas(despesasData.filter((des) => des.usuarioId === userId));
+              setProdutos(produtosData.filter((pro) => pro.usuarioId === userId));
+              setServicos(servicosData.filter((ser) => ser.usuarioId === userId));
+              setCategorias(categoriasData.filter((cat) => cat.usuarioId === userId));
+            }
+          )
+          .catch((error) => {
+            console.error("Erro ao buscar dados:", error);
+          })
+          .finally(() => setLoading(false));
+      };
+
+      fetchData(); // Chama imediatamente ao entrar
+
+      const intervalId = setInterval(fetchData, 8000); // Atualiza a cada 5 segundos
+
+      return () => clearInterval(intervalId); // Limpa o intervalo ao desmontar
     }
-  }, [userId]);
+  }, [userId, atualizar]);
 
   const handleExcluirRegistro = async (tipo, id) => {
     try {
@@ -89,20 +101,47 @@ const Registros = () => {
     }
   };
 
-  const getNomeById = (id, array) => {
-    const item = array.find(item => item.id === id);
-    return item ? item.nome : '';
+  const buscaIdsCategorias = (rowData, categorias) => {
+    if (
+      !rowData ||
+      !rowData.categoriasId ||
+      rowData.categoriasId.length === 0
+    ) {
+      return "Contas";
+    }
+
+    const nomes = rowData.categoriasId.map((id) => {
+      const categoria = categorias.find((categoria) => categoria.id === id);
+      return categoria ? categoria.nome : "Sem categoria cadastrada";
+    });
+
+    return nomes.join(", ");
   };
+
+
+  const buscarIdsProdutos = (rowData, produtos, servicos) => {
+    if (!rowData) {
+      return "Tênis"; // exemplo
+
+    }
+  }
+
+  const buscarIdsServicos = (rowData, servicos) => {
+    if (!rowData) {
+      return "N/A";
+    }
+  }
+
 
 
   const renderFaturamentosRow = (fat) => {
     return {
-      data: fat.dataFaturamento,
       venda: fat.nome,
-      produto: getNomeById(fat.produtoId, produtos),
-      servico: getNomeById(fat.servicoId, servicos),
+      produto: buscarIdsProdutos(fat.produtoId, produtos),
+      servico: buscarIdsServicos(fat.servicoId, servicos),
       meioDePagamento: fat.meioDePagamento,
       valor: fat.valor.toString(),
+      data: fat.dataFaturamento,
       button: <IconButton
         icon="delete"
         color="red"
@@ -114,10 +153,10 @@ const Registros = () => {
 
   const renderDespesasRow = (des) => {
     return {
-      dataDespesa: des.dataDespesa,
       nome: des.nome,
-      categoria: getNomeById(des.categoriaId, categorias),
+      categoria: buscaIdsCategorias(des.categoriaId, categorias),
       valor: des.valor.toString(),
+      dataDespesa: des.dataDespesa,
       button: <IconButton
         icon="delete"
         color="red"
@@ -150,43 +189,27 @@ const Registros = () => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.box}>
-        {renderTable(
-          ["Data", "Venda", "Produto", "Serviço", "Meio de Pagamento", "Valor", ""],
-          faturamentos,
-          renderFaturamentosRow,
-          "Registros de vendas"
-        )}
-        {renderTable(
-          ["Data", "Despesa", "Categoria", "Valor", ""],
-          despesas,
-          renderDespesasRow,
-          "Registros de despesas"
-        )}
-      </View>
+      {loading ? (
+        <ActivityIndicator size="large" color="#0000ff" />
+      ) : (
+        <View style={styles.box}>
+          {renderTable(
+            ["Venda", "Produto", "Serviço", "Meio de Pagamento", "Valor", "Data", ""],
+            faturamentos,
+            renderFaturamentosRow,
+            "Registros de vendas"
+          )}
+          {renderTable(
+            ["Despesa", "Categoria", "Valor", "Data", ""],
+            despesas,
+            renderDespesasRow,
+            "Registros de despesas"
+          )}
+        </View>
+      )}
     </View>
   );
-
-  //https://github.com/dohooo/react-native-table-component/issues/145
-  return (
-    <View style={styles.container}>
-      <View style={styles.box}>
-        {renderFaturamentosTable(
-          ["Data", "Venda", "Produto", "Serviço", "Meio de Pagamento", "Valor", ""],
-          faturamentos,
-          renderFaturamentosRow,
-          "Registros de vendas"
-        )}
-        {renderTable(
-          ["Data", "Despesa", "Categoria", "Valor", ""],
-          despesas,
-          renderDespesasRow,
-          "Registros de despesas"
-        )}
-      </View>
-    </View>
-  );
-};
+}
 
 const styles = StyleSheet.create({
   container: {

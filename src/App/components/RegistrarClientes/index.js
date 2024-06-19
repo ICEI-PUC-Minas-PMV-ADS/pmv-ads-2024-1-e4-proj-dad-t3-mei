@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, FlatList, StyleSheet, Alert, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, FlatList, StyleSheet, Alert, ScrollView, TouchableOpacity, ActivityIndicator } from 'react-native';
 import { TextInput, Button } from "react-native-paper";
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -18,9 +18,36 @@ const GerenciarClientes = () => {
   const [search, setSearch] = useState('');
   const [error, setError] = useState('');
   const [showDatePicker, setShowDatePicker] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const buscarClientes = async () => {
+    setLoading(true);
+    try {
+      const jwtToken = await AsyncStorage.getItem('token');
+      if (!jwtToken) {
+        Alert.alert('Erro', 'Token não encontrado');
+        return;
+      }
+      const response = await axios.get(API_URLS.CLIENTES, {
+        headers: {
+          Authorization: `Bearer ${jwtToken}`,
+        },
+      });
+
+      const usuarioIdCorreto = usuarioId;
+      const clientesFiltrados = response.data.filter(cliente => cliente.usuarioId === usuarioIdCorreto);
+
+      setClientes(clientesFiltrados);
+    } catch (error) {
+      console.error('Erro ao buscar clientes:', error);
+      Alert.alert('Erro', 'Falha ao buscar clientes');
+    }
+    setLoading(false);
+  };
 
   useEffect(() => {
     const obterTokenEUsuario = async () => {
+      setLoading(true);
       const jwtToken = await AsyncStorage.getItem('token');
       if (!jwtToken) {
         Alert.alert('Erro', 'Token não encontrado');
@@ -28,33 +55,8 @@ const GerenciarClientes = () => {
       }
       const decodedToken = jwtDecode(jwtToken);
       setUsuarioId(decodedToken && decodedToken.nameid);
-      // Chamar buscarClientes aqui não é mais necessário
+      setLoading(false);
     };
-
-    const buscarClientes = async () => {
-      try {
-        const jwtToken = await AsyncStorage.getItem('token');
-        if (!jwtToken) {
-          Alert.alert('Erro', 'Token não encontrado');
-          return;
-        }
-        const response = await axios.get(API_URLS.CLIENTES, {
-          headers: {
-            Authorization: `Bearer ${jwtToken}`,
-          },
-        });
-
-        const usuarioIdCorreto = usuarioId;
-        const clientesFiltrados = response.data.filter(cliente => cliente.usuarioId === usuarioIdCorreto);
-
-        setClientes(clientesFiltrados);
-      } catch (error) {
-        console.error('Erro ao buscar clientes:', error);
-        Alert.alert('Erro', 'Falha ao buscar clientes');
-      }
-    };
-
-    // Chamar obterTokenEUsuario e buscarClientes quando o componente é montado
     obterTokenEUsuario();
     buscarClientes();
   }, []);
@@ -74,7 +76,7 @@ const GerenciarClientes = () => {
         return;
       }
 
-      Alert.alert("Atenção!", "Venda adicionada com sucesso", [
+      Alert.alert("Atenção!", "Cliente adicionada com sucesso", [
         {
           text: "Cancelar",
           onPress: () => console.log("Cancel Pressed"),
@@ -84,7 +86,7 @@ const GerenciarClientes = () => {
           text: "Continuar",
           onPress: () => {
             limparCampos();
-            buscarClientes();
+
           },
         },
       ]);
@@ -154,6 +156,7 @@ const GerenciarClientes = () => {
             } catch (error) {
               console.error('Erro ao excluir cliente:', error);
               Alert.alert("Erro", "Não foi possível excluir o cliente.");
+
             }
           }
         }
@@ -214,6 +217,7 @@ const GerenciarClientes = () => {
             <Button mode="contained" onPress={handleRegister} style={styles.button}>
               Registrar Cliente
             </Button>
+            <Button style={styles.smallButton} onPress={buscarClientes}></Button>
             <View style={styles.searchContainer}>
               <Icon
                 name="search"
@@ -231,25 +235,34 @@ const GerenciarClientes = () => {
           </View>
         }
         renderItem={({ item }) => (
-          <View style={styles.clienteItem}>
-            <Text>{item.nome}</Text>
-            <Text>{item.email}</Text>
-            <Text>{item.telefone}</Text>
-            <Text>{new Date(item.dataDeNascimento).toLocaleDateString("pt-BR")}</Text>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-              <Button>
-                Editar
-              </Button>
-              <Button onPress={() => handleDeleteCliente(item.id)}>
-                Excluir
-              </Button>
-            </View>
+          <View style={styles.container}>
+            {loading ? (
+              <ActivityIndicator size="large" color="#0000ff" /> // Indicador de carregamento para a renderização dos itens
+            ) : (
+              <FlatList
+                data={clientes}
+                keyExtractor={item => item.id.toString()}
+                renderItem={({ item }) => (
+                  <View style={styles.clienteItem}>
+                    <Text>{item.nome}</Text>
+                    <Text>{item.email}</Text>
+                    <Text>{item.telefone}</Text>
+                    <Text>{new Date(item.dataDeNascimento).toLocaleDateString("pt-BR")}</Text>
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+                      <Button>Editar</Button>
+                      <Button>Excluir</Button>
+                    </View>
+                  </View>
+                )}
+              />
+            )}
           </View>
         )}
       />
-    </View >
+    </View>
   );
-}
+};
+
 
 const styles = StyleSheet.create({
   container: {
@@ -261,6 +274,12 @@ const styles = StyleSheet.create({
   },
   button: {
     marginBottom: 20,
+  },
+  smallButton: {
+    marginBottom: 10,
+    padding: 0,
+    height: 3,
+    backgroundColor: '#afafaf',
   },
   clienteItem: {
     padding: 10,
