@@ -1,0 +1,25 @@
+message: Please cite this software using these metadata.
+title: Mei a Mei
+authors:
+  - family-names: Carolina Mozelli
+    given-names:  Ana
+  - family-names: Clara Rocha Mota
+    given-names: Anna
+  - family-names: Homero do Couto Neto
+    given-names: Geraldo
+  - family-names: César Candian Ferreira
+    given-names: Hugo
+  - family-names: Marina Campos
+    given-names: Júnia
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Vilela Cardoso
+    given-names: Leonardo
+keywords:
+  - MEI
+  - Gestão
+  - Faturamentos
+  - Despesas
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei
+version: 1.0.0
+date-released: 2023-06-23
