@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../../assets/logo.svg";
+import logomarca from "../../assets/logomarca.svg";
 
 import { InputText } from "primereact/inputtext";
 import { Password } from "primereact/password";
@@ -197,7 +197,7 @@ const Cadastrar = () => {
             {error && <p className="msg-erro">{error}</p>}
           </div>
           <div className="cadastro-logo">
-            <img src={logo} alt="" />
+            <img src={logomarca} alt="" />
           </div>
         </div>
       </div>

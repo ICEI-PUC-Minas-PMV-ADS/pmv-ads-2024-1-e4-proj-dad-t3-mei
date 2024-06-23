@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/logo.svg";
+import logomarca from "../../assets/logomarca.svg";
 import "./Recuperar.css";
 import Navbar from "../../components/Navbar";
 
@@ -32,7 +32,7 @@ const Recuperar = () => {
             </p>
           </div>
           <div className="recuperar-logo">
-            <img src={logo} alt="" />
+            <img src={logomarca} alt="" />
           </div>
         </div>
       </div>
