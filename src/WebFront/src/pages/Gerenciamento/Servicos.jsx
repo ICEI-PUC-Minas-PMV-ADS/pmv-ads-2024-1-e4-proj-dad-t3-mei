@@ -105,8 +105,8 @@ const Servicos = () => {
 
       toast.current.show({
         severity: "success",
-        summary: "Sucesso",
-        detail: "Serviço adicionado com sucesso.",
+        summary: "Sucesso!",
+        detail: "Serviço adicionado.",
         life: 3000,
       });
 
@@ -140,8 +140,8 @@ const Servicos = () => {
       setServicos(servicos.filter((servico) => servico.id !== selectedServico));
       toast.current.show({
         severity: "success",
-        summary: "Sucesso",
-        detail: "Serviço excluído com sucesso.",
+        summary: "Sucesso!",
+        detail: "Serviço excluído.",
         life: 3000,
       });
     } catch (error) {
@@ -189,8 +189,8 @@ const Servicos = () => {
         // Exibir uma mensagem de sucesso
         toast.current.show({
           severity: "success",
-          summary: "Sucesso",
-          detail: "Serviço editado com sucesso.",
+          summary: "Sucesso!",
+          detail: "Serviço editado.",
           life: 3000,
         });
 
@@ -266,7 +266,7 @@ const Servicos = () => {
           paginator
           rows={5}
           paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
-          currentPageReportTemplate="Mostrando {first} de {last} de {totalRecords} serviços"
+          currentPageReportTemplate="Mostrando {first} de {last} dos {totalRecords} serviços"
           globalFilter={globalFilter}
           header={header}
           emptyMessage={loading ? "Carregando..." : "Sem serviços cadastrados"}

@@ -20,19 +20,20 @@
 .login-form {
   display: grid;
   justify-content: center;
+  gap: 20px;
 }
 .login-form label {
   font-size: 1.125rem;
 }
 .login-form input {
   outline: none;
-  margin-bottom: 20px;
   border: none;
   height: 40px;
   width: 300px;
   font-size: 1.2rem;
   border-radius: 5px;
 }
+
 .botoes-login {
   display: flex;
   justify-content: center;

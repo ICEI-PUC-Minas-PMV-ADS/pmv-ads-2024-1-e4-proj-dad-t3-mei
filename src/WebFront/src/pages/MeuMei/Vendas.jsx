@@ -21,8 +21,8 @@ const Vendas = ({ fetchFaturamento }) => {
   const show = () => {
     toast.current.show({
       severity: "success",
-      summary: "Success",
-      detail: "Venda adicionada com sucesso!",
+      summary: "Sucesso!",
+      detail: "Venda adicionada.",
       life: 5000,
     });
   };
@@ -186,8 +186,10 @@ const Vendas = ({ fetchFaturamento }) => {
           value={dataFaturamento}
           onChange={(e) => setDataFaturamento(e.value)}
           showIcon
+          showOnFocus={false}
           locale="pt-BR"
           placeholder="Data*"
+          mask="99/99/9999"
         />
         <Dropdown
           value={selectedProduct}
@@ -199,6 +201,7 @@ const Vendas = ({ fetchFaturamento }) => {
           optionLabel="name"
           placeholder="Selecione o produto"
           className="w-full md:w-14rem"
+          emptyMessage="Sem produtos cadastrados"
         />
         <Dropdown
           value={selectedService}
@@ -210,6 +213,7 @@ const Vendas = ({ fetchFaturamento }) => {
           optionLabel="name"
           placeholder="Selecione o serviço"
           className="w-full md:w-14rem"
+          emptyMessage="Sem serviços cadastrados"
         />
         <Dropdown
           value={meioDePagamento}

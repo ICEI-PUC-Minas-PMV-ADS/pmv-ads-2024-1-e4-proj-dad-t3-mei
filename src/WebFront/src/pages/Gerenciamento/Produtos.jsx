@@ -104,8 +104,8 @@ const Produtos = () => {
 
       toast.current.show({
         severity: "success",
-        summary: "Sucesso",
-        detail: "Produto adicionado com sucesso.",
+        summary: "Sucesso!",
+        detail: "Produto adicionado.",
         life: 3000,
       });
 
@@ -137,8 +137,8 @@ const Produtos = () => {
       setProdutos(produtos.filter((produto) => produto.id !== selectedProduct));
       toast.current.show({
         severity: "success",
-        summary: "Sucesso",
-        detail: "Produto excluído com sucesso.",
+        summary: "Sucesso!",
+        detail: "Produto excluído.",
         life: 3000,
       });
     } catch (error) {
@@ -185,8 +185,8 @@ const Produtos = () => {
         // Exibir uma mensagem de sucesso
         toast.current.show({
           severity: "success",
-          summary: "Sucesso",
-          detail: "Produto editado com sucesso.",
+          summary: "Sucesso!",
+          detail: "Produto editado.",
           life: 3000,
         });
 
@@ -263,7 +263,7 @@ const Produtos = () => {
           paginator
           rows={5}
           paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
-          currentPageReportTemplate="Mostrando {first} de {last} de {totalRecords} produtos"
+          currentPageReportTemplate="Mostrando {first} de {last} dos {totalRecords} produtos"
           globalFilter={globalFilter}
           header={header}
           emptyMessage={loading ? "Carregando..." : "Sem produtos cadastrados"}

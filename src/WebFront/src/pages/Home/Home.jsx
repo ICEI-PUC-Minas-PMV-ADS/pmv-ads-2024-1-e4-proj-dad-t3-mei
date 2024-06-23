@@ -27,10 +27,10 @@ const Home = () => {
             <p>Registre e gerencie tudo com mais facilidade!</p>
             <ul>
               <li>Sistema Financeiro simples e seguro.</li>
-              <li>Automatize as rotinas financeiras do seu MEI.</li>
+              <li>Automatize as rotinas financeiras do seu MEI</li>
               <li>Tenha suas informações organizadas.</li>
               <li>Cadastre seus clientes.</li>
-              <li>Produtos e serviços fáceis de cadastrar.</li>
+              <li>Produtos e serviços de cadastrar.</li>
               <li>Relatório anual e mensal.</li>
             </ul>
           </div>

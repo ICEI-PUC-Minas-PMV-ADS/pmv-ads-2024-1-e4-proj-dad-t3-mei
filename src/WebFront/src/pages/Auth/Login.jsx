@@ -1,8 +1,8 @@
 import "./Login.css";
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../provider/authProvider";
-import { api, requestConfig } from "../../utils/config";
+import { api } from "../../utils/config";
 
 import { InputText } from "primereact/inputtext";
 import { Password } from "primereact/password";
@@ -23,6 +23,7 @@ const Login = () => {
   };
 
   const handleSubmit = async (event) => {
+    setError("");
     setLoading(true);
     event.preventDefault();
 
@@ -44,6 +45,12 @@ const Login = () => {
 
       if (!response.ok) {
         const errorData = await response.json();
+
+        if (errorData.status === 401) {
+          setError("Verifique o e-mail e a senha");
+          setLoading(false);
+          return;
+        }
         setError(errorData.message || "Erro ao fazer login");
         setLoading(false);
         return;
@@ -59,7 +66,6 @@ const Login = () => {
         throw new Error("Token não encontrado");
       }
     } catch (error) {
-      console.error("Erro ao fazer login", error);
       setError("Erro ao fazer login");
       setLoading(false);
     }
@@ -73,25 +79,28 @@ const Login = () => {
           <div className="login-conteudo">
             <h1>Faça seu login</h1>
             <form className="login-form" onSubmit={handleSubmit}>
-              <label>E-mail</label>
-              <InputText
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                disabled={loading}
-              />
-
-              <label>Senha</label>
-              <Password
-                type="password"
-                value={senha}
-                onChange={(e) => setSenha(e.target.value)}
-                required
-                disabled={loading}
-                feedback={false}
-                tabIndex={1}
-              />
+              <div>
+                <label>E-mail</label>
+                <InputText
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  disabled={loading}
+                />
+              </div>
+              <div>
+                <label>Senha</label>
+                <Password
+                  type="password"
+                  value={senha}
+                  onChange={(e) => setSenha(e.target.value)}
+                  required
+                  disabled={loading}
+                  feedback={false}
+                  toggleMask
+                />
+              </div>
 
               <div className="botoes-login">
                 {!loading && (

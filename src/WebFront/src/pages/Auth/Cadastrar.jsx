@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 
 import { InputText } from "primereact/inputtext";
 import { Password } from "primereact/password";
+import { InputMask } from "primereact/inputmask";
+import { Button } from "primereact/button";
+import { Toast } from "primereact/toast";
 
 import "./Cadastrar.css";
-import { api, requestConfig } from "../../utils/config";
+import { api } from "../../utils/config";
 import Navbar from "../../components/Navbar";
 
 const Cadastrar = () => {
@@ -14,9 +17,20 @@ const Cadastrar = () => {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [confirmarSenha, setConfirmarSenha] = useState("");
+
   const [cnpj, setCnpj] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const toastTopCenter = useRef(null);
+  const showMessage = (ref, severity) => {
+    ref.current.show({
+      severity: severity,
+      summary: "Usuário cadastrado!",
+      detail: "Redirecionando para o Login",
+      life: 3000,
+    });
+  };
 
   const navigate = useNavigate();
 
@@ -33,6 +47,7 @@ const Cadastrar = () => {
   };
 
   const handleSubmit = async (event) => {
+    setError("");
     event.preventDefault(); // Para prevenir o comportamento padrão do formulário
     setLoading(true);
 
@@ -45,6 +60,11 @@ const Cadastrar = () => {
 
     if (senha !== confirmarSenha) {
       setError("As senhas precisam ser iguais!");
+      setLoading(false);
+      return;
+    }
+    if (senha.length < 5) {
+      setError("Mínimo 5 caracteres para senha!");
       setLoading(false);
       return;
     }
@@ -77,7 +97,10 @@ const Cadastrar = () => {
 
       limparCampos();
       setLoading(false);
-      navigate("/login");
+      showMessage(toastTopCenter, "success");
+      setTimeout(() => {
+        navigate("/login");
+      }, 3000);
     } catch (error) {
       setError(error);
       setLoading(false);
@@ -88,59 +111,66 @@ const Cadastrar = () => {
     <>
       <Navbar />
       <div className="container">
+        <Toast ref={toastTopCenter} position="top-center" />
         <div className="cadastro">
           <div className="cadastro-conteudo">
             <h1>Criar Conta</h1>
             <form className="cadastro-form" onSubmit={handleSubmit}>
-              <label>Razão social</label>
-              <InputText
-                type="text"
-                value={nome}
-                onChange={(e) => setNome(e.target.value)}
-                disabled={loading}
-                required
-              />
-
-              <label>E-mail</label>
-              <InputText
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                disabled={loading}
-              />
-
-              <label>Senha</label>
-              <Password
-                type="password"
-                value={senha}
-                onChange={(e) => setSenha(e.target.value)}
-                required
-                disabled={loading}
-                feedback={false}
-                tabIndex={1}
-              />
-
-              <label htmlFor="confirmarSenha">Confirmar senha</label>
-              <Password
-                type="password"
-                value={confirmarSenha}
-                onChange={(e) => setConfirmarSenha(e.target.value)}
-                required
-                disabled={loading}
-                feedback={false}
-                tabIndex={1}
-              />
-
-              <label>CNPJ</label>
-              <InputText
-                type="text"
-                placeholder="00.000.000/0000-00"
-                value={cnpj}
-                onChange={(e) => setCnpj(e.target.value)}
-                required
-                disabled={loading}
-              />
+              <div>
+                <label>Razão social</label>
+                <InputText
+                  type="text"
+                  value={nome}
+                  onChange={(e) => setNome(e.target.value)}
+                  disabled={loading}
+                  required
+                />
+              </div>
+              <div>
+                <label>E-mail</label>
+                <InputText
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  disabled={loading}
+                />
+              </div>
+              <div>
+                <label>Senha</label>
+                <Password
+                  type="password"
+                  value={senha}
+                  onChange={(e) => setSenha(e.target.value)}
+                  required
+                  disabled={loading}
+                  feedback={false}
+                  tabIndex={0}
+                />
+              </div>
+              <div>
+                <label htmlFor="confirmarSenha">Confirmar senha</label>
+                <Password
+                  type="password"
+                  value={confirmarSenha}
+                  onChange={(e) => setConfirmarSenha(e.target.value)}
+                  required
+                  disabled={loading}
+                  feedback={false}
+                />
+              </div>
+              <div>
+                <label>CNPJ</label>
+                <InputMask
+                  value={cnpj}
+                  onChange={(e) => setCnpj(e.target.value)}
+                  mask="99.999.999/9999-99"
+                  required
+                  disabled={loading}
+                  // placeholder="00.000.000/0000-00"
+                  autoClear
+                />
+              </div>
               <div className="botoes-cadastrar">
                 <input
                   type="button"

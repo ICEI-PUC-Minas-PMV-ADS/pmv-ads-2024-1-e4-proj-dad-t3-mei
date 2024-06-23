@@ -21,8 +21,8 @@ const Despesas = ({ fetchDespesa }) => {
   const show = () => {
     toast.current.show({
       severity: "success",
-      summary: "Success",
-      detail: "Despesa adicionada com sucesso!",
+      summary: "Sucesso!",
+      detail: "Despesa adicionada.",
       life: 5000,
     });
   };
@@ -161,8 +161,10 @@ const Despesas = ({ fetchDespesa }) => {
           value={dataDespesa}
           onChange={(e) => setDataDespesa(e.value)}
           showIcon
+          showOnFocus={false}
           locale="pt-BR"
           placeholder="Data*"
+          mask="99/99/9999"
         />
         <Dropdown
           value={selectedCategoria}
@@ -174,6 +176,7 @@ const Despesas = ({ fetchDespesa }) => {
           optionLabel="name"
           placeholder="Selecione a categoria"
           className="w-full md:w-14rem"
+          emptyMessage="Sem categorias cadastradas"
         />
         <button
           className="btn-despesa"

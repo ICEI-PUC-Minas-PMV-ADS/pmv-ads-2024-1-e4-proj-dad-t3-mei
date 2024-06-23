@@ -3,6 +3,7 @@ import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { Button } from "primereact/button";
 import { InputText } from "primereact/inputtext";
+import { InputMask } from "primereact/inputmask";
 import { Toast } from "primereact/toast";
 import { Toolbar } from "primereact/toolbar";
 import { Dialog } from "primereact/dialog";
@@ -42,6 +43,7 @@ const Clientes = () => {
     const date = new Date(rowData.dataDeNascimento);
     return `${date.toLocaleDateString("pt-BR")}`;
   };
+
   const columns = [
     { field: "nome", header: "Nome" },
     { field: "email", header: "Email" },
@@ -153,8 +155,8 @@ const Clientes = () => {
 
       toast.current.show({
         severity: "success",
-        summary: "Sucesso",
-        detail: "Cliente adicionado com sucesso.",
+        summary: "Sucesso!",
+        detail: "Cliente adicionado.",
         life: 3000,
       });
       setClientDialog(false);
@@ -187,8 +189,8 @@ const Clientes = () => {
       );
       toast.current.show({
         severity: "success",
-        summary: "Sucesso",
-        detail: "Cliente excluído com sucesso.",
+        summary: "Sucesso!",
+        detail: "Cliente excluído.",
         life: 3000,
       });
     } catch (error) {
@@ -202,7 +204,8 @@ const Clientes = () => {
     setNomeEdit(cliente.nome);
     setEmailEdit(cliente.email);
     setTelefoneEdit(cliente.telefone);
-    setDataDeNascimento(cliente.dataDeNascimento);
+    setDataDeNascimentoEdit(new Date(cliente.dataDeNascimento));
+
     setSelectedClientes(cliente.id);
     setEditDialog(true);
   };
@@ -242,8 +245,8 @@ const Clientes = () => {
         // Exibir uma mensagem de sucesso
         toast.current.show({
           severity: "success",
-          summary: "Sucesso",
-          detail: "Cliente editado com sucesso.",
+          summary: "Sucesso!",
+          detail: "Cliente editado.",
           life: 3000,
         });
 
@@ -322,7 +325,7 @@ const Clientes = () => {
           paginator
           rows={5}
           paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
-          currentPageReportTemplate="Mostrando {first} de {last} de {totalRecords} clientes"
+          currentPageReportTemplate="Mostrando {first} de {last} dos {totalRecords} clientes"
           globalFilter={globalFilter}
           header={header}
           emptyMessage={loading ? "Carregando..." : "Sem clientes cadastrados"}
@@ -450,6 +453,8 @@ const Clientes = () => {
               onChange={(e) => setDataDeNascimentoEdit(e.value)}
               showIcon
               locale="pt-BR"
+              mask="99/99/9999"
+              placeholder="__/__/____"
             />
           </div>
         </div>
@@ -501,10 +506,12 @@ const Clientes = () => {
             <label htmlFor="telefone" style={{ paddingTop: "10px" }}>
               Telefone:
             </label>
-            <InputText
+            <InputMask
               id="telefone"
               value={telefone}
               onChange={(e) => setTelefone(e.target.value)}
+              mask="(099)99999-9999"
+              autoClear={false}
             />
             <label htmlFor="nascimento" style={{ paddingTop: "10px" }}>
               Data de Nascimento:
@@ -515,6 +522,9 @@ const Clientes = () => {
               onChange={(e) => setDataDeNascimento(e.value)}
               showIcon
               locale="pt-BR"
+              mask="99/99/9999"
+              placeholder="__/__/____"
+              showOnFocus={false}
             />
           </div>
         </div>

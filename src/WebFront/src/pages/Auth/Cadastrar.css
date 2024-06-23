@@ -23,13 +23,13 @@
 .cadastro-form {
   display: grid;
   justify-content: center;
+  gap: 20px;
 }
 .cadastro-form label {
   font-size: 1.125rem;
 }
 .cadastro-form input {
   outline: none;
-  margin-bottom: 20px;
   border: none;
   height: 40px;
   width: 300px;
@@ -45,7 +45,7 @@
   justify-content: space-between;
 }
 .msg-erro {
-  margin: 0 auto;
+  margin: 5px auto;
   text-align: center;
   color: #e21;
   background-color: rgba(255, 21, 0, 0.151);

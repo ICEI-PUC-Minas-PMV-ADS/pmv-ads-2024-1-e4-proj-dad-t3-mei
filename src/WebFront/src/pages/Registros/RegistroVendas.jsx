@@ -190,8 +190,8 @@ const RegistroVendas = () => {
       );
       toast.current.show({
         severity: "success",
-        summary: "Sucesso",
-        detail: "Faturamento excluído com sucesso.",
+        summary: "Sucesso!",
+        detail: "Faturamento excluído.",
         life: 3000,
       });
     } catch (error) {
@@ -205,9 +205,7 @@ const RegistroVendas = () => {
     setNomeEdit(faturamento.nome);
     setValorEdit(faturamento.valor);
     setMeioDePagamentoEdit(faturamento.meioDePagamento);
-    setDataDeFaturamentoEdit(faturamento.dataFaturamento);
-    // setProdutoIdEdit(faturamento.produtoId);
-    // setServicoIdEdit(faturamento.servicoId);
+    setDataDeFaturamentoEdit(new Date(faturamento.dataFaturamento));
 
     setSelectedFaturamento(faturamento.id);
     setEditDialog(true);
@@ -253,8 +251,8 @@ const RegistroVendas = () => {
         // Exibir uma mensagem de sucesso
         toast.current.show({
           severity: "success",
-          summary: "Sucesso",
-          detail: "Faturamento editado com sucesso.",
+          summary: "Sucesso!",
+          detail: "Faturamento editado.",
           life: 3000,
         });
 
@@ -323,7 +321,7 @@ const RegistroVendas = () => {
           paginator
           rows={5}
           paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
-          currentPageReportTemplate="Mostrando {first} de {last} de {totalRecords} faturamentos"
+          currentPageReportTemplate="Mostrando {first} de {last} dos {totalRecords} faturamentos"
           globalFilter={globalFilter}
           header={header}
           emptyMessage={loading ? "Carregando..." : "Sem vendas registradas"}
@@ -440,7 +438,10 @@ const RegistroVendas = () => {
               value={dataDeFaturamentoEdit}
               onChange={(e) => setDataDeFaturamentoEdit(e.value)}
               showIcon
+              showOnFocus={false}
               locale="pt-BR"
+              mask="99/99/9999"
+              placeholder="__/__/____"
             />
             <label htmlFor="produtoIdEdit" style={{ paddingTop: "10px" }}>
               Produto
@@ -467,7 +468,7 @@ const RegistroVendas = () => {
                 value: servico.id,
               }))}
               optionLabel="name"
-              placeholder="Selecione o produto"
+              placeholder="Selecione o serviço"
               className="w-full md:w-14rem"
             />
             <label htmlFor="meioDePagamentoEdit" style={{ paddingTop: "10px" }}>

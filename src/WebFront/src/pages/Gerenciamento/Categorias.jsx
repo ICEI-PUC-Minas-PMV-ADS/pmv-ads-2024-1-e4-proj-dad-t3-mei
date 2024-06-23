@@ -104,8 +104,8 @@ const Categorias = () => {
       setNome("");
       toast.current.show({
         severity: "success",
-        summary: "Sucesso",
-        detail: "Categoria adicionado com sucesso.",
+        summary: "Sucesso!",
+        detail: "Categoria adicionada.",
         life: 3000,
       });
       setCategoriaDialog(false);
@@ -138,8 +138,8 @@ const Categorias = () => {
       );
       toast.current.show({
         severity: "success",
-        summary: "Sucesso",
-        detail: "Categoria excluída com sucesso.",
+        summary: "Sucesso!",
+        detail: "Categoria excluída.",
         life: 3000,
       });
     } catch (error) {
@@ -187,8 +187,8 @@ const Categorias = () => {
         // Exibir uma mensagem de sucesso
         toast.current.show({
           severity: "success",
-          summary: "Sucesso",
-          detail: "Categoria editada com sucesso.",
+          summary: "Sucesso!",
+          detail: "Categoria editada.",
           life: 3000,
         });
 
@@ -267,7 +267,7 @@ const Categorias = () => {
           paginator
           rows={5}
           paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
-          currentPageReportTemplate="Mostrando {first} de {last} de {totalRecords} categorias"
+          currentPageReportTemplate="Mostrando {first} de {last} das {totalRecords} categorias"
           globalFilter={globalFilter}
           header={header}
           emptyMessage={

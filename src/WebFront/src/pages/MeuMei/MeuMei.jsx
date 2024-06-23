@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import "./MeuMei.css";
 import { ProgressBar } from "primereact/progressbar";
@@ -18,19 +18,26 @@ import GraficoVendas from "./GraficoVendas";
 import { api } from "../../utils/config";
 import { useAuth } from "../../provider/authProvider";
 
+import { RadioButton } from "primereact/radiobutton";
+
 const MeuMei = () => {
   const msgs = useRef(null);
   const [msgContent, setMsgContent] = useState("");
   const [msgSeverity, setMsgSeverity] = useState("");
   const [valorProgresso, setValorProgresso] = useState(0);
   const [corProgresso, setCorProgresso] = useState("");
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
 
   const [totalFaturamentos, setTotalFaturamentos] = useState("");
   const [totalDespesas, setTotalDespesas] = useState("");
 
   const { usuarioId } = useAuth();
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const [tipoMei, setTipoMei] = useState(1);
+
+  let meiValor;
+  tipoMei === 1 ? (meiValor = "R$81.000") : (meiValor = "R$251.600");
 
   // Atualizar saldo faturamento
   const fetchFaturamento = async () => {
@@ -99,7 +106,7 @@ const MeuMei = () => {
           setLoading(false);
         })
         .catch((error) => {
-          console.error("Erro ao buscar dados:", error);
+          setError("Erro ao buscar dados:", error);
           setLoading(false);
         });
     }
@@ -140,7 +147,7 @@ const MeuMei = () => {
   }, [msgs, valorProgresso, msgSeverity, msgContent]);
 
   return (
-    <div className="container">
+    <div className="container info-meumei-botao">
       <div className="meumei-conteudo">
         {loading && (
           <Skeleton width="max-content" height="max-content">
@@ -179,7 +186,7 @@ const MeuMei = () => {
         </div>
         <div className="limite-mei">
           <h1>
-            Seu limite MEI <span id="meivalorbase">R$81.000 ao ano</span>
+            Seu limite MEI <span id="meivalorbase">{meiValor} ao ano</span>
           </h1>
           <Messages ref={msgs} />
         </div>

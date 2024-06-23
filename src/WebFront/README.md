@@ -1,8 +1,21 @@
-# React + Vite
+# MEI A MEI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+`PUC Minas - Análise e Desenvolvimento de Sistemas`
 
-Currently, two official plugins are available:
+`Eixo 4 - Projeto: Desenvolvimento de uma Aplicação Distribuída`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+`Primeiro Semestre de 2024`
+
+Será desenvolvido um APP e um Sistema Web para auxiliar os empresários que estão no regime de tributação MEI a controlar seu faturamento e não extrapolar os limites estabelecidos em Lei. Para isso, o objetivos é criar alertas que mostre ao empresário que ele está próximo em ultrapassar o limite de faturamento da categoria.
+
+## Integrantes
+
+* Ana Carolina Mozelli
+* Anna Clara Rocha Mota
+* Geraldo Homero do Couto Neto
+* Hugo César Candian Ferreira
+* Junia Marina Campos
+
+## Orientador
+
+* Leonardo Vilela Cardoso

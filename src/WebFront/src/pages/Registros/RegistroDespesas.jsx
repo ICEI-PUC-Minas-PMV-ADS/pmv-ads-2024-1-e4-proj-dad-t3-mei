@@ -158,8 +158,8 @@ const RegistroDespesas = () => {
       setDespesas(despesas.filter((despesa) => despesa.id !== selectedDespesa));
       toast.current.show({
         severity: "success",
-        summary: "Sucesso",
-        detail: "Despesa excluída com sucesso.",
+        summary: "Sucesso!",
+        detail: "Despesa excluída.",
         life: 3000,
       });
     } catch (error) {
@@ -173,7 +173,7 @@ const RegistroDespesas = () => {
     setNomeEdit(despesa.nome);
     setValorEdit(despesa.valor);
     setCategoriaIdEdit(despesa.categorias);
-    setDataDeDespesaEdit(despesa.dataFaturamento);
+    setDataDeDespesaEdit(new Date(despesa.dataDespesa));
 
     setSelectedDespesa(despesa.id);
     setEditDialog(true);
@@ -214,8 +214,8 @@ const RegistroDespesas = () => {
         // Exibir uma mensagem de sucesso
         toast.current.show({
           severity: "success",
-          summary: "Sucesso",
-          detail: "Faturamento editado com sucesso.",
+          summary: "Sucesso!",
+          detail: "Faturamento editado.",
           life: 3000,
         });
 
@@ -284,7 +284,7 @@ const RegistroDespesas = () => {
           paginator
           rows={5}
           paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
-          currentPageReportTemplate="Mostrando {first} de {last} de {totalRecords} despesas"
+          currentPageReportTemplate="Mostrando {first} de {last} das {totalRecords} despesas"
           globalFilter={globalFilter}
           header={header}
           emptyMessage={loading ? "Carregando..." : "Sem despesas registradas"}
@@ -401,7 +401,10 @@ const RegistroDespesas = () => {
               value={dataDeDespesaEdit}
               onChange={(e) => setDataDeDespesaEdit(e.value)}
               showIcon
+              showOnFocus={false}
               locale="pt-BR"
+              mask="99/99/9999"
+              placeholder="__/__/____"
             />
             <label htmlFor="categoriaEdit" style={{ paddingTop: "10px" }}>
               Categoria
