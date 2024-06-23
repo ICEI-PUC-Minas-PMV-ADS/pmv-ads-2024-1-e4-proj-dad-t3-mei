@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import logo from "../../assets/logo.svg";
+//import logo from "../../assets/logo.svg";
 import gerenciamento from "../../assets/gerenciamento.png";
 import acompanhe from "../../assets/acompanhe.png";
 import multiplataforma from "../../assets/multiplataforma.png";
