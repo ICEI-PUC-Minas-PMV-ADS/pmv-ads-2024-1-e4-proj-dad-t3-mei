@@ -68,3 +68,6 @@ Observação (correções futuras):
 
 [Teste Registri de Vendas](https://www.youtube.com/watch?v=HUG8KssfjC4)
 
+[Teste Tela de Registro Feitos](https://www.youtube.com/watch?v=BN-9H2mlzxY)
+
+[Teste Tela Perfil e Sair](https://www.youtube.com/watch?v=d2bkmlOY3EM)
