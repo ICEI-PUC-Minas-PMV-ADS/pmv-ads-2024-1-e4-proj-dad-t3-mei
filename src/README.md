@@ -16,6 +16,8 @@ Ou entre diretamente por https://meiameipuc.azurewebsites.net/
 
 ## instalação e execução do App
 
+`git clone <link do repo>`
+
 `cd <local/do/repo/{src/App}>`
 
 `npm install`
