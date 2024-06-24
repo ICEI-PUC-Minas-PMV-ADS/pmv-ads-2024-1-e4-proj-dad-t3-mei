@@ -1,8 +1,27 @@
 # Instruções de utilização
 
-## Instalação do Site
+## Instalação e execução do Site
 
-O site em HTML/CSS/JS é um projeto estático, logo pode ser utilizado tanto em servidores...
+`git clone <link do repo>`
+
+`cd <PastaLocal/do/repo/{src/WebFront}>`
+
+`npm install`
+
+`npm run dev`
+
+Ou entre diretamente por https://meiameipuc.azurewebsites.net/
+
+***
+
+## instalação e execução do App
+
+`cd <local/do/repo/{src/App}>`
+
+`npm install`
+
+`npx expo start`
+
 
 ## Histórico de versões
 
