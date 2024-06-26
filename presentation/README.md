@@ -6,4 +6,4 @@ Faça uma apresentação de um resumo de todos o processo de desenvolvimento e n
 
 [Video Mei a Mei](https://www.youtube.com/watch?v=uFsKke6buu0)
 
-[Video Apresentação Final](https://www.youtube.com/watch?v=AK65_cRulQM)
+[Video Apresentação Final](https://www.youtube.com/watch?v=Y0kH2FhUrYc)
