@@ -12,6 +12,10 @@
 
 Ou entre diretamente por https://meiameipuc.azurewebsites.net/
 
+### Conta para testes
+E-mail: gg@email.com
+Senha: 12345
+
 ***
 
 ## instalação e execução do App
