@@ -1,3 +1,4 @@
+cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: Mei a Mei
 authors:
@@ -21,5 +22,6 @@ keywords:
   - Faturamentos
   - Despesas
 repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e4-proj-dad-t3-mei
+license: CC-BY-4.0
 version: 1.0.0
 date-released: 2024-06-23
